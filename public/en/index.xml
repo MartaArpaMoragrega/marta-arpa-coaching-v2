@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Marta Arpa</title>
+    <link>//localhost:1313/en/</link>
+    <description>Recent content on Marta Arpa</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 22 Feb 2026 00:00:00 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Impostor Syndrome: When You Doubt Yourself Even Though You&#39;re Doing Well</title>
+      <link>//localhost:1313/en/blog/impostor-syndrome/</link>
+      <pubDate>Sun, 22 Feb 2026 00:00:00 -0500</pubDate>
+      <guid>//localhost:1313/en/blog/impostor-syndrome/</guid>
+      <description>&lt;p&gt;Have you ever felt you don&amp;rsquo;t deserve your achievements and that, at any moment, someone will discover you&amp;rsquo;re &amp;ldquo;not that capable&amp;rdquo;? That feeling has a name: impostor syndrome. It&amp;rsquo;s not a disorder, but a thinking pattern that leads competent people to doubt themselves and attribute their success to luck or external factors.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Positive leadership: a way of leading that transforms people and organizations</title>
+      <link>//localhost:1313/en/blog/positive-leadership/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 -0500</pubDate>
+      <guid>//localhost:1313/en/blog/positive-leadership/</guid>
+      <description>&lt;p&gt;Leadership is changing. Today, organizations need leaders who can generate trust, commitment, and sustainable results.&#xA;In this new context, positive leadership has become one of the most valued competencies in companies and organizations.&#xA;But what exactly is it, and why does it make such a difference?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Transforming is not about changing places: it&#39;s about changing perspective</title>
+      <link>//localhost:1313/en/blog/transforming-is-not-changing-places/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 -0500</pubDate>
+      <guid>//localhost:1313/en/blog/transforming-is-not-changing-places/</guid>
+      <description>&lt;p&gt;In a world that moves increasingly fast, we tend to think that transformation means changing jobs, cities, or situations. However, true transformation does not begin outside, but within. It is not a geographical move nor an impulsive leap: it is a deep shift in how we observe reality and how we observe ourselves.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>//localhost:1313/en/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/en/about/</guid>
+      <description>&lt;p&gt;With more than 15 years of experience in consulting, coaching, and project management, I have supported organizations and individuals through profound change processes. My purpose is to foster human and organizational development, creating environments where innovation, collaboration, and learning become drivers of sustainable growth.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>//localhost:1313/en/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/en/contact/</guid>
+      <description>&lt;p&gt;Do you have a question or want to explore how I can support you in your growth process? Write to me and I&amp;rsquo;ll get back to you soon.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

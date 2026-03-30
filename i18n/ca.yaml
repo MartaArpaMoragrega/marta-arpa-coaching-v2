@@ -1,0 +1,20 @@
+- id: read_more
+  translation: Llegir més
+
+- id: send
+  translation: Enviar Missatge
+
+- id: tags
+  translation: Etiquetes
+
+- id: fname
+  translation: Nom
+
+- id: lname
+  translation: Cognom
+
+- id: email
+  translation: Adreça Electrònica
+
+- id: message
+  translation: Missatge

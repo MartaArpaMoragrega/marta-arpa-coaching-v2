@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Marta Arpa</title>
+    <link>//localhost:1313/blog/</link>
+    <description>Recent content in Blog on Marta Arpa</description>
+    <generator>Hugo</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Sun, 22 Feb 2026 00:00:00 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Síndrome de la impostora: cuando dudas de ti aunque lo estés haciendo bien</title>
+      <link>//localhost:1313/blog/sindrome-de-la-impostora/</link>
+      <pubDate>Sun, 22 Feb 2026 00:00:00 -0500</pubDate>
+      <guid>//localhost:1313/blog/sindrome-de-la-impostora/</guid>
+      <description>&lt;p&gt;¿Alguna vez has sentido que no mereces tus logros y que, en cualquier momento, alguien descubrirá que &amp;ldquo;no eres tan capaz&amp;rdquo;? Esa sensación tiene nombre: síndrome de la impostora. No es un trastorno, sino un patrón de pensamiento que hace que personas competentes duden de sí mismas y atribuyan sus éxitos a la suerte o a factores externos.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Liderazgo positivo: una forma de liderar que transforma personas y organizaciones</title>
+      <link>//localhost:1313/blog/liderazgo-positivo/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 -0500</pubDate>
+      <guid>//localhost:1313/blog/liderazgo-positivo/</guid>
+      <description>&lt;p&gt;El liderazgo está cambiando. Hoy las organizaciones necesitan líderes capaces de generar confianza, compromiso y resultados sostenibles.&#xA;En este nuevo contexto, el liderazgo positivo se ha convertido en una de las competencias más valoradas en empresas y organizaciones.&#xA;Pero ¿qué es exactamente y por qué marca la diferencia?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Transformar no es cambiar de lugar: es cambiar de perspectiva</title>
+      <link>//localhost:1313/blog/transformar-no-es-cambiar-de-lugar/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 -0500</pubDate>
+      <guid>//localhost:1313/blog/transformar-no-es-cambiar-de-lugar/</guid>
+      <description>&lt;p&gt;En un mundo que se mueve cada vez más rápido, tendemos a pensar que transformar significa cambiar de trabajo, de ciudad o de situación. Sin embargo, la verdadera transformación no empieza fuera, sino dentro. No es un movimiento geográfico ni un salto impulsivo: es un ajuste profundo en la forma en la que observamos la realidad y nos observamos a nosotros mismos.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

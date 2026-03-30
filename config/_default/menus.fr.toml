@@ -1,0 +1,60 @@
+# main menu
+[[main]]
+name = "Accueil"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Services"
+url = "/#services"
+weight = 2
+
+[[main]]
+name = "À propos"
+url = "/about"
+weight = 3
+
+[[main]]
+name = "Blog"
+url = "/blog"
+weight = 4
+
+[[main]]
+name = "Contact"
+url = "/contact"
+weight = 5
+
+# footer menu left (Services)
+[[footer_left]]
+name = "Coaching Exécutif"
+url = "/#services"
+
+[[footer_left]]
+name = "Coaching Personnel"
+url = "/#services"
+
+[[footer_left]]
+name = "PMaaS & CMaaS"
+url = "/#services"
+
+[[footer_left]]
+name = "Conseil en Changement"
+url = "/#services"
+
+# footer menu middle (Ressources)
+[[footer_middle]]
+name = "Blog"
+url = "/blog"
+
+[[footer_middle]]
+name = "À propos"
+url = "/about"
+
+# footer menu right (Légal)
+[[footer_right]]
+name = "Politique de confidentialité"
+url = "/privacy-policy"
+
+[[footer_right]]
+name = "Conditions d'utilisation"
+url = "/terms-conditions"

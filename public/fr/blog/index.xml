@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Marta Arpa</title>
+    <link>//localhost:1313/fr/blog/</link>
+    <description>Recent content in Blog on Marta Arpa</description>
+    <generator>Hugo</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Sun, 22 Feb 2026 00:00:00 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/fr/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Syndrome de l&#39;imposteur : quand vous doutez de vous même si tout va bien</title>
+      <link>//localhost:1313/fr/blog/syndrome-imposteur/</link>
+      <pubDate>Sun, 22 Feb 2026 00:00:00 -0500</pubDate>
+      <guid>//localhost:1313/fr/blog/syndrome-imposteur/</guid>
+      <description>&lt;p&gt;Vous est-il déjà arrivé de sentir que vous ne méritez pas vos réussites et que, tôt ou tard, quelqu&amp;rsquo;un découvrira que vous n&amp;rsquo;êtes « pas si compétent » ? Ce ressenti porte un nom : le syndrome de l&amp;rsquo;imposteur. Ce n&amp;rsquo;est pas un trouble, mais un schéma de pensée qui pousse des personnes compétentes à douter d&amp;rsquo;elles-mêmes et à attribuer leurs succès à la chance ou à des facteurs externes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Le leadership positif : une manière de diriger qui transforme les personnes et les organisations</title>
+      <link>//localhost:1313/fr/blog/leadership-positif/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 -0500</pubDate>
+      <guid>//localhost:1313/fr/blog/leadership-positif/</guid>
+      <description>&lt;p&gt;Le leadership évolue. Aujourd&amp;rsquo;hui, les organisations ont besoin de leaders capables de générer confiance, engagement et résultats durables.&#xA;Dans ce nouveau contexte, le leadership positif est devenu l&amp;rsquo;une des compétences les plus valorisées dans les entreprises et les organisations.&#xA;Mais qu&amp;rsquo;est-ce que c&amp;rsquo;est exactement et pourquoi fait-il la différence ?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Transformer ne consiste pas à changer de lieu : c&#39;est changer de perspective</title>
+      <link>//localhost:1313/fr/blog/transformer-changer-de-perspective/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 -0500</pubDate>
+      <guid>//localhost:1313/fr/blog/transformer-changer-de-perspective/</guid>
+      <description>&lt;p&gt;Dans un monde qui va de plus en plus vite, nous avons tendance à penser que transformer signifie changer de travail, de ville ou de situation. Pourtant, la véritable transformation ne commence pas à l&amp;rsquo;extérieur, mais à l&amp;rsquo;intérieur. Ce n&amp;rsquo;est ni un déplacement géographique ni un saut impulsif : c&amp;rsquo;est un ajustement profond dans la manière dont nous observons la réalité et dont nous nous observons nous-mêmes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

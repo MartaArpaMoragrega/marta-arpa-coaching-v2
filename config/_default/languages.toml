@@ -1,0 +1,47 @@
+################################### Spanish (default) #####################################
+[es]
+languageName = "ES"
+languageCode = "es-ES"
+contentDir = "content/spanish"
+weight = 1
+[es.params]
+footer_menu_left = "Servicios"
+footer_menu_middle = "Recursos"
+footer_menu_right = "Legal"
+footer_content = "Coaching ejecutivo y personal, gestión del cambio y consultoría organizacional."
+
+################################### English #####################################
+[en]
+languageName = "EN"
+languageCode = "en-US"
+contentDir = "content/english"
+weight = 2
+[en.params]
+footer_menu_left = "Services"
+footer_menu_middle = "Resources"
+footer_menu_right = "Legal"
+footer_content = "Executive and personal coaching, change management and organizational consulting."
+
+################################### French #####################################
+[fr]
+languageName = "FR"
+languageCode = "fr-FR"
+contentDir = "content/french"
+weight = 3
+[fr.params]
+footer_menu_left = "Services"
+footer_menu_middle = "Ressources"
+footer_menu_right = "Légal"
+footer_content = "Coaching exécutif et personnel, gestion du changement et conseil organisationnel."
+
+################################### Catalan #####################################
+[ca]
+languageName = "CA"
+languageCode = "ca-ES"
+contentDir = "content/catalan"
+weight = 4
+[ca.params]
+footer_menu_left = "Serveis"
+footer_menu_middle = "Recursos"
+footer_menu_right = "Legal"
+footer_content = "Coaching executiu i personal, gestió del canvi i consultoria organitzacional."
