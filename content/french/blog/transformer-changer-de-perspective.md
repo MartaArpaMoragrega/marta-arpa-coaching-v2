@@ -4,7 +4,7 @@ date: "2025-12-15"
 image: "images/posts/transformacion/banner.fr.png"
 author: "Marta Arpa"
 description: "Nous pensons souvent que transformer signifie changer de situation. Pourtant, la véritable transformation commence à l'intérieur."
-type: "regular"
+type: "post"
 translationKey: "transformar-perspectiva"
 draft: false
 ---

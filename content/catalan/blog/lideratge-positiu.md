@@ -4,7 +4,7 @@ date: "2026-01-19"
 image: "images/posts/liderazgo-positivo/banner.png"
 author: "Marta Arpa"
 description: "El lideratge està canviant. Avui les organitzacions necessiten líders capaços de generar confiança, compromís i resultats sostenibles."
-type: "featured"
+type: "post"
 translationKey: "liderazgo-positivo"
 draft: false
 ---

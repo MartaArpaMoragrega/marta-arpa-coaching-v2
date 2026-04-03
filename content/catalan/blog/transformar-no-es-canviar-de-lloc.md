@@ -4,7 +4,7 @@ date: "2025-12-15"
 image: "images/posts/transformacion/banner.cat.png"
 author: "Marta Arpa"
 description: "Tendim a pensar que transformar vol dir canviar de lloc. Tanmateix, la veritable transformació no comença a fora, sinó a dins."
-type: "regular"
+type: "post"
 translationKey: "transformar-perspectiva"
 draft: false
 ---

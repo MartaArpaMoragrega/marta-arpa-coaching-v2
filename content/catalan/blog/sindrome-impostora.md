@@ -4,7 +4,7 @@ date: "2026-02-22"
 image: "images/posts/sindrome-de-la-impostora/banner.png"
 author: "Marta Arpa"
 description: "Has sentit mai que no mereixes els teus èxits i que algú descobrirà que no ets tan capaç? Aquesta sensació té nom: síndrome de la impostora."
-type: "regular"
+type: "post"
 translationKey: "sindrome-impostora"
 draft: false
 ---

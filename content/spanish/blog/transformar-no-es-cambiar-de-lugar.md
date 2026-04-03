@@ -4,7 +4,7 @@ date: "2025-12-15"
 image: "images/posts/transformacion/banner.png"
 author: "Marta Arpa"
 description: "Transformar no es cambiar de lugar: es un ajuste profundo en cómo observamos la realidad. La verdadera transformación empieza dentro."
-type: "regular"
+type: "post"
 translationKey: "transformar-perspectiva"
 draft: false
 ---

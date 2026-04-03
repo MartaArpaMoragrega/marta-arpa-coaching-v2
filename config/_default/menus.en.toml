@@ -5,11 +5,6 @@ url = "/"
 weight = 1
 
 [[main]]
-name = "Services"
-url = "/#services"
-weight = 2
-
-[[main]]
 name = "About"
 url = "/about"
 weight = 3

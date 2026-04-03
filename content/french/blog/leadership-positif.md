@@ -4,7 +4,7 @@ date: "2026-01-19"
 image: "images/posts/liderazgo-positivo/banner.png"
 author: "Marta Arpa"
 description: "Le leadership évolue. Aujourd'hui, les organisations ont besoin de leaders capables de générer confiance, engagement et résultats durables."
-type: "featured"
+type: "post"
 translationKey: "liderazgo-positivo"
 draft: false
 ---

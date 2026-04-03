@@ -4,7 +4,7 @@ date: "2026-01-19"
 image: "images/posts/liderazgo-positivo/banner.png"
 author: "Marta Arpa"
 description: "El liderazgo está cambiando. Hoy las organizaciones necesitan líderes capaces de generar confianza, compromiso y resultados sostenibles."
-type: "featured"
+type: "post"
 translationKey: "liderazgo-positivo"
 draft: false
 ---

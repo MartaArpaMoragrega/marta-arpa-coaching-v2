@@ -4,7 +4,7 @@ date: "2026-02-22"
 image: "images/posts/sindrome-de-la-impostora/banner.png"
 author: "Marta Arpa"
 description: "¿Alguna vez has sentido que no mereces tus logros y que alguien descubrirá que no eres tan capaz? Esa sensación tiene nombre: síndrome de la impostora."
-type: "regular"
+type: "post"
 translationKey: "sindrome-impostora"
 draft: false
 ---

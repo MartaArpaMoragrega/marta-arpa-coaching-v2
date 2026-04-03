@@ -4,7 +4,7 @@ date: "2026-02-22"
 image: "images/posts/sindrome-de-la-impostora/banner.png"
 author: "Marta Arpa"
 description: "Have you ever felt you don't deserve your achievements and that someone will discover you're not that capable? That feeling has a name: impostor syndrome."
-type: "regular"
+type: "post"
 translationKey: "sindrome-impostora"
 draft: false
 ---

@@ -4,7 +4,7 @@ date: "2025-12-15"
 image: "images/posts/transformacion/banner.en.png"
 author: "Marta Arpa"
 description: "We often think transformation means changing jobs or cities. But true transformation begins within: a deep shift in how we observe reality."
-type: "regular"
+type: "post"
 translationKey: "transformar-perspectiva"
 draft: false
 ---

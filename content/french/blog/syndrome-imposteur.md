@@ -4,7 +4,7 @@ date: "2026-02-22"
 image: "images/posts/sindrome-de-la-impostora/banner.png"
 author: "Marta Arpa"
 description: "Avez-vous déjà senti que vous ne méritez pas vos réussites et que quelqu'un le découvrira ? Ce ressenti a un nom : le syndrome de l'imposteur."
-type: "regular"
+type: "post"
 translationKey: "sindrome-impostora"
 draft: false
 ---
