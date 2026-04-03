@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "gethugothemes",
   "scripts": {
-    "dev": "hugo server",
+    "dev": "hugo server --bind 0.0.0.0",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --forceSyncStatic",
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --watch --forceSyncStatic -e production --minify",
     "dev:example": "cd exampleSite; hugo server --themesDir ../..",
