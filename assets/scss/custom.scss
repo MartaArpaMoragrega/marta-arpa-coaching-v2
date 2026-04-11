@@ -1,0 +1,59 @@
+// Banner — full-bleed image on the right, text on the left,
+// white-to-transparent gradient bridges the two sides.
+.banner {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0 80px;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+
+  // Image: absolutely covers the right 65% of the section
+  .banner-image-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+
+    // Gradient overlay: white on the left edge, fully transparent on the right
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(to right, white 0%, rgba(255,255,255,0.6) 25%, transparent 60%);
+    }
+
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+  }
+
+  // Text sits above the image layer
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  // On small screens: stack image below text, full width
+  @media (max-width: 991px) {
+    display: block;
+    padding: 60px 0 0;
+    min-height: auto;
+
+    .banner-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      margin-top: 2rem;
+
+      &::before {
+        background: linear-gradient(to bottom, white 0%, transparent 40%);
+      }
+    }
+  }
+}
