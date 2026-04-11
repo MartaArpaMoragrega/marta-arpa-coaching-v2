@@ -31,7 +31,8 @@ content/
   catalan/                     # CA content
 i18n/{es,en,fr,ca}.yaml        # UI string translations (form labels, pagination, etc.)
 layouts/partials/              # Theme overrides (see below)
-static/images/                 # All static images served at /images/...
+static/images/                 # Static images (banner, about, posts, logo) served at /images/...
+assets/images/services/        # Service section images — processed by Hugo (auto WebP + responsive srcsets)
 assets/scss/custom.scss        # Minor SCSS overrides only
 ```
 
@@ -78,6 +79,8 @@ Place banner images in `static/images/posts/<folder>/`.
 ### Homepage service row
 Edit `content/{lang}/_index.md`. Each service_item requires `title`, `content`, `images` (list of paths), and optionally a `button`.
 
+Place service images in `assets/images/services/` (not `static/`) — Hugo will automatically generate WebP versions and responsive srcsets at build time. Source images should be square PNG at 512×512.
+
 ---
 
 ## Multilingual rules
@@ -96,7 +99,7 @@ Four theme/module partials are overridden in `layouts/partials/` — **do not de
 
 | File | Why overridden |
 |---|---|
-| `image.html` | Changed `absURL` → `relURL` for static images (fixes cross-device loading) |
+| `image.html` | Changed `absURL` → `relURL` for static images (fixes cross-device loading). Also handles WebP conversion + responsive `<picture>` srcsets for images in `assets/` |
 | `logo.html` | Same fix for the logo image |
 | `header.html` | Navbar brand uses `"/" | relLangURL` instead of `site.BaseURL`; language switcher uses `.RelPermalink` |
 | `basic-seo.html` | Suppresses `<base>` tag when `hugo.IsServer` (was injecting `//localhost:PORT/`, breaking all relative URLs) |

@@ -12,17 +12,17 @@ banner:
 ##################### Feature ##########################
 feature:
   enable: true
-  title: "La Invitació"
+  title: "On puc aportar"
   feature_item:
     - name: "Coaching Executiu"
       icon: "fas fa-briefcase"
       content: "Empoderar líders i equips per maximitzar el seu rendiment i assolir objectius estratègics."
 
-    - name: "Coaching Personal"
+    - name: "Tallers Personalitzats"
       icon: "fas fa-heart"
       content: "Fomentar una transformació profunda per al creixement integral i la realització personal."
 
-    - name: "PMaaS & CMaaS"
+    - name: "Píndoles de Focus"
       icon: "fas fa-project-diagram"
       content: "Gestió de projectes i del canvi per garantir una execució eficient i l'adaptació organitzativa."
 
@@ -30,9 +30,9 @@ feature:
       icon: "fas fa-sync-alt"
       content: "Facilitar transformacions organitzatives amb estratègies personalitzades."
 
-    - name: "Lideratge conscient"
+    - name: "Lideratge Positiu"
       icon: "fas fa-lightbulb"
-      content: "Liderar amb claredat, coherència i responsabilitat compartida per generar equips compromesos."
+      content: "Aprèn a liderar amb claredat, coherència i responsabilitat compartida per generar equips compromesos."
 
     - name: "Autoconeixement"
       icon: "fas fa-seedling"
@@ -51,19 +51,19 @@ service:
         label: "Parlem-ne"
         link: "contact/"
 
-    - title: "Coaching Personal"
+    - title: "Tallers Personalitzats"
       images:
-        - "images/services/coaching-per.png"
-      content: "El coaching ontològic va més enllà del coaching tradicional. Es centra en el ser de la persona, explorant com el llenguatge, les emocions i la corporalitat configuren la nostra realitat. Un viatge d'autoconeixement que revela noves possibilitats d'acció i transforma patrons de pensament limitants."
+        - "images/services/talleres-personalizados.png"
+      content: "Tallers a mida que responen directament als reptes reals de la teva empresa. Dinàmics, pràctics i enfocats en resultats des del primer minut. Impulsa el teu equip amb eines que s'apliquen a l'instant i generen impacte immediat."
       button:
         enable: true
         label: "Parlem-ne"
         link: "contact/"
 
-    - title: "PMaaS & CMaaS"
+    - title: "Píndoles de Focus"
       images:
-        - "images/services/maas.png"
-      content: "Program Management as a Service i Change Management as a Service: gestió de programes complexos amb metodologies àgils i tradicionals, i suport integral per gestionar el costat humà del canvi en organitzacions. Tots dos serveis es poden contractar de forma independent o combinada."
+        - "images/services/pildoras-foco.png"
+      content: "Les \"Píndoles de Focus\" són micro-tallers pràctics i directes que activen la concentració, la claredat i l'acció en poc temps. Dissenyats per a equips que necessiten resultats ràpids: menys dispersió, prioritats més clares i execució efectiva des del primer moment."
       button:
         enable: true
         label: "Parlem-ne"
@@ -72,7 +72,7 @@ service:
     - title: "Consultoria del Canvi"
       images:
         - "images/services/consultancy.png"
-      content: "Dissenyar i implementar processos de transformació organitzacional i cultural per a pimes que busquen sostenibilitat, innovació i resiliència. A través d'un diagnòstic integral, disseny del pla de transformació i implementació del canvi, acompanyem les organitzacions cap a resultats duradors."
+      content: "Acompanyo la teva organització en processos de canvi i gestió de projectes amb un enfocament pràctic, estructurat i orientat a resultats. Facilito l'adaptació, alinee equips i asseguro que les iniciatives avancin amb claredat, compromís i execució efectiva."
       button:
         enable: true
         label: "Parlem-ne"

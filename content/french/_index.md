@@ -12,17 +12,17 @@ banner:
 ##################### Feature ##########################
 feature:
   enable: true
-  title: "L'Invitation"
+  title: "Où je peux contribuer"
   feature_item:
     - name: "Coaching Exécutif"
       icon: "fas fa-briefcase"
       content: "Autonomiser les leaders et les équipes pour maximiser leur performance et atteindre leurs objectifs stratégiques."
 
-    - name: "Coaching Personnel"
+    - name: "Ateliers Personnalisés"
       icon: "fas fa-heart"
       content: "Favoriser une transformation profonde pour le développement intégral et l'épanouissement personnel."
 
-    - name: "PMaaS & CMaaS"
+    - name: "Pilules de Focus"
       icon: "fas fa-project-diagram"
       content: "Gestion de projets et du changement pour une exécution efficace et une adaptation organisationnelle."
 
@@ -30,9 +30,9 @@ feature:
       icon: "fas fa-sync-alt"
       content: "Faciliter les transformations organisationnelles grâce à des stratégies personnalisées."
 
-    - name: "Leadership Conscient"
+    - name: "Leadership Positif"
       icon: "fas fa-lightbulb"
-      content: "Diriger avec clarté, cohérence et responsabilité partagée pour construire des équipes engagées."
+      content: "Apprenez à diriger avec clarté, cohérence et responsabilité partagée pour construire des équipes engagées."
 
     - name: "Connaissance de soi"
       icon: "fas fa-seedling"
@@ -51,19 +51,19 @@ service:
         label: "Parlons-en"
         link: "contact/"
 
-    - title: "Coaching Personnel"
+    - title: "Ateliers Personnalisés"
       images:
-        - "images/services/coaching-per.png"
-      content: "Le coaching ontologique va au-delà du coaching traditionnel. Il se concentre sur l'être de la personne, en explorant comment le langage, les émotions et la corporalité façonnent notre réalité. Un voyage de découverte de soi qui révèle de nouvelles possibilités d'action et transforme les schémas de pensée limitants."
+        - "images/services/talleres-personalizados.png"
+      content: "Des ateliers sur mesure qui répondent directement aux défis réels de votre entreprise. Dynamiques, pratiques et orientés résultats dès la première minute. Donnez à votre équipe des outils qui s'appliquent immédiatement et génèrent un impact concret."
       button:
         enable: true
         label: "Parlons-en"
         link: "contact/"
 
-    - title: "PMaaS & CMaaS"
+    - title: "Pilules de Focus"
       images:
-        - "images/services/maas.png"
-      content: "Program Management as a Service et Change Management as a Service : gestion de programmes complexes avec des méthodologies agiles et traditionnelles, et soutien intégral pour gérer le côté humain du changement organisationnel. Les deux services peuvent être contractés indépendamment ou combinés."
+        - "images/services/pildoras-foco.png"
+      content: "Les \"Pilules de Focus\" sont des micro-ateliers pratiques et directs qui activent la concentration, la clarté et l'action en peu de temps. Conçus pour les équipes qui ont besoin de résultats rapides : moins de dispersion, des priorités plus claires et une exécution efficace dès le premier moment."
       button:
         enable: true
         label: "Parlons-en"
@@ -72,7 +72,7 @@ service:
     - title: "Conseil en Changement"
       images:
         - "images/services/consultancy.png"
-      content: "Concevoir et mettre en œuvre des processus de transformation organisationnelle et culturelle pour les PME qui recherchent durabilité, innovation et résilience. À travers un diagnostic complet, la conception d'un plan de transformation et la mise en œuvre du changement."
+      content: "J'accompagne votre organisation dans les processus de changement et la gestion de projets avec une approche pratique, structurée et orientée résultats. Je facilite l'adaptation, j'aligne les équipes et je m'assure que les initiatives avancent avec clarté, engagement et exécution efficace."
       button:
         enable: true
         label: "Parlons-en"

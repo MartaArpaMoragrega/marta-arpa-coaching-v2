@@ -12,17 +12,17 @@ banner:
 ##################### Feature ##########################
 feature:
   enable: true
-  title: "The Invitation"
+  title: "Where I can contribute"
   feature_item:
     - name: "Executive Coaching"
       icon: "fas fa-briefcase"
       content: "Empower leaders and teams to maximize performance and achieve strategic goals."
 
-    - name: "Personal Coaching"
+    - name: "Tailored Workshops"
       icon: "fas fa-heart"
       content: "Foster deep transformation for personal growth and self-fulfillment."
 
-    - name: "PMaaS & CMaaS"
+    - name: "Focus Pills"
       icon: "fas fa-project-diagram"
       content: "Project and change management to ensure efficient execution and organizational adaptation."
 
@@ -30,9 +30,9 @@ feature:
       icon: "fas fa-sync-alt"
       content: "Facilitate organizational transformations through tailored strategies."
 
-    - name: "Conscious Leadership"
+    - name: "Positive Leadership"
       icon: "fas fa-lightbulb"
-      content: "Lead with clarity, coherence and shared responsibility to build committed teams."
+      content: "Learn to lead with clarity, coherence and shared responsibility to build committed teams."
 
     - name: "Self-awareness"
       icon: "fas fa-seedling"
@@ -51,19 +51,19 @@ service:
         label: "Let's talk"
         link: "contact/"
 
-    - title: "Personal Coaching"
+    - title: "Tailored Workshops"
       images:
-        - "images/services/coaching-per.png"
-      content: "Ontological coaching goes beyond traditional coaching. It focuses on the person's being, exploring how language, emotions, and embodiment shape our reality. A journey of self-discovery that reveals new possibilities for action and transforms thought patterns that limit your development."
+        - "images/services/talleres-personalizados.png"
+      content: "Tailored workshops that respond directly to your company's real challenges. Dynamic, practical, and results-focused from the very first minute. Empower your team with tools that apply instantly and generate immediate impact."
       button:
         enable: true
         label: "Let's talk"
         link: "contact/"
 
-    - title: "PMaaS & CMaaS"
+    - title: "Focus Pills"
       images:
-        - "images/services/maas.png"
-      content: "Program Management as a Service and Change Management as a Service: management of complex programs using agile and traditional methodologies, and comprehensive support for managing the human side of organizational change. Both services can be contracted independently or combined to maximize the success of transformation initiatives."
+        - "images/services/pildoras-foco.png"
+      content: "\"Focus Pills\" are practical, direct micro-workshops that activate concentration, clarity, and action in a short time. Designed for teams that need fast results: less dispersion, clearer priorities, and effective execution from the very first moment."
       button:
         enable: true
         label: "Let's talk"
@@ -72,7 +72,7 @@ service:
     - title: "Change Consulting"
       images:
         - "images/services/consultancy.png"
-      content: "Design and implement organizational and cultural transformation processes for SMEs seeking sustainability, innovation, and resilience. Through comprehensive diagnosis, transformation plan design, and change implementation, we accompany organizations toward lasting results."
+      content: "I accompany your organization through change processes and project management with a practical, structured, results-oriented approach. I facilitate adaptation, align teams, and ensure that initiatives move forward with clarity, commitment, and effective execution."
       button:
         enable: true
         label: "Let's talk"

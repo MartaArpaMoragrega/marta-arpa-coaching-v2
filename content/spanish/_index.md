@@ -12,17 +12,17 @@ banner:
 ##################### Feature ##########################
 feature:
   enable: true
-  title: "La Invitación"
+  title: "Donde puedo aportar"
   feature_item:
     - name: "Coaching Ejecutivo"
       icon: "fas fa-briefcase"
       content: "Empoderar a líderes y equipos para maximizar su rendimiento y alcanzar objetivos estratégicos."
 
-    - name: "Coaching Personal"
+    - name: "Talleres personalizados"
       icon: "fas fa-heart"
       content: "Fomentar una transformación profunda para el desarrollo integral y la realización personal."
 
-    - name: "PMaaS & CMaaS"
+    - name: "Píldoras de Foco"
       icon: "fas fa-project-diagram"
       content: "Gestión de proyectos y del cambio para una ejecución eficiente y la adaptación organizativa."
 
@@ -30,9 +30,9 @@ feature:
       icon: "fas fa-sync-alt"
       content: "Facilitar transformaciones organizativas a través de estrategias personalizadas."
 
-    - name: "Liderazgo consciente"
+    - name: "Liderazgo Positivo"
       icon: "fas fa-lightbulb"
-      content: "Liderar con claridad, coherencia y responsabilidad compartida para generar equipos comprometidos."
+      content: "Aprende a liderar con claridad, coherencia y responsabilidad compartida para generar equipos comprometidos."
 
     - name: "Autoconocimiento"
       icon: "fas fa-seedling"
@@ -51,19 +51,19 @@ service:
         label: "Hablemos"
         link: "contact/"
 
-    - title: "Coaching Personal"
+    - title: "Talleres personalizados"
       images:
-        - "images/services/coaching-per.png"
-      content: "El coaching ontológico va más allá del coaching tradicional. Se centra en el ser de la persona, explorando cómo el lenguaje, las emociones y la corporalidad configuran nuestra realidad. Un viaje de autoconocimiento que revela nuevas posibilidades de acción y transforma patrones de pensamiento que limitan tu desarrollo."
+        - "images/services/talleres-personalizados.png"
+      content: "Talleres a medida que responden directamente a los retos reales de tu empresa. Dinámicos, prácticos y enfocados en resultados desde el primer minuto. Impulsa a tu equipo con herramientas que se aplican al instante y generan impacto inmediato."
       button:
         enable: true
         label: "Hablemos"
         link: "contact/"
 
-    - title: "PMaaS & CMaaS"
+    - title: "Píldoras de Foco"
       images:
-        - "images/services/maas.png"
-      content: "Program Management as a Service y Change Management as a Service: gestión de programas complejos con metodologías ágiles y tradicionales, y soporte integral para gestionar el lado humano del cambio en organizaciones. Ambos servicios pueden contratarse de forma independiente o combinada para maximizar el éxito de iniciativas de transformación."
+        - "images/services/pildoras-foco.png"
+      content: "\"Píldoras de Foco\" son micro-talleres prácticos y directos que activan la concentración, la claridad y la acción en poco tiempo. Diseñados para equipos que necesitan resultados rápidos: menos dispersión, más prioridades claras y ejecución efectiva desde el primer momento."
       button:
         enable: true
         label: "Hablemos"
@@ -72,7 +72,7 @@ service:
     - title: "Consultoría del Cambio"
       images:
         - "images/services/consultancy.png"
-      content: "Diseñar e implementar procesos de transformación organizacional y cultural para PyMEs que buscan sostenibilidad, innovación y resiliencia. A través de un diagnóstico integral, diseño del plan de transformación e implementación del cambio, acompañamos a las organizaciones hacia resultados duraderos."
+      content: "Acompaño a tu organización en procesos de cambio y gestión de proyectos con un enfoque práctico, estructurado y orientado a resultados. Facilito la adaptación, alineo equipos y aseguro que las iniciativas avancen con claridad, compromiso y ejecución efectiva."
       button:
         enable: true
         label: "Hablemos"
