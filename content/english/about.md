@@ -13,7 +13,7 @@ about:
     My approach integrates strategic clarity with active listening and empathy, enabling transformations that allow individuals and teams to overcome challenges, reinvent themselves, and achieve their most ambitious goals. This combination of vision, experience, and sensitivity defines the way I support people and organizations on their journey of growth and transformation.
 
     [LinkedIn](https://www.linkedin.com/in/marta-arpa-moragrega/)
-  image: "images/about/marpa-profile-office.jpg"
+  image: "images/about/profile-pic.png"
 
 philosophy:
   enable: true

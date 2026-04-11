@@ -13,7 +13,7 @@ about:
     Mon approche intègre la clarté stratégique avec l'écoute active et l'empathie, facilitant des transformations qui permettent aux individus et aux équipes de relever des défis, de se réinventer et d'atteindre leurs objectifs les plus ambitieux. Cette combinaison de vision, d'expérience et de sensibilité définit ma manière d'accompagner les personnes et les organisations dans leur chemin d'évolution et de transformation.
 
     [LinkedIn](https://www.linkedin.com/in/marta-arpa-moragrega/)
-  image: "images/about/marpa-profile-office.jpg"
+  image: "images/about/profile-pic.png"
 
 philosophy:
   enable: true

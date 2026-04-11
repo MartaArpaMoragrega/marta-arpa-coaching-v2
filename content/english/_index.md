@@ -88,7 +88,7 @@ screenshot:
 call_to_action:
   enable: true
   title: "Ready to take the next step?"
-  image: "images/about/marpa-profile-office.jpg"
+  image: "images/about/marpa-profile-office.png"
   content: "Book a free 30-minute session and let's talk about your goals. No commitment required."
   button:
     enable: true
