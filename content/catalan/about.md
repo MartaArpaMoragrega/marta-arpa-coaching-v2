@@ -30,5 +30,5 @@ philosophy:
     - icon: "fas fa-gem"
       title: "La Meva Essència Professional"
       content: |
-        Combina la claredat estratègica del consultor amb l'escolta profunda del coach. Ajudo a convertir la complexitat en accions concretes i, alhora, creo espais de reflexió que permeten a les persones i als equips avançar amb propòsit cap a un creixement sostenible.
+        Combina la claredat estratègica del consultor amb l'escolta profunda del coach. Ajudo a convertir la complexitat en accions concretes i, alhora, creo espais de reflexió que permeten avançar amb propòsit cap a un creixement sostenible.
 ---

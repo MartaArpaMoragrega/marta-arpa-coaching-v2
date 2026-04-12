@@ -8662,6 +8662,19 @@ body.dark {
         margin-top: 2rem; }
         .banner .banner-image-wrap::before {
           background: linear-gradient(to bottom, white 0%, transparent 40%); } }
+.about-content {
+  text-align: justify; }
+
+.about-profile-img {
+  max-height: 380px;
+  max-width: 100%;
+  width: auto;
+  display: block;
+  margin: 0 auto; }
+
+.feature-card div.mb-3 {
+  text-align: justify !important; }
+
 .feature-card .bg-primary i {
   color: #fff; }
 

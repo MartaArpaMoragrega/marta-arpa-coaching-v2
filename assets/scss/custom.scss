@@ -58,6 +58,26 @@
   }
 }
 
+// ── About page — profile image matches text column height ───────────────────
+// align-items-stretch on the row makes both columns the same height;
+// object-fit: cover fills that height without distorting the photo.
+.about-content {
+  text-align: justify;
+}
+
+
+.about-profile-img {
+  max-height: 380px;
+  max-width: 100%;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.feature-card div.mb-3 {
+  text-align: justify !important;
+}
+
 // ── About page — philosophy icons ───────────────────────────────────────────
 // .feature-card i forces color: $color-primary (teal), which makes icons
 // invisible inside the .bg-primary teal circle. Override to white.

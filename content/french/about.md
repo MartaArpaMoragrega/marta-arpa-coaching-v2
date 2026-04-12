@@ -30,5 +30,5 @@ philosophy:
     - icon: "fas fa-gem"
       title: "Mon Essence Professionnelle"
       content: |
-        Elle combine la clarté stratégique du consultant avec l'écoute profonde du coach. J'aide à transformer la complexité en actions concrètes et, en même temps, je crée des espaces de réflexion qui permettent aux personnes et aux équipes d'avancer avec intention vers une croissance durable.
+        Elle combine la clarté stratégique du consultant avec l'écoute profonde du coach. J'aide à transformer la complexité en actions concrètes et, en même temps, je crée des espaces de réflexion qui permettent d'avancer avec intention vers une croissance durable.
 ---

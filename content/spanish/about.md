@@ -30,5 +30,5 @@ philosophy:
     - icon: "fas fa-gem"
       title: "Mi Esencia Profesional"
       content: |
-        Combina la claridad estratégica del consultor con la escucha profunda del coach. Ayudo a convertir la complejidad en acciones concretas y, al mismo tiempo, genero espacios de reflexión que permiten a las personas y equipos avanzar con propósito hacia un crecimiento sostenible.
+        Combina la claridad estratégica del consultor con la escucha profunda del coach. Ayudo a convertir la complejidad en acciones concretas y, al mismo tiempo, genero espacios de reflexión que permiten avanzar con propósito hacia un crecimiento sostenible.
 ---

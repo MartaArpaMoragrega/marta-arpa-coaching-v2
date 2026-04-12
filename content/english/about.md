@@ -30,5 +30,5 @@ philosophy:
     - icon: "fas fa-gem"
       title: "My Professional Essence"
       content: |
-        It combines the strategic clarity of a consultant with the deep listening of a coach. I help turn complexity into concrete actions while creating spaces for reflection that enable people and teams to move forward with purpose toward sustainable growth.
+        It combines the strategic clarity of a consultant with the deep listening of a coach. I help turn complexity into concrete actions while creating spaces for reflection that enable moving forward with purpose toward sustainable growth.
 ---
