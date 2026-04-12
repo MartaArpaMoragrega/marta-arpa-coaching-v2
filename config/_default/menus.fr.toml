@@ -19,23 +19,6 @@ name = "Contact"
 url = "/contact"
 weight = 5
 
-# footer menu left (Services)
-[[footer_left]]
-name = "Coaching Exécutif"
-url = "/#services"
-
-[[footer_left]]
-name = "Coaching Personnel"
-url = "/#services"
-
-[[footer_left]]
-name = "PMaaS & CMaaS"
-url = "/#services"
-
-[[footer_left]]
-name = "Conseil en Changement"
-url = "/#services"
-
 # footer menu middle (Ressources)
 [[footer_middle]]
 name = "Blog"
@@ -47,9 +30,10 @@ url = "/about"
 
 # footer menu right (Légal)
 [[footer_right]]
-name = "Politique de confidentialité"
-url = "/privacy-policy"
+name = "Mentions Légales"
+url = "/aviso-legal"
 
 [[footer_right]]
-name = "Conditions d'utilisation"
-url = "/terms-conditions"
+name = "Politique de Cookies"
+url = "/cookie-policy"
+
