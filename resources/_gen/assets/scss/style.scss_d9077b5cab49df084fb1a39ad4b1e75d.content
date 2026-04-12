@@ -8662,6 +8662,13 @@ body.dark {
         margin-top: 2rem; }
         .banner .banner-image-wrap::before {
           background: linear-gradient(to bottom, white 0%, transparent 40%); } }
+.feature-card .bg-primary i {
+  color: #fff; }
+
+.service-img-wrap {
+  border-radius: 20px;
+  overflow: hidden; }
+
 .preloader {
   position: fixed;
   top: 0;

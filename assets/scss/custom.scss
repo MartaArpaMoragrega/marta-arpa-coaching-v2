@@ -57,3 +57,20 @@
     }
   }
 }
+
+// ── About page — philosophy icons ───────────────────────────────────────────
+// .feature-card i forces color: $color-primary (teal), which makes icons
+// invisible inside the .bg-primary teal circle. Override to white.
+.feature-card .bg-primary i {
+  color: #fff;
+}
+
+// ── Service rows — image container ──────────────────────────────────────────
+// Full-bleed image inside a rounded wrapper. The transparent areas of each
+// RGBA illustration blend naturally with the section background colour
+// (white on rows 0 & 2, pale-teal #EDF6F5 on rows 1 & 3) — no extra
+// background or padding needed.
+.service-img-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+}
