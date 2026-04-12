@@ -51,7 +51,9 @@ blog/
   *.md           # Blog posts (3 per language, 12 total)
 ```
 
-Spanish also has `privacy-policy.md` and `terms-conditions.md`.
+Spanish also has `privacy-policy.md` and `terms-conditions.md` (Lorem ipsum — not yet live).
+
+All 4 languages have `aviso-legal.md` and `cookie-policy.md` — content is real but contains `[PLACEHOLDER]` fields (name, NIF, address, email, domain) that Marta must fill in before go-live.
 
 Translations across languages are linked via `translationKey` in front matter.
 
@@ -103,6 +105,7 @@ Four theme/module partials are overridden in `layouts/partials/` — **do not de
 | `logo.html` | Same fix for the logo image |
 | `header.html` | Navbar brand uses `"/" | relLangURL` instead of `site.BaseURL`; language switcher uses `.RelPermalink` |
 | `basic-seo.html` | Suppresses `<base>` tag when `hugo.IsServer` (was injecting `//localhost:PORT/`, breaking all relative URLs) |
+| `custom-script.html` | Injects Cookiebot CMP script as the first `<head>` script so it can block GA and other cookies until consent is given |
 
 The root cause: Hugo dev server overrides `site.BaseURL` to `//localhost:PORT/` in templates, which breaks cross-device access. These overrides ensure all resource URLs are root-relative.
 
@@ -138,6 +141,7 @@ Colors and fonts are set in `hugo.toml` under `[params.variables]` and compiled 
 - [ ] Wire up contact form action URL (`contact_form_action` in params.toml)
 - [ ] Create `contact-thanks.md` in each language
 - [ ] Update favicon (`static/`)
-- [ ] Phase 5: Analytics (Google Analytics ID `G-25NEQK4KKL` or Umami), sticky CTA button
+- [ ] Phase 5: Analytics — set GA ID `G-25NEQK4KKL` in `hugo.toml` under `[services.googleAnalytics].ID`; replace `[COOKIEBOT-ID]` in `layouts/partials/custom-script.html` with CBid from cookiebot.com (free plan); sticky CTA button
+- [ ] Fill in `[PLACEHOLDER]` fields in `aviso-legal.md` and `cookie-policy.md` across all 4 languages
 - [ ] Phase 6: SEO — site metadata, Schema.org JSON-LD
 - [ ] Phase 8: QA — full build, link check, form test, mobile review
