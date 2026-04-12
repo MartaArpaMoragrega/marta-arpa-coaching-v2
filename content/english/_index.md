@@ -19,24 +19,24 @@ feature:
       content: "Empower leaders and teams to maximize performance and achieve strategic goals."
 
     - name: "Tailored Workshops"
-      icon: "fas fa-heart"
+      icon: "fas fa-users"
       content: "Foster deep transformation for personal growth and self-fulfillment."
 
     - name: "Focus Pills"
-      icon: "fas fa-project-diagram"
-      content: "Project and change management to ensure efficient execution and organizational adaptation."
+      icon: "fas fa-bullseye"
+      content: "Practical and direct micro-workshops that activate concentration, clarity and action in a short time."
 
     - name: "Change Consulting"
       icon: "fas fa-sync-alt"
-      content: "Facilitate organizational transformations through tailored strategies."
+      content: "Facilitate organizational transformations through tailored strategies. Project and change management."
 
     - name: "Positive Leadership"
       icon: "fas fa-lightbulb"
       content: "Learn to lead with clarity, coherence and shared responsibility to build committed teams."
 
-    - name: "Self-awareness"
-      icon: "fas fa-seedling"
-      content: "Every process starts from the unique potential of each person and organization."
+    - name: "Career Plan"
+      icon: "fas fa-route"
+      content: "I help you define, plan, and move forward with clarity towards your professional goals aligned with your purpose and talent."
 
 ######################### Service #####################
 service:

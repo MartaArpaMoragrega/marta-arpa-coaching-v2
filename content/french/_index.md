@@ -19,24 +19,24 @@ feature:
       content: "Autonomiser les leaders et les équipes pour maximiser leur performance et atteindre leurs objectifs stratégiques."
 
     - name: "Ateliers Personnalisés"
-      icon: "fas fa-heart"
+      icon: "fas fa-users"
       content: "Favoriser une transformation profonde pour le développement intégral et l'épanouissement personnel."
 
     - name: "Pilules de Focus"
-      icon: "fas fa-project-diagram"
-      content: "Gestion de projets et du changement pour une exécution efficace et une adaptation organisationnelle."
+      icon: "fas fa-bullseye"
+      content: "Micro-ateliers pratiques et directs qui activent la concentration, la clarté et l'action en peu de temps."
 
     - name: "Conseil en Changement"
       icon: "fas fa-sync-alt"
-      content: "Faciliter les transformations organisationnelles grâce à des stratégies personnalisées."
+      content: "Faciliter les transformations organisationnelles grâce à des stratégies personnalisées. Gestion de projets et du changement."
 
     - name: "Leadership Positif"
       icon: "fas fa-lightbulb"
       content: "Apprenez à diriger avec clarté, cohérence et responsabilité partagée pour construire des équipes engagées."
 
-    - name: "Connaissance de soi"
-      icon: "fas fa-seedling"
-      content: "Chaque processus part du potentiel unique de chaque personne et organisation."
+    - name: "Plan de Carrière"
+      icon: "fas fa-route"
+      content: "Je t'aide à définir, planifier et avancer avec clarté vers tes objectifs professionnels alignés avec ta mission et ton talent."
 
 ######################### Service #####################
 service:

@@ -19,24 +19,24 @@ feature:
       content: "Empoderar líders i equips per maximitzar el seu rendiment i assolir objectius estratègics."
 
     - name: "Tallers Personalitzats"
-      icon: "fas fa-heart"
+      icon: "fas fa-users"
       content: "Fomentar una transformació profunda per al creixement integral i la realització personal."
 
     - name: "Píndoles de Focus"
-      icon: "fas fa-project-diagram"
-      content: "Gestió de projectes i del canvi per garantir una execució eficient i l'adaptació organitzativa."
+      icon: "fas fa-bullseye"
+      content: "Micro-tallers pràctics i directes que activen la concentració, la claredat i l'acció en poc temps."
 
     - name: "Consultoria del Canvi"
       icon: "fas fa-sync-alt"
-      content: "Facilitar transformacions organitzatives amb estratègies personalitzades."
+      content: "Facilitar transformacions organitzatives amb estratègies personalitzades. Gestió de projectes i del canvi."
 
     - name: "Lideratge Positiu"
       icon: "fas fa-lightbulb"
       content: "Aprèn a liderar amb claredat, coherència i responsabilitat compartida per generar equips compromesos."
 
-    - name: "Autoconeixement"
-      icon: "fas fa-seedling"
-      content: "Cada procés parteix del potencial únic de cada persona i organització."
+    - name: "Pla de Carrera"
+      icon: "fas fa-route"
+      content: "T'ajudo a definir, planificar i avançar amb claredat cap als teus objectius professionals alineats amb el teu propòsit i talent."
 
 ######################### Service #####################
 service:

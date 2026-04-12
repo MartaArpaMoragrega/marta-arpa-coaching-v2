@@ -19,24 +19,24 @@ feature:
       content: "Empoderar a líderes y equipos para maximizar su rendimiento y alcanzar objetivos estratégicos."
 
     - name: "Talleres personalizados"
-      icon: "fas fa-heart"
+      icon: "fas fa-users"
       content: "Fomentar una transformación profunda para el desarrollo integral y la realización personal."
 
     - name: "Píldoras de Foco"
-      icon: "fas fa-project-diagram"
-      content: "Gestión de proyectos y del cambio para una ejecución eficiente y la adaptación organizativa."
+      icon: "fas fa-bullseye"
+      content: "Micro-talleres prácticos y directos que activan la concentración, la claridad y la acción en poco tiempo."
 
     - name: "Consultoría del Cambio"
       icon: "fas fa-sync-alt"
-      content: "Facilitar transformaciones organizativas a través de estrategias personalizadas."
+      content: "Facilitar transformaciones organizativas a través de estrategias personalizadas. Gestión de proyectos y del cambio."
 
     - name: "Liderazgo Positivo"
       icon: "fas fa-lightbulb"
       content: "Aprende a liderar con claridad, coherencia y responsabilidad compartida para generar equipos comprometidos."
 
-    - name: "Autoconocimiento"
-      icon: "fas fa-seedling"
-      content: "Cada proceso parte del potencial único de cada persona y organización."
+    - name: "Plan de Carrera"
+      icon: "fas fa-route"
+      content: "Te ayudo a definir, planificar y avanzar con claridad hacia tus objetivos profesionales alineados con tu propósito y talento."
 
 ######################### Service #####################
 service:
