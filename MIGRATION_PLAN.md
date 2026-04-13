@@ -90,9 +90,9 @@ Map source `data/homepage.yml` blocks to Bigspring front matter structure. Servi
 - [ ] Header navigation CTA button label + URL ("Reserva sesión" → Brevo)
 - [ ] Language switcher: verify all 4 languages render correctly
 - [x] Analytics: Google Analytics `G-25NEQK4KKL` set in `hugo.toml`
-- [ ] Analytics: Umami — decision pending (keep or drop)
+- [x] Analytics: Umami Cloud added (`6d411740-d616-4e37-875f-35102dd154c6`), cookieless, `data-cookieconsent="ignore"`
 - [x] Cookiebot CBid `74620d63-7852-407b-b5c4-4c336038f057` set in `layouts/partials/custom-script.html`
-- [ ] Cookiebot: classify reCAPTCHA as "necessary/functional" in dashboard so it isn't blocked by consent banner
+- [x] Cookiebot: reCAPTCHA script tagged `data-cookieconsent="ignore"` — never blocked by auto-blocking
 
 ---
 
