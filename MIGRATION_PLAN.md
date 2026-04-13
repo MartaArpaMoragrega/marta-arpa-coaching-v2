@@ -86,10 +86,12 @@ Map source `data/homepage.yml` blocks to Bigspring front matter structure. Servi
 
 > Deferred — tackle after core content is in place.
 
-- [ ] Sticky CTA button (Brevo booking — floating pill)
+- [x] Sticky CTA button: not doing (confirmed decision).
 - [ ] Header navigation CTA button label + URL ("Reserva sesión" → Brevo)
 - [ ] Language switcher: verify all 4 languages render correctly
-- [ ] Analytics: Google Analytics (`G-25NEQK4KKL`) + Umami
+- [x] Analytics: Google Analytics `G-25NEQK4KKL` set in `hugo.toml`
+- [ ] Analytics: Umami — decision pending (keep or drop)
+- [x] Cookiebot CBid `74620d63-7852-407b-b5c4-4c336038f057` set in `layouts/partials/custom-script.html`
 - [ ] Cookiebot: classify reCAPTCHA as "necessary/functional" in dashboard so it isn't blocked by consent banner
 
 ---

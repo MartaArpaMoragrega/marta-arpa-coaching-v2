@@ -17,7 +17,7 @@ hasCJKLanguage = true # If hasCJKLanguage true, auto-detect Chinese/Japanese/Kor
 ########################### Services #############################
 [services]
 [services.googleAnalytics]
-ID = '##########' # see https://gohugo.io/templates/internal/#configure-google-analytics
+ID = 'G-25NEQK4KKL'
 
 
 ############################# Modules ############################

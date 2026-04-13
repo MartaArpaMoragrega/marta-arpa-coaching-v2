@@ -147,8 +147,8 @@ Colors and fonts are set in `hugo.toml` under `[params.variables]` and compiled 
 ## Pending work (from MIGRATION_PLAN.md)
 
 - [ ] Update favicon (`static/`)
-- [ ] Phase 5: Analytics — set GA ID `G-25NEQK4KKL` in `hugo.toml` under `[services.googleAnalytics].ID`; replace `[COOKIEBOT-ID]` in `layouts/partials/custom-script.html` with CBid from cookiebot.com (free plan); sticky CTA button
 - [ ] Cookiebot: classify reCAPTCHA as "necessary/functional" in the Cookiebot dashboard
+- [ ] Analytics: Umami — decision pending (keep alongside GA or drop)
 - [ ] Fill in `[PLACEHOLDER]` fields in `aviso-legal.md` and `cookie-policy.md` across all 4 languages
 - [ ] Phase 6: SEO — site title/description in `hugo.toml`, metadata in `params.toml`, Schema.org JSON-LD
 - [ ] Phase 8: QA — full build, link check, form test (end-to-end submit with reCAPTCHA), mobile review
