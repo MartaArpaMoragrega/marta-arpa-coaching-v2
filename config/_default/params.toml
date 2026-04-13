@@ -16,7 +16,8 @@ theme_default = "light" # available options [light/dark/system]
 # Main Sections
 mainSections = ["blog"]
 # contact form action
-contact_form_action = "#!" # contact form works with [https://airform.io/] or [https://formspree.io]
+contact_form_action = "https://forms.un-static.com/forms/4558fb21fb022b78fb17ba7616be6bc4e0c70a4a"
+recaptcha_site_key = "6Ld-08orAAAAANupWBL2u9QZu78ZB3O4E4-R65a6"
 # demo form action
 demo_form_action = "#!" # demo form works with [https://airform.io/] or [https://formspree.io]
 # career form action

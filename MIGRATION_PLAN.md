@@ -10,8 +10,8 @@
 - [x] **FAQ page**: Delete.
 - [x] **German language**: Delete (replacing with ES+EN+FR+CA).
 - [x] **Dark mode**: Disable — remove theme switcher.
-- [ ] **Newsletter page**: Decision deferred — do nothing for now.
-- [ ] **Contact Thanks page**: Needed — must be created in each language.
+- [x] **Newsletter page**: Not migrated (confirmed decision).
+- [x] **Contact Thanks page**: Created in all 4 languages.
 - [ ] **Analytics**: Source uses Google Analytics (`G-25NEQK4KKL`) + Umami. Confirm which to keep (deferred to Phase 5).
 
 ---
@@ -76,8 +76,9 @@ Map source `data/homepage.yml` blocks to Bigspring front matter structure. Servi
 
 ### 4.3 Contact page
 - [x] `content/spanish/contact.md` and all language variants written
-- [ ] Wire up un-static.com form action URL in `params.toml` (`contact_form_action`)
-- [ ] Create `contact-thanks.md` in each language (post-submission redirect)
+- [x] Wire up un-static.com form action URL in `params.toml` (`contact_form_action`)
+- [x] Create `contact-thanks.md` in each language (post-submission redirect)
+- [x] reCAPTCHA v2 integrated in contact layout override (`layouts/_default/contact.html`)
 
 ---
 
@@ -89,6 +90,7 @@ Map source `data/homepage.yml` blocks to Bigspring front matter structure. Servi
 - [ ] Header navigation CTA button label + URL ("Reserva sesión" → Brevo)
 - [ ] Language switcher: verify all 4 languages render correctly
 - [ ] Analytics: Google Analytics (`G-25NEQK4KKL`) + Umami
+- [ ] Cookiebot: classify reCAPTCHA as "necessary/functional" in dashboard so it isn't blocked by consent banner
 
 ---
 
@@ -96,7 +98,8 @@ Map source `data/homepage.yml` blocks to Bigspring front matter structure. Servi
 
 > Deferred — tackle after core content is in place.
 
-- [ ] Update `hugo.toml`: site title, description, base URL
+- [x] Update `hugo.toml`: `baseURL = "https://martaarpa.com"` (set; title/description still pending)
+- [ ] Update `hugo.toml`: site title, description
 - [ ] Update `params.toml`: metadata description, author, image
 - [ ] hreflang tags for ES/EN/FR/CA + x-default
 - [ ] Canonical URLs

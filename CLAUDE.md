@@ -43,12 +43,13 @@ assets/scss/custom.scss        # Minor SCSS overrides only
 Each language directory mirrors the same structure:
 
 ```
-_index.md        # Homepage (banner + features + service rows + CTA in front matter YAML)
-about.md         # About page (layout: about)
-contact.md       # Contact page (layout: contact)
+_index.md           # Homepage (banner + features + service rows + CTA in front matter YAML)
+about.md            # About page (layout: about)
+contact.md          # Contact page (layout: contact)
+contact-thanks.md   # Post-form redirect page (default single layout)
 blog/
-  _index.md      # Blog listing
-  *.md           # Blog posts (3 per language, 12 total)
+  _index.md         # Blog listing
+  *.md              # Blog posts (3 per language, 12 total)
 ```
 
 Spanish also has `privacy-policy.md` and `terms-conditions.md` (Lorem ipsum — not yet live).
@@ -107,6 +108,12 @@ Four theme/module partials are overridden in `layouts/partials/` — **do not de
 | `basic-seo.html` | Suppresses `<base>` tag when `hugo.IsServer` (was injecting `//localhost:PORT/`, breaking all relative URLs) |
 | `custom-script.html` | Injects Cookiebot CMP script as the first `<head>` script so it can block GA and other cookies until consent is given |
 
+One layout is overridden in `layouts/_default/`:
+
+| File | Why overridden |
+|---|---|
+| `contact.html` | Adds hidden `_redirect` field (language-aware thanks page via `absLangURL`), reCAPTCHA v2 widget, and reCAPTCHA API script |
+
 The root cause: Hugo dev server overrides `site.BaseURL` to `//localhost:PORT/` in templates, which breaks cross-device access. These overrides ensure all resource URLs are root-relative.
 
 ---
@@ -130,6 +137,7 @@ Colors and fonts are set in `hugo.toml` under `[params.variables]` and compiled 
 |---|---|---|
 | Nav CTA button | `config/_default/params.toml` | `navigation_button` |
 | Contact form URL | `config/_default/params.toml` | `contact_form_action` |
+| reCAPTCHA site key | `config/_default/params.toml` | `recaptcha_site_key` |
 | Google Analytics | `hugo.toml` | `[services.googleAnalytics].ID` |
 | Social links | `config/_default/params.toml` | `[params.social]` |
 | Logo path/size | `config/_default/params.toml` | `logo`, `logo_width` |
@@ -138,10 +146,9 @@ Colors and fonts are set in `hugo.toml` under `[params.variables]` and compiled 
 
 ## Pending work (from MIGRATION_PLAN.md)
 
-- [ ] Wire up contact form action URL (`contact_form_action` in params.toml)
-- [ ] Create `contact-thanks.md` in each language
 - [ ] Update favicon (`static/`)
 - [ ] Phase 5: Analytics — set GA ID `G-25NEQK4KKL` in `hugo.toml` under `[services.googleAnalytics].ID`; replace `[COOKIEBOT-ID]` in `layouts/partials/custom-script.html` with CBid from cookiebot.com (free plan); sticky CTA button
+- [ ] Cookiebot: classify reCAPTCHA as "necessary/functional" in the Cookiebot dashboard
 - [ ] Fill in `[PLACEHOLDER]` fields in `aviso-legal.md` and `cookie-policy.md` across all 4 languages
-- [ ] Phase 6: SEO — site metadata, Schema.org JSON-LD
-- [ ] Phase 8: QA — full build, link check, form test, mobile review
+- [ ] Phase 6: SEO — site title/description in `hugo.toml`, metadata in `params.toml`, Schema.org JSON-LD
+- [ ] Phase 8: QA — full build, link check, form test (end-to-end submit with reCAPTCHA), mobile review
