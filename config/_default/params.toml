@@ -28,7 +28,7 @@ google_tag_manager = "" # example: G-XXXXXXXXXX
 custom_script = ""
 # copyright
 theme_copyright = true
-copyright = "Copyright by your company"
+copyright = "© Marta Arpa"
 
 # preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
@@ -52,10 +52,10 @@ crisp_website_id = "9aa449e1-9999-422a-938f-8567982eec6d" # replace this code wi
 
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
-keywords = ["Hugo", "Themefisher", "Gethugothemes"]
-description = "This is meta description"
-author = "Gethugothemes"
-image = "images/logo.png"                           # this image will be used as fallback if a page has no image of its own
+keywords = ["coaching ejecutivo", "coaching personal", "consultoría del cambio", "gestión de proyectos", "Marta Arpa"]
+description = "Coaching ejecutivo y personal, consultoría del cambio y gestión de proyectos. Acompaño a personas y organizaciones hacia un impacto real."
+author = "Marta Arpa"
+image = "images/logo-ma.webp"                       # this image will be used as fallback if a page has no image of its own
 
 # matomo tracking: see https://matomo.org/
 # matomo tracking module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/matomo-analytics
@@ -98,26 +98,11 @@ enable = false
 
 ############################# social site ########################
 [[social]]
-title = "facebook"
-icon = "fab fa-facebook" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#!"
-
-[[social]]
-title = "twitter"
-icon = "fab fa-twitter" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#!"
+title = "linkedin"
+icon = "fab fa-linkedin"
+link = "https://www.linkedin.com/in/marta-arpa-moragrega/"
 
 [[social]]
 title = "instagram"
-icon = "fab fa-instagram" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#!"
-
-[[social]]
-title = "github"
-icon = "fab fa-github" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#!"
-
-[[social]]
-title = "linkedin"
-icon = "fab fa-linkedin" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#!"
+icon = "fab fa-instagram"
+link = "https://www.instagram.com/marta_arpa_coaching"

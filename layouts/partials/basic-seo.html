@@ -25,9 +25,7 @@
 
 
 <!-- meta canonical -->
-{{ with .Params.canonical }}
-  <link rel="canonical" href="{{ . }}" itemprop="url" />
-{{ end }}
+<link rel="canonical" href="{{ .Permalink }}" />
 
 
 <!-- multilingual SEO optimizations -->
@@ -35,7 +33,11 @@
   {{ range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
   {{ end }}
-  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+  {{ $xdefault := . }}
+  {{ range .AllTranslations }}
+    {{ if eq .Lang "es" }}{{ $xdefault = . }}{{ end }}
+  {{ end }}
+  <link rel="alternate" hreflang="x-default" href="{{ $xdefault.Permalink }}" />
 {{ end }}
 
 
@@ -167,4 +169,34 @@
 {{ end }}
 {{ with site.Params.metadata.author }}
   <meta name="twitter:creator" content="@{{ . }}" />
+{{ end }}
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Marta Arpa Coaching",
+  "url": "{{ site.BaseURL | strings.TrimRight "/" }}",
+  "logo": "{{ "images/logo-ma.webp" | absURL }}",
+  "sameAs": [
+    "https://www.linkedin.com/in/marta-arpa-moragrega/",
+    "https://www.instagram.com/marta_arpa_coaching"
+  ]
+}
+</script>
+{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "author": { "@type": "Person", "name": "Marta Arpa" },
+  "image": "{{ .Params.image | absURL }}",
+  "url": "{{ .Permalink }}",
+  "description": {{ (.Params.description | default .Summary) | jsonify }}
+}
+</script>
 {{ end }}

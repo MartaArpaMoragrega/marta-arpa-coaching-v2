@@ -100,12 +100,11 @@ Map source `data/homepage.yml` blocks to Bigspring front matter structure. Servi
 
 > Deferred — tackle after core content is in place.
 
-- [x] Update `hugo.toml`: `baseURL = "https://martaarpa.com"` (set; title/description still pending)
-- [ ] Update `hugo.toml`: site title, description
-- [ ] Update `params.toml`: metadata description, author, image
-- [ ] hreflang tags for ES/EN/FR/CA + x-default
-- [ ] Canonical URLs
-- [ ] Schema.org JSON-LD (Organization, BlogPosting)
+- [x] Update `hugo.toml`: `baseURL = "https://martaarpa.com"`
+- [x] Update `params.toml`: metadata description, author, image, keywords, copyright, social links
+- [x] hreflang tags for ES/EN/FR/CA + x-default (x-default fixed to always point to ES)
+- [x] Canonical URLs (auto-generated from `.Permalink`)
+- [x] Schema.org JSON-LD (Organization on all pages, BlogPosting on blog posts)
 
 ---
 

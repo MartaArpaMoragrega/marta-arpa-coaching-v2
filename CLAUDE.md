@@ -150,5 +150,5 @@ Colors and fonts are set in `hugo.toml` under `[params.variables]` and compiled 
 - [ ] Cookiebot: classify reCAPTCHA as "necessary/functional" in the Cookiebot dashboard
 - [ ] Analytics: Umami — decision pending (keep alongside GA or drop)
 - [ ] Fill in `[PLACEHOLDER]` fields in `aviso-legal.md` and `cookie-policy.md` across all 4 languages
-- [ ] Phase 6: SEO — site title/description in `hugo.toml`, metadata in `params.toml`, Schema.org JSON-LD
+- [x] Phase 6: SEO — metadata, canonical URLs, hreflang x-default fix, Schema.org JSON-LD (done)
 - [ ] Phase 8: QA — full build, link check, form test (end-to-end submit with reCAPTCHA), mobile review
