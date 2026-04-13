@@ -1,2 +1,4 @@
+{{ if not hugo.IsServer }}
 <!-- Cookiebot CMP — must be first script in <head> to block all others until consent -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="[COOKIEBOT-ID]" data-blockingmode="auto" type="text/javascript"></script>
+{{ end }}
