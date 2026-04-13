@@ -39,23 +39,38 @@
     z-index: 2;
   }
 
-  // On small screens: stack image below text, full width
+  // On small screens: text first, image below, full width
   @media (max-width: 991px) {
-    display: block;
-    padding: 60px 0 0;
+    display: flex;
+    flex-direction: column;
+    overflow: visible; // image is in-flow; overflow:hidden no longer needed
+    padding: 40px 0 0;
     min-height: auto;
 
+    .container {
+      order: 1;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
     .banner-image-wrap {
+      order: 2;
       position: relative;
       width: 100%;
-      height: 280px;
-      margin-top: 2rem;
+      height: 260px;
+      margin-top: 0;
 
+      // Fade bottom edge into the next section
       &::before {
-        background: linear-gradient(to bottom, white 0%, transparent 40%);
+        background: linear-gradient(to bottom, transparent 60%, white 100%);
       }
     }
   }
+}
+
+// Prevent long headings from being clipped by overflow:hidden parents
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
 // ── About page — profile image matches text column height ───────────────────
