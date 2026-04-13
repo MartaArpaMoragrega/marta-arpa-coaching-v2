@@ -48,7 +48,7 @@ Template colors, fonts, and design system are kept as-is (teal `#0AA8A7`, Lato, 
 
 - [x] Copy `logo-ma-bottom.webp` from source → `static/images/logo-ma.webp`
 - [x] Update `params.toml`: `logo`, `logo_webp`, `logo_width`, `logo_text`, `theme_switcher = false`
-- [ ] Update favicon in `static/`
+- [x] Update favicon — square MA mark generated from logo, placed in `assets/images/favicon.png` (auto-resized by Hugo to 48/96/144px)
 
 ---
 
@@ -115,7 +115,7 @@ Map source `data/homepage.yml` blocks to Bigspring front matter structure. Servi
 - [x] Profile photo (`images/about/marpa-profile-office.jpg`)
 - [x] Blog post banners (`images/posts/*/banner*.png`)
 - [x] Logo (`images/logo-ma.webp`)
-- [ ] Update favicon in `static/`
+- [x] Update favicon — square MA mark generated from logo, placed in `assets/images/favicon.png` (auto-resized by Hugo to 48/96/144px)
 
 ---
 
