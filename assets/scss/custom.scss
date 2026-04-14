@@ -109,3 +109,67 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20px;
   overflow: hidden;
 }
+
+// ── Contact page ─────────────────────────────────────────────────────────────
+
+.contact-steps-heading {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: $text-light;
+  margin: 0;
+}
+
+.contact-step {
+  gap: 1rem;
+  padding: 0.75rem 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.contact-step-number {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $color-primary;
+  line-height: 1.4;
+  min-width: 2rem;
+  flex-shrink: 0;
+}
+
+.contact-step-title {
+  font-weight: 600;
+  color: $text-dark;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.contact-step-text {
+  font-size: 0.85rem;
+  color: $text-light;
+}
+
+.contact-form-card {
+  background-color: $light;
+}
+
+.contact-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba($color-primary, 0.08);
+  color: $color-primary;
+  font-size: 18px;
+  transition: 0.2s ease;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $white;
+  }
+}

@@ -18,3 +18,15 @@
 
 - id: message
   translation: Message
+
+- id: book_session
+  translation: "Book a free session"
+
+- id: book_session_subtitle
+  translation: "30 minutes · No commitment"
+
+- id: or_write
+  translation: "Or write to me directly"
+
+- id: message_placeholder
+  translation: "How can I help you?"

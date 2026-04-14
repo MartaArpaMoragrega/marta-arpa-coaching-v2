@@ -4,35 +4,71 @@
 
 <section class="section">
   <div class="container">
-    <div class="row gy-5">
-      <div class="col-lg-6">
-        <div class="content">{{ .Content }}</div>
+    <div class="row gy-5 align-items-start">
+
+      <!-- Left: portrait + intro + booking CTA + social links -->
+      <div class="col-lg-5">
+
+        <div class="content mb-4">{{ .Content }}</div>
+
+        {{ with .Params.steps }}
+        <div class="contact-steps mb-4">
+          <p class="contact-steps-heading mb-3">{{ .heading }}</p>
+          {{ range .items }}
+          <div class="contact-step d-flex align-items-start">
+            <span class="contact-step-number">{{ .number }}</span>
+            <div>
+              <p class="contact-step-title mb-0">{{ .title }}</p>
+              <p class="contact-step-text mb-0">{{ .text }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        <a href="{{ site.Params.navigation_button.link | safeURL }}" class="btn btn-primary w-100 mb-2" target="_blank" rel="noopener noreferrer">{{ i18n "book_session" }}</a>
+        <p class="text-muted small text-center mb-4">{{ i18n "book_session_subtitle" }}</p>
+
+        <div class="contact-social d-flex gap-3">
+          {{ range site.Params.social }}
+          <a href="{{ .link | safeURL }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer" class="contact-social-link">
+            <i class="{{ .icon }}"></i>
+          </a>
+          {{ end }}
+        </div>
+
       </div>
-      <div class="col-lg-6">
-        <form method="POST" class="row g-4" action="{{site.Params.contact_form_action | safeURL}}">
-          <input type="hidden" name="_redirect" value="{{ absLangURL "contact-thanks/" }}">
-          <div class="col-lg-6">
-            <label class="mb-1" for="fname">{{ i18n "fname"}} <span class="text-danger">*</span></label>
-            <input class="form-control shadow-none" type="text" name="first_name" placeholder="{{ i18n `fname`}}" required>
-          </div>
-          <div class="col-lg-6">
-            <label class="mb-1" for="fname">{{ i18n "lname"}} <span class="text-danger">*</span></label>
-            <input class="form-control shadow-none" type="text" name="last_name" placeholder="{{ i18n `lname`}}" required>
-          </div>
-          <div class="col-lg-12">
-            <label class="mb-1" for="email">{{i18n "email"}} <span class="text-danger">*</span></label>
-            <input class="form-control shadow-none" type="email" name="email_address" placeholder="{{i18n `email`}}" required>
-          </div>
-          <div class="col-lg-12">
-            <label class="mb-1" for="email">{{i18n "message"}}</label>
-            <textarea class="form-control shadow-none" name="message" rows="4" placeholder="{{i18n `message`}}"></textarea>
-          </div>
-          <div class="col-lg-12">
-            <div class="g-recaptcha mb-3" data-sitekey="{{ site.Params.recaptcha_site_key }}"></div>
-            <button class="btn btn-primary btn-sm mt-2" type="submit">{{ i18n "send"}}</button>
-          </div>
-        </form>
+
+      <!-- Right: form in a card -->
+      <div class="col-lg-7">
+        <div class="contact-form-card rounded p-4 p-lg-5">
+          <h5 class="mb-4">{{ i18n "or_write" }}</h5>
+          <form method="POST" class="row g-4" action="{{site.Params.contact_form_action | safeURL}}">
+            <input type="hidden" name="_redirect" value="{{ absLangURL "contact-thanks/" }}">
+            <div class="col-sm-6">
+              <label class="mb-1">{{ i18n "fname"}} <span class="text-danger">*</span></label>
+              <input class="form-control shadow-none" type="text" name="first_name" placeholder="{{ i18n `fname`}}" required>
+            </div>
+            <div class="col-sm-6">
+              <label class="mb-1">{{ i18n "lname"}} <span class="text-danger">*</span></label>
+              <input class="form-control shadow-none" type="text" name="last_name" placeholder="{{ i18n `lname`}}" required>
+            </div>
+            <div class="col-12">
+              <label class="mb-1">{{i18n "email"}} <span class="text-danger">*</span></label>
+              <input class="form-control shadow-none" type="email" name="email_address" placeholder="{{i18n `email`}}" required>
+            </div>
+            <div class="col-12">
+              <label class="mb-1">{{i18n "message"}}</label>
+              <textarea class="form-control shadow-none" name="message" rows="4" placeholder="{{i18n `message_placeholder`}}"></textarea>
+            </div>
+            <div class="col-12">
+              <div class="g-recaptcha mb-3" data-sitekey="{{ site.Params.recaptcha_site_key }}"></div>
+              <button class="btn btn-primary w-100" type="submit">{{ i18n "send"}}</button>
+            </div>
+          </form>
+        </div>
       </div>
+
     </div>
   </div>
 </section>

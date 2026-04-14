@@ -18,3 +18,15 @@
 
 - id: message
   translation: Missatge
+
+- id: book_session
+  translation: "Reserva una sessió gratuïta"
+
+- id: book_session_subtitle
+  translation: "30 minuts · Sense compromís"
+
+- id: or_write
+  translation: "O escriu-me directament"
+
+- id: message_placeholder
+  translation: "En què et puc ajudar?"

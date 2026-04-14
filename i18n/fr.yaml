@@ -18,3 +18,15 @@
 
 - id: message
   translation: Message
+
+- id: book_session
+  translation: "Réserver une séance gratuite"
+
+- id: book_session_subtitle
+  translation: "30 minutes · Sans engagement"
+
+- id: or_write
+  translation: "Ou écrivez-moi directement"
+
+- id: message_placeholder
+  translation: "Comment puis-je vous aider ?"
