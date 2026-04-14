@@ -4,7 +4,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
       <!-- navbar brand/logo -->
-      <a class="navbar-brand" href="{{ "/" | relLangURL }}">
+      <a class="navbar-brand" href="{{ site.Home.RelPermalink }}">
         {{ partial "logo.html" }}
       </a>
       <button class="navbar-toggler border-0" type="button">
@@ -21,13 +21,13 @@
             </a>
             <div class="dropdown-menu">
               {{ range .Children }}
-              <a class="dropdown-item" href="{{ .URL | relLangURL }}" title="{{ .Name }}">{{ .Name }}</a>
+              <a class="dropdown-item" href="{{ .URL | relURL }}" title="{{ .Name }}">{{ .Name }}</a>
               {{ end }}
             </div>
           </li>
           {{ else }}
           <li class="nav-item">
-            <a class="nav-link" href="{{ .URL | relLangURL }}" title="{{ .Name }}">{{ .Name }}</a>
+            <a class="nav-link" href="{{ .URL | relURL }}" title="{{ .Name }}">{{ .Name }}</a>
           </li>
           {{ end }}
           {{ end }}
@@ -57,7 +57,7 @@
 
         {{ if site.Params.navigation_button.enable }}
         {{ with site.Params.navigation_button }}
-        <a href="{{ .link | relLangURL }}" title="{{ .label }}" class="btn btn-sm btn-primary ml-3">{{ .label }}</a>
+        <a href="{{ .link | relURL }}" title="{{ .label }}" class="btn btn-sm btn-primary ml-3">{{ .label }}</a>
         {{ end }}
         {{ end }}
       </div>
