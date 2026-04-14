@@ -5,7 +5,7 @@ url = "/en/"
 weight = 1
 
 [[main]]
-name = "About"
+name = "About Me"
 url = "/en/about"
 weight = 3
 
@@ -25,7 +25,7 @@ name = "Blog"
 url = "/en/blog"
 
 [[footer_middle]]
-name = "About"
+name = "About Me"
 url = "/en/about"
 
 # footer menu right (Legal)
