@@ -29,14 +29,6 @@
         <a href="{{ site.Params.navigation_button.link | safeURL }}" class="btn btn-primary w-100 mb-2" target="_blank" rel="noopener noreferrer">{{ i18n "book_session" }}</a>
         <p class="text-muted small text-center mb-4">{{ i18n "book_session_subtitle" }}</p>
 
-        <div class="contact-social d-flex gap-3">
-          {{ range site.Params.social }}
-          <a href="{{ .link | safeURL }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer" class="contact-social-link">
-            <i class="{{ .icon }}"></i>
-          </a>
-          {{ end }}
-        </div>
-
       </div>
 
       <!-- Right: form in a card -->

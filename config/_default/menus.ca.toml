@@ -28,6 +28,10 @@ url = "/ca/blog"
 name = "Sobre mi"
 url = "/ca/about"
 
+[[footer_middle]]
+name = "Contacte"
+url = "/ca/contact"
+
 # footer menu right (Legal)
 [[footer_right]]
 name = "Avís Legal"
