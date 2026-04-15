@@ -266,19 +266,105 @@ This is a content/asset task, not a code task. The deliverable is two new PNG fi
 ### D-06 · Improve form field styling and interaction states
 **Status:** `[ ]`
 
-**Problem:** The contact form uses Bootstrap's `shadow-none` utility, stripping the only default visual feedback from input focus. There are no documented focus ring, hover, or error states in `custom.scss`. On a high-stakes contact form (the conversion endpoint of the entire site), invisible interaction states are a UX liability.
+**Current state — what the form actually does:**
 
-**Why it matters:** A form that doesn't respond to input makes users unsure whether it's working. This is especially damaging on mobile where fat-finger errors are common and clear error states are the only recovery path.
+Every input and textarea in `contact.html` carries `class="form-control shadow-none"`. Bootstrap's `.form-control` has a built-in focus style: the border shifts to `#86b7fe` (a blue) and a blue glow ring appears via `box-shadow`. The `shadow-none` utility sets `box-shadow: none !important`, killing the glow ring. The border-color shift to blue still fires — but it's a generic Bootstrap blue with no relationship to the site's teal brand.
 
-**Proposed change:**
-- Add to `custom.scss`:
-  - Focus state: `border-color: #0AA8A7; box-shadow: 0 0 0 3px rgba(10,168,167,0.15);` on all `input:focus` and `textarea:focus`.
-  - Hover state: subtle `border-color` shift on hover before focus.
-  - Invalid state: red border + short error message support (Bootstrap `.is-invalid` is already available, just needs visual confirmation it works with the current overrides).
-- Review reCAPTCHA v2 widget container — it renders with a fixed Google iframe that may overflow on very narrow screens. Add `max-width: 100%; overflow: hidden;` to its wrapper if needed.
-- Submit button: ensure the loading/disabled state has a visible style difference (opacity drop is sufficient, but must be explicit).
+The net result: focusing a field produces a faint blue border change. No ring, no teal, no confirmation that the input is active. On mobile, where the virtual keyboard covers most of the screen, that small blue border is often not visible at all.
 
-**Files to touch:** `assets/scss/custom.scss`, `layouts/_default/contact.html`
+There are no hover states, no explicit `.is-invalid` styles, and no disabled/loading state on the submit button.
+
+---
+
+**The four things to fix, in order of impact:**
+
+#### Fix 1 — Replace Bootstrap's blue focus with a teal ring
+
+Bootstrap's focus overrides live in `_forms.scss` via CSS custom properties. The cleanest override for our setup is to target `.form-control` directly:
+
+```scss
+// ── Contact form — interaction states ────────────────────────────────────────
+.contact-form-card {
+  .form-control {
+    &:hover:not(:focus) {
+      border-color: darken(#ced4da, 10%); // subtle warm-up before focus
+    }
+    &:focus {
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+      outline: none;
+    }
+  }
+}
+```
+
+Scoping to `.contact-form-card` ensures this doesn't bleed into any other Bootstrap form controls that might exist elsewhere in the theme.
+
+The `rgba($color-primary, 0.15)` glow is soft enough not to overwhelm the pale-teal card background while still being clearly visible. The hover state (`darken(#ced4da, 10%)` ≈ `#b0b8c1`) gives a one-step transition: neutral → darker border on hover → teal border + ring on focus.
+
+#### Fix 2 — Validate that `.is-invalid` works with our overrides
+
+Bootstrap's `.is-invalid` adds a red border and a small warning icon via `background-image`. Our `shadow-none` strips the focus glow on invalid fields too, which means a field that fails HTML5 validation (e.g. submitting with empty `required` fields or a malformed email) gets a red border but no ring — inconsistent with the valid focus treatment.
+
+Add an explicit invalid focus state:
+```scss
+.contact-form-card {
+  .form-control {
+    &.is-invalid:focus,
+    &:invalid:focus {
+      border-color: #dc3545;
+      box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+    }
+  }
+}
+```
+
+Note: the `required` fields on this form rely on native browser validation, which only triggers on submit — not inline as the user types. This is acceptable behavior and no change to the form HTML is needed.
+
+#### Fix 3 — Submit button disabled state
+
+The submit button (`btn btn-primary w-100`) has no explicit disabled styling. Bootstrap's `.btn:disabled` does add `opacity: 0.65` by default, which is adequate — but it only applies if the button carries the `disabled` attribute or `.disabled` class. Neither is added anywhere. Since this is a static form (no JS intercepting the submit), the browser handles submission natively and the button doesn't need a JS-managed disabled state.
+
+However: add an explicit `cursor` rule so that if the reCAPTCHA challenge isn't completed, the button gives tactile feedback:
+```scss
+.contact-form-card {
+  .btn[type="submit"] {
+    transition: opacity 0.15s ease;
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+```
+
+#### Fix 4 — reCAPTCHA overflow on narrow screens
+
+Google's reCAPTCHA v2 widget renders a fixed-width iframe — 304px wide minimum, 78px tall. On screens below 320px (older small phones) or when the form column is constrained, this overflows its container with no scrollbar, causing horizontal page overflow.
+
+The fix is a CSS transform scale approach scoped to the reCAPTCHA container:
+```scss
+.g-recaptcha {
+  @media (max-width: 360px) {
+    transform: scale(0.85);
+    transform-origin: 0 0;
+  }
+}
+```
+
+This shrinks the widget to ~258px at the origin point, fitting within any reasonable phone viewport without affecting the widget's function. No changes to `contact.html` needed.
+
+---
+
+**Implementation summary — all changes go in `assets/scss/custom.scss`, appended to the existing contact page block:**
+
+1. Scoped `.form-control` hover + focus states (teal ring, teal border)
+2. Scoped `.is-invalid:focus` state (red ring)
+3. Submit button `cursor: not-allowed` on `:disabled`
+4. reCAPTCHA scale at `max-width: 360px`
+
+No changes needed to `contact.html` — this is entirely CSS.
+
+**Files to touch:** `assets/scss/custom.scss`
 
 ---
 
