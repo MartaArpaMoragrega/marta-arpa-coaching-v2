@@ -181,7 +181,7 @@ Issues that a visitor may not consciously name but that accumulate into a "somet
 ---
 
 ### D-04 · Unify the icon system
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Problem:** The six feature cards on the homepage use Font Awesome icons from different semantic families (briefcase, users, bullseye, sync, lightbulb, route). The three philosophy cards on the About page use a completely different selection (comments, chart-line, gem). There's no visual thread connecting them.
 

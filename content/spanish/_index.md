@@ -14,7 +14,7 @@ feature:
   title: "Donde puedo aportar"
   feature_item:
     - name: "Coaching Ejecutivo"
-      icon: "fas fa-briefcase"
+      icon: "fas fa-handshake"
       content: "Empoderar a líderes y equipos para maximizar su rendimiento y alcanzar objetivos estratégicos."
 
     - name: "Talleres personalizados"
@@ -26,7 +26,7 @@ feature:
       content: "Micro-talleres prácticos y directos que activan la concentración, la claridad y la acción en poco tiempo."
 
     - name: "Consultoría del Cambio"
-      icon: "fas fa-sync-alt"
+      icon: "fas fa-arrow-trend-up"
       content: "Facilitar transformaciones organizativas a través de estrategias personalizadas. Gestión de proyectos y del cambio."
 
     - name: "Liderazgo Positivo"
@@ -34,7 +34,7 @@ feature:
       content: "Aprende a liderar con claridad, coherencia y responsabilidad compartida para generar equipos comprometidos."
 
     - name: "Plan de Carrera"
-      icon: "fas fa-route"
+      icon: "fas fa-map"
       content: "Te ayudo a definir, planificar y avanzar con claridad hacia tus objetivos profesionales alineados con tu propósito y talento."
 
 ######################### Service #####################

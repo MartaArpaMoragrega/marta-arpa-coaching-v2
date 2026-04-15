@@ -14,7 +14,7 @@ feature:
   title: "Où je peux contribuer"
   feature_item:
     - name: "Coaching Exécutif"
-      icon: "fas fa-briefcase"
+      icon: "fas fa-handshake"
       content: "Autonomiser les leaders et les équipes pour maximiser leur performance et atteindre leurs objectifs stratégiques."
 
     - name: "Ateliers Personnalisés"
@@ -26,7 +26,7 @@ feature:
       content: "Micro-ateliers pratiques et directs qui activent la concentration, la clarté et l'action en peu de temps."
 
     - name: "Conseil en Changement"
-      icon: "fas fa-sync-alt"
+      icon: "fas fa-arrow-trend-up"
       content: "Faciliter les transformations organisationnelles grâce à des stratégies personnalisées. Gestion de projets et du changement."
 
     - name: "Leadership Positif"
@@ -34,7 +34,7 @@ feature:
       content: "Apprenez à diriger avec clarté, cohérence et responsabilité partagée pour construire des équipes engagées."
 
     - name: "Plan de Carrière"
-      icon: "fas fa-route"
+      icon: "fas fa-map"
       content: "Je t'aide à définir, planifier et avancer avec clarté vers tes objectifs professionnels alignés avec ta mission et ton talent."
 
 ######################### Service #####################

@@ -14,7 +14,7 @@ feature:
   title: "Where I can contribute"
   feature_item:
     - name: "Executive Coaching"
-      icon: "fas fa-briefcase"
+      icon: "fas fa-handshake"
       content: "Empower leaders and teams to maximize performance and achieve strategic goals."
 
     - name: "Tailored Workshops"
@@ -26,7 +26,7 @@ feature:
       content: "Practical and direct micro-workshops that activate concentration, clarity and action in a short time."
 
     - name: "Change Consulting"
-      icon: "fas fa-sync-alt"
+      icon: "fas fa-arrow-trend-up"
       content: "Facilitate organizational transformations through tailored strategies. Project and change management."
 
     - name: "Positive Leadership"
@@ -34,7 +34,7 @@ feature:
       content: "Learn to lead with clarity, coherence and shared responsibility to build committed teams."
 
     - name: "Career Plan"
-      icon: "fas fa-route"
+      icon: "fas fa-map"
       content: "I help you define, plan, and move forward with clarity towards your professional goals aligned with your purpose and talent."
 
 ######################### Service #####################

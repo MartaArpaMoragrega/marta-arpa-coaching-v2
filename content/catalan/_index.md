@@ -14,7 +14,7 @@ feature:
   title: "On puc aportar"
   feature_item:
     - name: "Coaching Executiu"
-      icon: "fas fa-briefcase"
+      icon: "fas fa-handshake"
       content: "Empoderar líders i equips per maximitzar el seu rendiment i assolir objectius estratègics."
 
     - name: "Tallers Personalitzats"
@@ -26,7 +26,7 @@ feature:
       content: "Micro-tallers pràctics i directes que activen la concentració, la claredat i l'acció en poc temps."
 
     - name: "Consultoria del Canvi"
-      icon: "fas fa-sync-alt"
+      icon: "fas fa-arrow-trend-up"
       content: "Facilitar transformacions organitzatives amb estratègies personalitzades. Gestió de projectes i del canvi."
 
     - name: "Lideratge Positiu"
@@ -34,7 +34,7 @@ feature:
       content: "Aprèn a liderar amb claredat, coherència i responsabilitat compartida per generar equips compromesos."
 
     - name: "Pla de Carrera"
-      icon: "fas fa-route"
+      icon: "fas fa-map"
       content: "T'ajudo a definir, planificar i avançar amb claredat cap als teus objectius professionals alineats amb el teu propòsit i talent."
 
 ######################### Service #####################

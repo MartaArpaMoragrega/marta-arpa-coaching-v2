@@ -153,10 +153,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // ── About page — philosophy icons ───────────────────────────────────────────
-// .feature-card i forces color: $color-primary (teal), which makes icons
-// invisible inside the .bg-primary teal circle. Override to white.
-.feature-card .bg-primary i {
-  color: #fff;
+.philosophy-icon {
+  font-size: 2rem;
+  color: $color-primary;
 }
 
 // ── Service rows — image container ──────────────────────────────────────────
