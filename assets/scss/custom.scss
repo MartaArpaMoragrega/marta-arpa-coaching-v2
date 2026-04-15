@@ -89,6 +89,17 @@
       }
     }
   }
+
+  // Tablet: taller image and more breathing room above the text
+  @media (min-width: 576px) and (max-width: 991px) {
+    .container {
+      padding-top: 2.5rem;
+      padding-bottom: 2rem;
+    }
+    .banner-image-wrap {
+      height: 380px;
+    }
+  }
 }
 
 // Prevent long headings from being clipped by overflow:hidden parents
@@ -122,6 +133,18 @@ h1, h2, h3, h4, h5, h6 {
   }
   .about-profile-img {
     max-width: 220px;
+  }
+}
+
+// ── Profile images — tablet intermediate sizes ────────────────────────────────
+@media (min-width: 576px) and (max-width: 991px) {
+  .about-profile-img {
+    max-width: 280px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .cta-profile-img {
+    max-height: 320px;
   }
 }
 

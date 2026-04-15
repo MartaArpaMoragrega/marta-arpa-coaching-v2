@@ -56,18 +56,119 @@ Add a comment above the `navigation_button` block in `params.toml` making clear 
 ---
 
 ### D-03 · Fix the mid-range (tablet) layout gap
-**Status:** `[ ]`
+**Status:** `[x]`
 
-**Problem:** The custom CSS has two effective breakpoints — mobile (<576px) and desktop (≥992px). The 576–991px band (tablets, large phones in landscape, small laptops) receives neither treatment. The banner image drops to 260px height as if it were a phone, but the viewport is wide enough for a richer layout.
+**Problem:** `custom.scss` has four media query blocks. Their effective coverage is:
 
-**Why it matters:** A significant share of coaching-service visitors browse on iPad or a 13" laptop. A layout that looks neither mobile nor desktop at those sizes reads as unfinished and undermines perceived quality.
+| Block | Range covered | What it controls |
+|---|---|---|
+| `max-width: 575.98px` | phones only | logo max-width |
+| `max-width: 991.98px` | phones + tablets | nav collapse centering |
+| `max-width: 991px` (inside `.banner`) | phones + tablets | banner stacking + image height |
+| `max-width: 767.98px` | phones + small tablets | profile image caps |
 
-**Proposed change:**
-- Audit every custom media query block in `custom.scss` and introduce an explicit `@media (min-width: 576px) and (max-width: 991px)` tablet tier.
-- Banner: increase image height to ~360px, keep text-first stacking but give it more breathing room.
-- About page profile image: intermediate max-width (~300px) between the current 220px mobile and 380px desktop cap.
-- CTA section: profile image should scale proportionally, not jump from 260px phone to full-size desktop.
-- Service image containers: test the 20px border radius on tablet — may need to scale down to 12px to avoid clipping on narrower renders.
+The result: everything between 576px and 991px — iPad Mini (768px), iPad Air (820px), iPad Pro (1024px in portrait), every 13" laptop running a split view — falls into the mobile banner path. The banner image is capped at **260px** at 900px viewport width. That is the same height as a 375px phone. Proportionally, it occupies 29% of the viewport height on a 900px screen vs. 69% on a phone. The section looks deflated.
+
+**Why it matters:** Coaching is sold to professionals. A meaningful share of them will first encounter this site on an iPad or a work laptop in a non-maximised window. A banner that looks correctly sized on a phone and on a 1200px desktop but visibly underpowered at 800px signals that nobody tested it — which reflects on the care taken in the work being sold.
+
+---
+
+**The three areas that need explicit tablet treatment:**
+
+#### Area 1 — Banner image height
+
+Current state: inside `.banner { @media (max-width: 991px) }`, the image wrapper is:
+```scss
+.banner-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 260px;    // ← same at 375px and 900px
+  ...
+}
+```
+
+Fix: split the existing mobile block into two. Keep 260px for true phones, increase to 380px for tablets:
+```scss
+// phones
+@media (max-width: 575.98px) {
+  .banner-image-wrap { height: 260px; }
+}
+// tablets
+@media (min-width: 576px) and (max-width: 991px) {
+  .banner-image-wrap { height: 380px; }
+}
+```
+Also increase the banner top padding slightly in the tablet range to give the text column more air before the image starts:
+```scss
+@media (min-width: 576px) and (max-width: 991px) {
+  .banner .container { padding-top: 2.5rem; padding-bottom: 2rem; }
+}
+```
+
+#### Area 2 — About page profile image
+
+Current state:
+```scss
+// global (no breakpoint)
+.about-profile-img {
+  max-height: 380px;
+  max-width: 100%;
+}
+
+// mobile only
+@media (max-width: 767.98px) {
+  .about-profile-img { max-width: 220px; }
+}
+```
+
+The layout uses `col-8 col-sm-6 col-lg-4`. At 576–767px the image is in a `col-sm-6` (50% width). At 768–991px the column is still `col-sm-6` because `col-lg-4` only kicks in at 992px. So throughout the entire tablet range, the image column is 50% of viewport width — up to ~495px wide on a 991px screen.
+
+The `max-height: 380px` global rule caps height. But there is no `max-width` cap in the 576–991px band. On a 900px screen, the image could render up to 450px wide. Combined with the `max-height: 380px`, a landscape-ish photo would be fine, but a portrait photo would be constrained by height first, leaving horizontal whitespace on either side.
+
+More importantly: the jump from `max-width: 220px` (at 767px) to unconstrained (at 768px) is a 230px width change across a 1px breakpoint. While users don't resize browsers this way, it signals the CSS was written reactively rather than designed as a system.
+
+Fix: add a tablet-specific cap that bridges the gap:
+```scss
+@media (min-width: 576px) and (max-width: 991px) {
+  .about-profile-img { max-width: 280px; }
+}
+```
+
+#### Area 3 — CTA profile image
+
+Current state:
+```scss
+@media (max-width: 767.98px) {
+  .cta-profile-img {
+    max-width: 260px !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+```
+
+The CTA layout (`col-lg-4 col-md-5`) places the image in a `col-md-5` column from 768px upward — that's 41.67% of viewport, so ~320px at 768px and ~413px at 991px. For a portrait photo, `img-fluid w-100` fills this width with no height constraint, which at 413px could mean a very tall image on the right side of the CTA section.
+
+On a 768-991px screen the layout is two-column (Bootstrap's `md` breakpoint activates both `col-md-5` and `col-md-6`), so the image and text are side by side — this is actually fine and is the intended layout. The problem is purely the height: without a `max-height`, a tall portrait photo in the CTA section will make the section abnormally tall on tablets.
+
+Fix: add a `max-height` constraint for the tablet range only:
+```scss
+@media (min-width: 768px) and (max-width: 991px) {
+  .cta-profile-img { max-height: 320px; }
+}
+```
+
+---
+
+**Implementation summary — exact changes to `assets/scss/custom.scss`:**
+
+1. Split the single `max-width: 991px` block inside `.banner` into a phone block (`max-width: 575.98px`) and a tablet block (`min-width: 576px) and (max-width: 991px)`).
+2. In the tablet banner block: `height: 380px` for the image, slightly increased `.container` padding.
+3. Add `@media (min-width: 576px) and (max-width: 991px)` block with `max-width: 280px` for `.about-profile-img`.
+4. Add `@media (min-width: 768px) and (max-width: 991px)` block with `max-height: 320px` for `.cta-profile-img`.
+
+No layout file changes needed — this is entirely a CSS concern.
 
 **Files to touch:** `assets/scss/custom.scss`
 
