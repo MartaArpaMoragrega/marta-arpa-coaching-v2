@@ -1,3 +1,11 @@
+// ── Logo — scale down on mobile ───────────────────────────────────────────────
+@media (max-width: 575.98px) {
+  .navbar-brand img,
+  footer .img {
+    max-width: 120px;
+  }
+}
+
 // ── Mobile nav CTA button — center on small screens ─────────────────────────
 @media (max-width: 991.98px) {
   .navigation .navbar-collapse {
