@@ -2,7 +2,7 @@
 
 Critical look at the site as it stands today. Each item includes a clear justification — the *why* matters as much as the *what*, so nothing here is done for its own sake.
 
-Status legend: `[ ]` = not started · `[~]` = in progress · `[x]` = done
+Status legend: `[ ]` = not started · `[~]` = in progress · `[x]` = done · `[?]` = pending decision / content input needed
 
 ---
 
@@ -264,7 +264,7 @@ This is a content/asset task, not a code task. The deliverable is two new PNG fi
 ---
 
 ### D-06 · Improve form field styling and interaction states
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Current state — what the form actually does:**
 
@@ -365,6 +365,26 @@ This shrinks the widget to ~258px at the origin point, fitting within any reason
 No changes needed to `contact.html` — this is entirely CSS.
 
 **Files to touch:** `assets/scss/custom.scss`
+
+**Additional work done beyond original scope (during implementation):**
+- Button hierarchy: booking CTA (`btn-primary`) vs. form submit (`btn-outline-primary w-100`)
+- Two-line booking button with `.btn-caption` qualifier line inside ("30 min · Sin compromiso")
+- Label `for`/input `id` pairs added to all form fields
+- `autocomplete` attributes added (`given-name`, `family-name`, `email`)
+- Inline button styles extracted to `.btn-caption` SCSS class
+
+---
+
+### C-01 · Contact page step 3 logic — content decision needed
+**Status:** `[?]`
+
+**Issue:** The "¿Qué pasa después?" steps list describes the form path: write → I respond → we talk. Step 3 reads *"Hablamos / Acordamos una sesión gratuita para conocernos."* — but the booking button on the same page already skips directly to that outcome, bypassing steps 1 and 2.
+
+A visitor reading the page top-to-bottom sees: intro → steps (what happens after you write?) → booking CTA. The steps feel like they belong to the form path, but they sit above the booking button in the reading order, which creates a mild logic loop.
+
+**Decision needed from Marta:** Should step 3 be reworded to reflect only the form outcome (e.g., *"Te propongo una sesión para conocernos"*)? Or should the steps heading be reframed to cover both paths (e.g., *"¿Cómo funciona?"*)? No code change until the copy direction is agreed.
+
+**Files to touch:** `content/{spanish,english,french,catalan}/contact.md` (copy change only)
 
 ---
 
