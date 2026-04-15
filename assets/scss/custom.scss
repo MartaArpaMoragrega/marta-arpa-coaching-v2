@@ -112,6 +112,19 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
+// ── Profile images — cap size on mobile ──────────────────────────────────────
+@media (max-width: 767.98px) {
+  .cta-profile-img {
+    max-width: 260px !important; // overrides Bootstrap img-fluid's max-width: 100% !important
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-profile-img {
+    max-width: 220px;
+  }
+}
+
 .feature-card div.mb-3 {
   text-align: justify !important;
 }
