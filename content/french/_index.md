@@ -7,7 +7,6 @@ banner:
   button:
     enable: true
     label: "Réservez ici"
-    link: "https://meet.brevo.com/marta-arpa/sesion-gratuita-"
 
 ##################### Feature ##########################
 feature:
@@ -93,5 +92,4 @@ call_to_action:
   button:
     enable: true
     label: "Réserver une séance gratuite"
-    link: "https://meet.brevo.com/marta-arpa/sesion-gratuita-"
 ---

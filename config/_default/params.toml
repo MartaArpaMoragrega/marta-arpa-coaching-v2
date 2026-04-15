@@ -36,7 +36,9 @@ copyright = "© Marta Arpa"
 enable = true
 preloader = "" # use jpg, png, svg or gif format. example - "images/preloader.gif"
 
-# Navigation buttons
+# Navigation button — also the single source for ALL booking CTAs on the site:
+# homepage banner button, homepage call-to-action button, and contact page booking link.
+# Change the link here and it updates everywhere automatically.
 [navigation_button]
 enable = true
 label = "Sesión gratuita"

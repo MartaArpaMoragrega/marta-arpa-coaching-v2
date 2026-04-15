@@ -135,7 +135,8 @@ Colors and fonts are set in `hugo.toml` under `[params.variables]` and compiled 
 
 | Setting | File | Key |
 |---|---|---|
-| Nav CTA button | `config/_default/params.toml` | `navigation_button` |
+| Booking URL — **all CTAs site-wide** (nav button, banner, homepage CTA, contact page) | `config/_default/params.toml` | `navigation_button.link` |
+| Nav CTA button label | `config/_default/params.toml` | `navigation_button.label` |
 | Contact form URL | `config/_default/params.toml` | `contact_form_action` |
 | reCAPTCHA site key | `config/_default/params.toml` | `recaptcha_site_key` |
 | Google Analytics | `hugo.toml` | `[services.googleAnalytics].ID` |
