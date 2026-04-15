@@ -391,15 +391,107 @@ A visitor reading the page top-to-bottom sees: intro → steps (what happens aft
 ### D-07 · Style the language selector
 **Status:** `[ ]`
 
-**Problem:** The language switcher is a raw HTML `<select>` element with no custom styling. On every browser and OS it renders differently — a system-native dropdown that looks entirely unlike the rest of the site's UI.
+**Current state:**
 
-**Why it matters:** The language selector is visible on every page, on every device. A native `<select>` in an otherwise polished header signals that the site was assembled rather than designed.
+```html
+<select class="m-2 border-0" id="select-language" onchange="location = this.value;">
+  <option value="/...">Español</option>
+  <option value="/en/..." selected>English</option>
+  ...
+</select>
+```
 
-**Proposed change:**
-- Replace `<select>` with a CSS-only custom dropdown (no JS dependency): hidden `<select>` + styled label overlay, or a `<details>`/`<summary>` pattern that degrades cleanly.
-- Visual spec: same height as the nav CTA button, no background fill, border `1px solid #ECECEC`, globe icon prefix (Font Awesome `fa-globe`), current language code displayed (ES / EN / FR / CA).
-- Mobile: collapses into the centered nav column, same as the CTA button.
-- Fallback: the hidden `<select>` remains fully functional for accessibility (keyboard nav, screen readers).
+`border-0` removes the only styling; the rest is entirely OS-native. The font is the browser default (not Lato), the arrow is the system chevron, and on mobile iOS it renders as a full-screen picker sheet. It looks completely disconnected from the nav around it.
+
+**Why it matters:** The language selector appears in the header on every page in every language. It's one of the most frequently seen elements on the site. A native `<select>` in an otherwise composed header signals that the site was assembled rather than designed.
+
+---
+
+**Approach: style the `<select>` directly, do not replace it**
+
+A fully custom JS dropdown would be more styleable but adds JavaScript, requires ARIA roles, needs keyboard handling, and is fragile. The `<details>`/`<summary>` pattern has inconsistent browser support for this use case. 
+
+The right call here is to keep the `<select>` — it already works correctly for keyboard navigation, screen readers, and mobile — and style its *closed state* (the always-visible part) to match the site's design. The open state (the OS dropdown list) remains native; this is acceptable and is what users expect for language switching.
+
+**What CSS can and cannot do to a `<select>`:**
+- ✓ `appearance: none` — removes all OS chrome (border, arrow, background)
+- ✓ `font-family`, `font-size`, `color`, `padding`, `cursor` — fully styleable
+- ✓ Background-image SVG arrow — replaces the OS chevron with a custom one
+- ✗ `<option>` elements — cannot be styled cross-browser; they remain OS-native when the list opens
+
+**Visual spec:**
+
+Wrap the `<select>` in a `<div class="lang-switcher">` that provides a globe icon prefix and a custom dropdown arrow via CSS `::after`. The `<select>` sits over the wrapper, transparent, so it intercepts all clicks while the wrapper renders the visual treatment.
+
+```
+🌐 ES ▾
+```
+
+- Globe icon: `fas fa-globe`, same color as nav links (`$text-dark`)
+- Language display: `.Lang | upper` → `ES`, `EN`, `FR`, `CA` (compact, conventional)
+- Arrow: inline SVG as `background-image` on the `<select>`
+- No border, no background — blends into the navbar like a nav-link
+- Hover: text color shifts to `$color-primary` (matches nav link hover)
+- Font: Lato, `0.9rem`, matching the nav links
+
+**Exact HTML change in `header.html`** — replace the bare `<select>` with:
+
+```html
+<li class="nav-item lang-switcher-wrap">
+  <i class="fas fa-globe lang-switcher-icon"></i>
+  <select id="select-language" class="lang-switcher-select" onchange="location = this.value;">
+    {{ range .Page.AllTranslations }}
+    <option value="{{ .RelPermalink }}"{{ if eq .Lang $.Page.Lang }} selected{{ end }}>
+      {{ .Lang | upper }}
+    </option>
+    {{ end }}
+  </select>
+</li>
+```
+
+Note: the existing template iterates `AllTranslations` through `$siteLanguages` to enforce a display order — that loop can be simplified to a plain `range .Page.AllTranslations` since Hugo returns them in the order defined in `languages.toml`.
+
+**Exact SCSS to add:**
+
+```scss
+// ── Language switcher ─────────────────────────────────────────────────────────
+.lang-switcher-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 0.5rem;
+}
+
+.lang-switcher-icon {
+  font-size: 0.8rem;
+  color: $text-dark;
+  pointer-events: none;
+}
+
+.lang-switcher-select {
+  appearance: none;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%23555'/%3E%3C/svg%3E") no-repeat right 0.1rem center;
+  background-size: 0.5rem;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: $text-dark;
+  padding: 0.25rem 1rem 0.25rem 0;
+  cursor: pointer;
+  line-height: 1;
+
+  &:hover {
+    color: $color-primary;
+  }
+  &:focus {
+    outline: none;
+    color: $color-primary;
+  }
+}
+```
+
+**Mobile behaviour:** the `lang-switcher-wrap` is a `flex` row; inside the collapsed mobile nav it flows inline with the other items. No additional breakpoint needed — it already collapses with the nav.
 
 **Files to touch:** `layouts/partials/header.html`, `assets/scss/custom.scss`
 
