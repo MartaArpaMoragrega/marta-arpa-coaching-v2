@@ -1,3 +1,18 @@
+// ── Mobile nav CTA button — center on small screens ─────────────────────────
+@media (max-width: 991.98px) {
+  .navigation .navbar-collapse {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .navigation .navbar-collapse > .navbar-nav {
+    width: 100%;
+  }
+  .navigation .navbar-collapse > .btn {
+    margin-top: 0.5rem;
+  }
+}
+
 // Banner — full-bleed image on the right, text on the left,
 // white-to-transparent gradient bridges the two sides.
 .banner {
