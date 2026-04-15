@@ -206,17 +206,60 @@ Issues that a visitor may not consciously name but that accumulate into a "somet
 ### D-05 · Service illustration visual audit and sizing
 **Status:** `[ ]`
 
-**Problem:** The four service illustration PNGs in `assets/images/services/` were specified as "transparent RGBA illustrations that blend with section backgrounds." Without seeing them rendered at every breakpoint, the risk is: jagged edges, inconsistent visual weight between the four images, or one image looking obviously different in style from the others.
+**Audit results — all four images inspected:**
 
-**Why it matters:** Service rows are the most content-rich section of the homepage. If one illustration looks different from the others, it signals that different hands worked on the site at different times — even if the copy is strong.
+All four are 512×512 PNG — dimensions are correct. Alpha channel status:
+- `coaching-ex.png` (182K) — `alpha=Blend` ✓
+- `talleres-personalizados.png` (225K) — `alpha=Blend` ✓
+- `pildoras-foco.png` (180K) — `alpha=Undefined` ⚠ (see below)
+- `consultancy.png` (102K) — `alpha=Blend` ✓ but see style note
 
-**Proposed change:**
-- Do a full visual review of all four service images at: desktop (≥1200px), tablet (768px), and mobile (<576px).
-- Check: do all four have consistent visual weight? Are edges crisp? Does the RGBA transparency blend correctly on both the white and pale-teal (`#EDF6F5`) alternating backgrounds?
-- If any image looks out of place, flag it for replacement at the source — do not attempt to compensate with CSS.
-- Ensure all four are genuinely square 512×512 source PNGs as specified (Hugo's image pipeline depends on this for correct responsive srcsets).
+---
 
-**Files to touch:** `assets/images/services/*.png` (replacement only if needed)
+**Finding 1 — `consultancy.png` is from a completely different illustration family**
+
+The three other images (coaching-ex, talleres, pildoras) share a consistent visual language: flat vector illustration, muted pastel color palette, rounded cartoonish character design, light neutral backgrounds, multiple people shown in collaborative settings.
+
+`consultancy.png` is the outlier: a single suited figure with a briefcase standing in front of a large coral/terracotta upward-trend arrow against a warm beige city skyline. Different character proportions, different color temperature (warmer, more saturated), a solid non-transparent background, and a solo-figure composition against a backdrop rather than an interactive-scene composition. It reads as a stock business illustration from a different library.
+
+The effect on the page: three sections feel like a coherent set, and the fourth — Consultoría del Cambio — breaks the rhythm. The mismatch is noticeable.
+
+**What to do:** Replace `consultancy.png` with a new illustration in the same flat-scene style as the other three. The concept should show an organizational or team context — people aligned around a shared goal, a process being mapped, or a team navigating change together. Specifically avoid: lone figures, upward arrows, briefcases, cityscapes. Those are the visual vocabulary of generic corporate consulting, not the brand Marta is building.
+
+The replacement must come from the same illustration source/artist used for the other three, or from a library that matches that style. Do not source from a different library and attempt to make it blend — the mismatch will persist.
+
+---
+
+**Finding 2 — `pildoras-foco.png` is too visually similar to `talleres-personalizados.png`**
+
+Both show a small group of people seated around a table with someone presenting or pointing at something. The visual difference is minimal: pildoras has a bullseye target on the screen, talleres has a whiteboard. At thumbnail scale — which is how service rows render on mobile — these look nearly identical.
+
+A visitor scanning the homepage will not easily distinguish these two services by their illustrations alone. The illustration should do work the copy doesn't have to.
+
+**What to do:** When sourcing a replacement for consultancy (finding 1), also evaluate whether pildoras-foco can be replaced with something more distinct — a single person at a focused workstation, a close-up of a timer or checklist, something that reads as "individual clarity and speed" rather than another meeting scene.
+
+---
+
+**Finding 3 — `pildoras-foco.png` alpha channel is `Undefined`**
+
+The other three images report `alpha=Blend`. Pildoras reports `alpha=Undefined`, which in ImageMagick means the alpha channel is present but its handling is not explicitly declared. In practice this usually renders identically to `Blend`, but it is a minor inconsistency in how the file was exported.
+
+**What to do:** When the image is replaced (finding 2), export with explicit alpha transparency. If keeping the current image, re-export it from the source to set a defined alpha channel. Low priority — only action if the other findings prompt a re-export anyway.
+
+---
+
+**Summary — what actually needs to happen:**
+
+| Image | Action |
+|---|---|
+| `coaching-ex.png` | No action needed |
+| `talleres-personalizados.png` | No action needed |
+| `pildoras-foco.png` | Replace if possible (too similar to talleres); re-export for alpha at minimum |
+| `consultancy.png` | **Must replace** — wrong illustration style, wrong concept |
+
+This is a content/asset task, not a code task. The deliverable is two new PNG files (512×512, transparent background, same flat illustration style as coaching-ex and talleres). No CSS or layout changes are needed — the existing `.service-img-wrap` border-radius and Hugo's image pipeline will handle the rest correctly once the source files are right.
+
+**Files to touch:** `assets/images/services/consultancy.png` (replace), `assets/images/services/pildoras-foco.png` (replace or re-export)
 
 ---
 
