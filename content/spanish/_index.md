@@ -19,7 +19,7 @@ feature:
 
     - name: "Talleres personalizados"
       icon: "fas fa-users"
-      content: "Fomentar una transformación profunda para el desarrollo integral y la realización personal."
+      content: "Talleres a medida para los retos de tu empresa: dinámicos, prácticos y con impacto inmediato."
 
     - name: "Píldoras de Foco"
       icon: "fas fa-bullseye"

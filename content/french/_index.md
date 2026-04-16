@@ -19,7 +19,7 @@ feature:
 
     - name: "Ateliers Personnalisés"
       icon: "fas fa-users"
-      content: "Favoriser une transformation profonde pour le développement intégral et l'épanouissement personnel."
+      content: "Des ateliers sur mesure qui répondent aux défis réels de votre entreprise : dynamiques, pratiques et à impact immédiat."
 
     - name: "Pilules de Focus"
       icon: "fas fa-bullseye"

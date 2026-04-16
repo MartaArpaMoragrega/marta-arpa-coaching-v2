@@ -19,7 +19,7 @@ feature:
 
     - name: "Tallers Personalitzats"
       icon: "fas fa-users"
-      content: "Fomentar una transformació profunda per al creixement integral i la realització personal."
+      content: "Tallers a mida que responen als reptes reals de la teva empresa: dinàmics, pràctics i amb impacte immediat."
 
     - name: "Píndoles de Focus"
       icon: "fas fa-bullseye"

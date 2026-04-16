@@ -19,7 +19,7 @@ feature:
 
     - name: "Tailored Workshops"
       icon: "fas fa-users"
-      content: "Foster deep transformation for personal growth and self-fulfillment."
+      content: "Tailored workshops that address your company's real challenges — dynamic, practical, and immediately impactful."
 
     - name: "Focus Pills"
       icon: "fas fa-bullseye"
