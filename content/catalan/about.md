@@ -11,8 +11,6 @@ about:
     Amb més de 15 anys d'experiència en consultoria, coaching i direcció de projectes, he acompanyat organitzacions i persones en processos de canvi profund. El meu propòsit és potenciar el desenvolupament humà i organitzacional, creant entorns on la innovació, la col·laboració i l'aprenentatge es converteixin en motors de creixement sostenible.
 
     El meu enfocament integra la claredat estratègica amb l'escolta activa i l'empatia, facilitant transformacions que permeten a individus i equips superar reptes, reinventar-se i assolir els seus objectius més ambiciosos. Aquesta combinació de visió, experiència i sensibilitat és el que defineix la meva manera d'acompanyar les persones i les organitzacions en el seu camí d'evolució i transformació.
-
-    [LinkedIn](https://www.linkedin.com/in/marta-arpa-moragrega/)
   image: "images/about/profile-pic.png"
 
 philosophy:

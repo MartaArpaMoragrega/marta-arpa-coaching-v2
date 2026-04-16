@@ -9,6 +9,17 @@
       <div class="col-lg-7">
         <div class="pe-0 pe-lg-5">
           <div class="about-content">{{.content | markdownify}}</div>
+          {{ with site.Params.social }}
+          <ul class="list-inline social-icons mt-4">
+            {{ range . }}
+            <li class="list-inline-item">
+              <a href="{{ .link | safeURL }}" title="{{ .title }}" aria-label="{{ .title }}">
+                <i class="{{ .icon }}"></i>
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+          {{ end }}
         </div>
       </div>
       <div class="col-8 col-sm-6 col-lg-4 mx-auto mx-lg-0">

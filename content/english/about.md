@@ -11,8 +11,6 @@ about:
     With more than 15 years of experience in consulting, coaching, and project management, I have supported organizations and individuals through profound change processes. My purpose is to foster human and organizational development, creating environments where innovation, collaboration, and learning become drivers of sustainable growth.
 
     My approach integrates strategic clarity with active listening and empathy, enabling transformations that allow individuals and teams to overcome challenges, reinvent themselves, and achieve their most ambitious goals. This combination of vision, experience, and sensitivity defines the way I support people and organizations on their journey of growth and transformation.
-
-    [LinkedIn](https://www.linkedin.com/in/marta-arpa-moragrega/)
   image: "images/about/profile-pic.png"
 
 philosophy:
