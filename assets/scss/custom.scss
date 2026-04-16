@@ -107,6 +107,17 @@ h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+// ── Typography refinements ────────────────────────────────────────────────────
+// Tighten tracking on display-size headings — default spacing reads loose at 48/38px
+h1, .h1, h2, .h2 {
+  letter-spacing: -0.02em;
+}
+
+// h5 is hardcoded to 16px in the theme — same as body text, useless as a heading
+h5, .h5 {
+  font-size: 18px;
+}
+
 // ── About page — profile image matches text column height ───────────────────
 // align-items-stretch on the row makes both columns the same height;
 // object-fit: cover fills that height without distorting the photo.

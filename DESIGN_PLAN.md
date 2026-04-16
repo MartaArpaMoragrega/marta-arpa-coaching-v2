@@ -537,7 +537,7 @@ Not urgent, but each one raises the ceiling on what the site can do for Marta's 
 ---
 
 ### D-10 · Improve typography hierarchy and heading contrast
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Problem:** The Major Third scale (1.25) produces a compressed heading hierarchy. At base 16px: h3 ≈ 20px, h2 ≈ 25px, h1 ≈ 31px. In practice, many sections use the same heading size because the difference is barely perceptible on screen. Body text is `#777` (medium gray on white) — this needs a contrast check against WCAG AA (minimum 4.5:1 ratio for normal text).
 

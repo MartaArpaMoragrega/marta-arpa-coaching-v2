@@ -123,7 +123,7 @@ The root cause: Hugo dev server overrides `site.BaseURL` to `//localhost:PORT/` 
 - **Primary color**: `#0AA8A7` (teal)
 - **Secondary color**: `#376f92` (dark blue)
 - **Font**: Lato (300/400/500/600/700)
-- **Font scale**: 1.25 (majorThird)
+- **Font scale**: 1.25 (majorThird) — `font_scale` in `hugo.toml` compiles to a SCSS variable that is never used; heading sizes are hardcoded in px in the theme. Changing `font_scale` has no effect.
 - **Dark mode**: disabled (`theme_switcher = false`)
 - **Logo**: `static/images/logo-ma.webp`, rendered at 160px wide
 
