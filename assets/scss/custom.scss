@@ -388,6 +388,14 @@ select:focus-visible,
   border-radius: 2px;
 }
 
+// Navbar toggler: theme sets :focus { box-shadow: none } which beats the rule
+// above. Re-assert the ring with a more specific selector.
+.navigation .navbar-toggler:focus-visible {
+  outline: 2px solid $color-primary-text;
+  outline-offset: 4px;
+  box-shadow: none;
+}
+
 // Skip-to-content link — visually hidden until focused
 .skip-to-content {
   position: absolute;

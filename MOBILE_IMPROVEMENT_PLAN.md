@@ -62,7 +62,7 @@ The site is responsive by default (Bootstrap 5 grid) with several intentional mo
 }
 ```
 
-- [ ] Add rule to `assets/scss/custom.scss` (after the existing focus-visible block, ~line 389)
+- [x] Add rule to `assets/scss/custom.scss` (after the existing focus-visible block, ~line 389)
 
 ### M1.3 — Verify open/close menu behavior end-to-end on a real device
 
