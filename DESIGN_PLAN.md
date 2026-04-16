@@ -520,7 +520,7 @@ Not urgent, but each one raises the ceiling on what the site can do for Marta's 
 ---
 
 ### D-09 · Blog post enhancements: reading time, author bio, related posts
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Problem:** Blog posts are currently a title, banner image, and body text — nothing else. There's no reading time estimate, no author bio at the foot of the post, and no suggested reading to keep visitors on-site.
 

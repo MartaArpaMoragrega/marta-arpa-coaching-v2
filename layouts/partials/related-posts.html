@@ -1,0 +1,26 @@
+{{ $currentPage := . }}
+{{ $related := slice }}
+{{ range where .Site.RegularPages "Section" "blog" }}
+  {{ if and (eq .Lang $currentPage.Lang) (ne .RelPermalink $currentPage.RelPermalink) }}
+    {{ $related = $related | append . }}
+  {{ end }}
+{{ end }}
+{{ $related = first 2 $related }}
+{{ if $related }}
+<div class="related-posts">
+  <h3 class="related-posts-heading">{{ i18n "related_posts_heading" }}</h3>
+  <div class="row gx-md-4 gy-4 mt-2">
+    {{ range $related }}
+    <div class="col-sm-6">
+      <div class="card bg-transparent border-0">
+        {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "rounded-2 w-100 mb-3" "Size" "460x") }}
+        <div class="card-body p-0">
+          <h4 class="h5"><a href="{{ .RelPermalink }}" class="text-dark">{{ .Title }}</a></h4>
+          <a href="{{ .RelPermalink }}" class="btn btn-sm btn-outline-primary mt-2">{{ i18n "read_more" }}</a>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

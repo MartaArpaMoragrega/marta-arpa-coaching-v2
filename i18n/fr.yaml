@@ -33,3 +33,12 @@
 
 - id: nav_cta
   translation: "Séance gratuite"
+
+- id: min_read
+  translation: "min de lecture"
+
+- id: post_cta_text
+  translation: "Cet article vous a parlé ? Parlons-en."
+
+- id: related_posts_heading
+  translation: "Plus d'articles"

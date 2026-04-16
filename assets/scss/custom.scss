@@ -294,6 +294,48 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// ── Blog post page ────────────────────────────────────────────────────────────
+.post-meta {
+  font-size: 0.85rem;
+  color: $text-light;
+  margin: 0.5rem 0 1.75rem;
+}
+
+.post-meta-sep {
+  margin: 0 0.4rem;
+  opacity: 0.5;
+}
+
+.post-cta {
+  border-top: 1px solid $border-color;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  text-align: center;
+
+  .post-cta-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: $text-dark;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.related-posts {
+  border-top: 1px solid $border-color;
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.related-posts-heading {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: $text-light;
+  margin-bottom: 0;
+}
+
+// ── Contact social links ───────────────────────────────────────────────────────
 .contact-social-link {
   display: inline-flex;
   align-items: center;

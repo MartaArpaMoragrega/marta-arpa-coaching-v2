@@ -33,3 +33,12 @@
 
 - id: nav_cta
   translation: "Free session"
+
+- id: min_read
+  translation: "min read"
+
+- id: post_cta_text
+  translation: "Did this resonate? Let's talk."
+
+- id: related_posts_heading
+  translation: "More articles"
