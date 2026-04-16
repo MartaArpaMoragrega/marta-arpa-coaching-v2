@@ -127,6 +127,15 @@ h5, .h5 {
   font-size: 18px;
 }
 
+// Mobile heading scale-down (≤ 575px)
+// The theme reduces h1→40px and h2→30px at ≤767px (tablet mixin) but stops
+// there. On a 375px phone 40px is ~10.7vw — too dominant. Step them down further.
+@include mobile {
+  h1, .h1 { font-size: 30px; }
+  h2, .h2 { font-size: 24px; }
+  h3, .h3 { font-size: 20px; }
+}
+
 // ── About page — profile image matches text column height ───────────────────
 // align-items-stretch on the row makes both columns the same height;
 // object-fit: cover fills that height without distorting the photo.

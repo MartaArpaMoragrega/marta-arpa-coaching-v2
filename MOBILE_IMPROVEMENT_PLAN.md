@@ -66,7 +66,7 @@ The site is responsive by default (Bootstrap 5 grid) with several intentional mo
 
 ### M1.3 — Verify open/close menu behavior end-to-end on a real device
 
-- [ ] Open on a phone (or DevTools → iPhone 14 Pro) and confirm:
+- [x] Open on a phone (or DevTools → iPhone 14 Pro) and confirm:
   - Hamburger shows ≡ when collapsed
   - Tapping shows menu + icon changes to ✕
   - Tapping again collapses + icon returns to ≡
@@ -93,7 +93,7 @@ The site is responsive by default (Bootstrap 5 grid) with several intentional mo
 }
 ```
 
-- [ ] Add rule in `assets/scss/custom.scss` after the existing typography refinements (~line 128)
+- [x] Add rule in `assets/scss/custom.scss` after the existing typography refinements (~line 128)
 
 ### M2.2 — `text-align: justify` on the About page is problematic on narrow screens
 
@@ -164,7 +164,7 @@ The site is responsive by default (Bootstrap 5 grid) with several intentional mo
 
 **Dependency**: Complete M1.1 first, then re-test.
 
-- [ ] After M1.1: confirm `aria-expanded` updates and CSS responds correctly
+- [x] After M1.1: confirm `aria-expanded` updates and CSS responds correctly
 
 ---
 
