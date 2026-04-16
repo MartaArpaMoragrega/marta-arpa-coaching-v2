@@ -156,7 +156,7 @@ The site is responsive by default (Bootstrap 5 grid) with several intentional mo
 }
 ```
 
-- [ ] Add override in `assets/scss/custom.scss` (after footer-related rules)
+- [x] Add override in `assets/scss/custom.scss` (after footer-related rules)
 
 ### M3.3 — `aria-expanded` is never updated on the nav toggler
 

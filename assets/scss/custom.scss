@@ -367,6 +367,14 @@ h5, .h5 {
   margin-bottom: 0;
 }
 
+// ── Footer social icons — contrast fix ───────────────────────────────────────
+// Theme uses $color-primary (#0AA8A7, 2.97:1 on white) — fails WCAG AA.
+// Override with $color-primary-text (#087E7D, 5.0:1) for icon color and border.
+.social-icons a {
+  color: $color-primary-text;
+  border-color: $color-primary-text;
+}
+
 // ── Contact social links ───────────────────────────────────────────────────────
 .contact-social-link {
   display: inline-flex;
