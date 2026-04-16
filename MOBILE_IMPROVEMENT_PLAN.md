@@ -109,7 +109,7 @@ The site is responsive by default (Bootstrap 5 grid) with several intentional mo
 }
 ```
 
-- [ ] Update `assets/scss/custom.scss:133–135`
+- [x] Update `assets/scss/custom.scss:133–135`
 
 ### M2.3 — Body `line-height: 1.2` is tight for inline/non-paragraph content
 

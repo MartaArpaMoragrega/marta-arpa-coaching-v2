@@ -140,7 +140,9 @@ h5, .h5 {
 // align-items-stretch on the row makes both columns the same height;
 // object-fit: cover fills that height without distorting the photo.
 .about-content {
-  text-align: justify;
+  @media (min-width: 576px) {
+    text-align: justify;
+  }
 }
 
 
