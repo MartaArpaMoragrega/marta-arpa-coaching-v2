@@ -13,9 +13,18 @@
 
       <div class="collapse navbar-collapse text-center">
         <ul class="navbar-nav mx-auto">
+          {{ $currentURL := $.Page.RelPermalink }}
           {{ range site.Menus.main }}
+          {{ $menuURL := .URL | relURL }}
+          {{ $active := false }}
+          {{ if eq $menuURL "/" }}
+            {{ if eq $currentURL "/" }}{{ $active = true }}{{ end }}
+          {{ else }}
+            {{ $menuURLSlash := printf "%s/" $menuURL }}
+            {{ if or (eq $currentURL $menuURL) (eq $currentURL $menuURLSlash) (hasPrefix $currentURL $menuURLSlash) }}{{ $active = true }}{{ end }}
+          {{ end }}
           {{ if .HasChildren }}
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown{{ if $active }} active{{ end }}">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
               {{ .Name }}
             </a>
@@ -26,7 +35,7 @@
             </div>
           </li>
           {{ else }}
-          <li class="nav-item">
+          <li class="nav-item{{ if $active }} active{{ end }}">
             <a class="nav-link" href="{{ .URL | relURL }}" title="{{ .Name }}">{{ .Name }}</a>
           </li>
           {{ end }}

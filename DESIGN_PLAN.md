@@ -498,7 +498,7 @@ Note: the existing template iterates `AllTranslations` through `$siteLanguages` 
 ---
 
 ### D-08 · Add active/current link indicator to navigation
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Problem:** There is no visual indication of which page the user is currently on. All nav links look identical regardless of location.
 

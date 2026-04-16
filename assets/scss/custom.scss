@@ -168,6 +168,12 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+// ── Nav active state ──────────────────────────────────────────────────────────
+.navigation .navbar-nav .nav-item.active > .nav-link {
+  border-bottom: 2px solid $color-primary;
+  color: $color-primary;
+}
+
 // ── Language switcher ─────────────────────────────────────────────────────────
 .lang-switcher-wrap {
   display: flex;
