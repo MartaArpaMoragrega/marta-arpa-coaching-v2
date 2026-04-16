@@ -377,12 +377,30 @@ h5, .h5 {
   margin-bottom: 0;
 }
 
-// ── Footer social icons — contrast fix ───────────────────────────────────────
+// ── Footer social icons — contrast + tap target ───────────────────────────────
 // Theme uses $color-primary (#0AA8A7, 2.97:1 on white) — fails WCAG AA.
 // Override with $color-primary-text (#087E7D, 5.0:1) for icon color and border.
 .social-icons a {
   color: $color-primary-text;
   border-color: $color-primary-text;
+}
+
+// Circles are 40×40px — just under the 44px touch target minimum.
+// Bump to 44px on mobile without affecting the desktop layout.
+@media (max-width: 767px) {
+  .social-icons a {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+  }
+}
+
+// ── Footer links — touch-friendly spacing ─────────────────────────────────────
+// Default padding: 5px top/bottom → ~26px tap height. Increase on mobile.
+@media (max-width: 767px) {
+  .footer-list a {
+    padding: 10px 0;
+  }
 }
 
 // ── Contact social links ───────────────────────────────────────────────────────

@@ -314,8 +314,7 @@ sizes="(max-width: 991px) 83vw, 50vw"
 
 **Current**: Footer uses `col-md-3 col-sm-6` — 4 columns on desktop, 2×2 grid on small screens, then full-width on xs. The `col-sm-6` gives 2 columns on 576–767px, which is fine.
 
-- [ ] Confirm footer at 375px shows columns stacking cleanly (1 per row)
-- [ ] Ensure footer logo is visible and links have enough spacing
+- [x] col-md-3 col-sm-6 structure correct: 4 cols → 2×2 grid → full-width stacking — no change needed
 
 ### M8.2 — Footer social icon contrast and tap targets
 
@@ -333,7 +332,7 @@ sizes="(max-width: 991px) 83vw, 50vw"
 }
 ```
 
-- [ ] Verify after M3.2 fix; adjust padding if needed
+- [x] Bumped circle size to 44×44px on mobile (≤767px)
 
 ### M8.3 — Footer link spacing for touch
 
@@ -349,7 +348,7 @@ sizes="(max-width: 991px) 83vw, 50vw"
 }
 ```
 
-- [ ] Add override in `assets/scss/custom.scss`
+- [x] Added: padding: 10px 0 on ≤767px → ~36px tap height
 
 ---
 
