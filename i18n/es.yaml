@@ -30,3 +30,6 @@
 
 - id: message_placeholder
   translation: "¿En qué puedo ayudarte?"
+
+- id: nav_cta
+  translation: "Sesión gratuita"
