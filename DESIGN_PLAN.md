@@ -553,7 +553,7 @@ Not urgent, but each one raises the ceiling on what the site can do for Marta's 
 ---
 
 ### D-11 · Clean up unused and legacy asset files
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Problem:** The `assets/images/` directory contains files that appear to be unused:
 - `service-1.png`, `service-2.png`, `service-3.png` — legacy service images
