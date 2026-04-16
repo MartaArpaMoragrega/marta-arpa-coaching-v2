@@ -356,10 +356,10 @@ sizes="(max-width: 991px) 83vw, 50vw"
 
 These are isolated and can be done at any time:
 
-- [ ] **M-QW1**: Navbar brand width at `mobile-xs` (≤ 400px) is capped to 50% by `_navigation.scss:11`. This means the logo is max 200px wide on a 400px screen. With our 120px cap in `custom.scss` this doesn't conflict, but verify visually.
-- [ ] **M-QW2**: `feature-card div.mb-3 { text-align: justify !important; }` — same rivers-of-whitespace risk as About page. Remove the `!important` justify rule or restrict to wider screens.
-- [ ] **M-QW3**: Language switcher on mobile — the 4 language codes (ES/EN/FR/CA) in a row may wrap awkwardly on narrow screens. Check at 320px. Consider reducing `padding` on `.lang-link` or adding `white-space: nowrap` on the switcher row.
-- [ ] **M-QW4**: `body { line-height: 1.2; }` — any `<li>` inside footer or feature cards that wraps onto 2 lines will look cramped. Add `li { line-height: 1.5; }` globally if found to be a problem.
+- [x] **M-QW1**: N/A — our `max-width: 120px` image rule beats the theme's `width: 50%` brand cap; no conflict.
+- [x] **M-QW2**: Removed dead rule `.feature-card div.mb-3 { text-align: justify !important; }` — no `div.mb-3` exists inside feature cards in the template.
+- [x] **M-QW3**: N/A — 4 lang codes in full-width open dropdown, fits fine at 320px with current padding.
+- [x] **M-QW4**: Added `li { line-height: 1.5; }` globally — prevents cramped wrapping in footer links, blog lists, and any multi-line list items.
 
 ---
 

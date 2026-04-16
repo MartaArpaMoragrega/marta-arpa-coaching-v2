@@ -116,6 +116,12 @@ h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+// body line-height is 1.2 — fine for headings but cramped for list items
+// that wrap onto multiple lines (footer links, blog lists, etc.)
+li {
+  line-height: 1.5;
+}
+
 // ── Typography refinements ────────────────────────────────────────────────────
 // Tighten tracking on display-size headings — default spacing reads loose at 48/38px
 h1, .h1, h2, .h2 {
@@ -179,9 +185,6 @@ h5, .h5 {
   }
 }
 
-.feature-card div.mb-3 {
-  text-align: justify !important;
-}
 
 // ── About page — philosophy icons ───────────────────────────────────────────
 .philosophy-icon {
