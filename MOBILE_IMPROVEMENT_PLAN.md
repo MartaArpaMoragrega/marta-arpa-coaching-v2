@@ -141,7 +141,7 @@ The site is responsive by default (Bootstrap 5 grid) with several intentional mo
 }
 ```
 
-- [ ] Edit `assets/scss/custom.scss:285`
+- [x] Edit `assets/scss/custom.scss:285`
 
 ### M3.2 — Social icons in footer use non-AA-compliant color
 

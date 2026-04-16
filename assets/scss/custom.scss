@@ -293,7 +293,8 @@ h5, .h5 {
     &:focus {
       border-color: $color-primary;
       box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
-      outline: none;
+      outline: 2px solid $color-primary-text;
+      outline-offset: 1px;
     }
     &.is-invalid:focus,
     &:invalid:focus {
