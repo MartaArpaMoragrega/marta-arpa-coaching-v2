@@ -42,3 +42,6 @@
 
 - id: related_posts_heading
   translation: "Plus d'articles"
+
+- id: all_rights_reserved
+  translation: "Tous droits réservés"

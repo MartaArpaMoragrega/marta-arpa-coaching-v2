@@ -572,7 +572,7 @@ Not urgent, but each one raises the ceiling on what the site can do for Marta's 
 ---
 
 ### D-12 · Footer: attribution and visual weight
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Problem:** The footer currently includes a theme attribution line ("Theme by GetHugoThemes"). This is standard for free themes but not appropriate for a professional client site. Additionally, the footer's visual weight relative to the rest of the page has not been reviewed — it may feel abrupt or too light.
 
