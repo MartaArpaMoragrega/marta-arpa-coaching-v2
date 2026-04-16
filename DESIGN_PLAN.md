@@ -389,7 +389,7 @@ A visitor reading the page top-to-bottom sees: intro → steps (what happens aft
 ---
 
 ### D-07 · Style the language selector
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Current state:**
 

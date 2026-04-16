@@ -168,6 +168,43 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+// ── Language switcher ─────────────────────────────────────────────────────────
+.lang-switcher-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 992px) {
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    padding-left: 0.75rem;
+    margin-left: 0.25rem;
+  }
+}
+
+// Shared base — links and active span
+.navigation .navbar-nav .lang-link {
+  padding: 0.25rem 0.35rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+// Inactive language links
+.navigation .navbar-nav a.lang-link {
+  color: inherit;
+
+  &:hover {
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+// Active (current) language
+.navigation .navbar-nav .lang-link-active {
+  color: $color-primary;
+  font-weight: 600;
+}
+
 // ── Contact page ─────────────────────────────────────────────────────────────
 
 .contact-steps-heading {
