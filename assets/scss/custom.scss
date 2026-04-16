@@ -12,11 +12,15 @@ $color-primary-text: #087E7D;
 }
 
 // ── Mobile nav CTA button — center on small screens ─────────────────────────
+// :not(.collapse) targets only the open state — Bootstrap uses display:none
+// on .collapse and the theme's JS toggles that class to show/hide the nav.
+// Applying display:flex unconditionally (with !important) was breaking the
+// toggle by always overriding Bootstrap's display:none.
 @media (max-width: 991.98px) {
-  .navigation .navbar-collapse {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+  .navigation .navbar-collapse:not(.collapse) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .navigation .navbar-collapse > .navbar-nav {
     width: 100%;
