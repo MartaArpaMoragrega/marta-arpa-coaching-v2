@@ -45,3 +45,9 @@
 
 - id: all_rights_reserved
   translation: "Tots els drets reservats"
+
+- id: skip_to_content
+  translation: "Anar al contingut"
+
+- id: menu_toggle
+  translation: "Menú"

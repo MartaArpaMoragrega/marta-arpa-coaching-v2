@@ -594,7 +594,7 @@ These items don't affect visual design for most users but are legally relevant i
 ---
 
 ### D-13 · ARIA labels and keyboard navigation audit
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Problem:** Icon-only buttons (social media icons in the contact page, language selector, potentially nav items on mobile) may lack accessible names. No keyboard navigation testing has been documented.
 
@@ -611,7 +611,7 @@ These items don't affect visual design for most users but are legally relevant i
 ---
 
 ### D-14 · Color contrast audit on primary brand color
-**Status:** `[ ]`
+**Status:** `[x]`
 
 **Problem:** Primary color `#0AA8A7` (teal) is used for links, button text (on white), icon colors, and decorative elements. Its contrast against white (`#fff`) is approximately 2.97:1 — well below the WCAG AA minimum of 4.5:1 for normal-weight text.
 

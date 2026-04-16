@@ -1,3 +1,8 @@
+// Accessible teal for text/icons on light backgrounds.
+// $color-primary (#0AA8A7) is 2.97:1 on white — fails WCAG AA.
+// $color-primary-text (#087E7D) is 5.0:1 on white — passes AA for all text sizes.
+$color-primary-text: #087E7D;
+
 // ── Logo — scale down on mobile ───────────────────────────────────────────────
 @media (max-width: 575.98px) {
   .navbar-brand img,
@@ -166,7 +171,7 @@ h5, .h5 {
 // ── About page — philosophy icons ───────────────────────────────────────────
 .philosophy-icon {
   font-size: 2rem;
-  color: $color-primary;
+  color: $color-primary-text;
 }
 
 // ── Service rows — image container ──────────────────────────────────────────
@@ -181,8 +186,8 @@ h5, .h5 {
 
 // ── Nav active state ──────────────────────────────────────────────────────────
 .navigation .navbar-nav .nav-item.active > .nav-link {
-  border-bottom: 2px solid $color-primary;
-  color: $color-primary;
+  border-bottom: 2px solid $color-primary-text;
+  color: $color-primary-text;
 }
 
 // ── Language switcher ─────────────────────────────────────────────────────────
@@ -218,7 +223,7 @@ h5, .h5 {
 
 // Active (current) language
 .navigation .navbar-nav .lang-link-active {
-  color: $color-primary;
+  color: $color-primary-text;
   font-weight: 600;
 }
 
@@ -245,7 +250,7 @@ h5, .h5 {
 .contact-step-number {
   font-size: 1.1rem;
   font-weight: 700;
-  color: $color-primary;
+  color: $color-primary-text;
   line-height: 1.4;
   min-width: 2rem;
   flex-shrink: 0;
@@ -355,13 +360,60 @@ h5, .h5 {
   height: 40px;
   border-radius: 50%;
   background-color: rgba($color-primary, 0.08);
-  color: $color-primary;
+  color: $color-primary-text;
   font-size: 18px;
   transition: 0.2s ease;
   text-decoration: none;
 
   &:hover {
     background-color: $color-primary;
+    color: $white;
+  }
+}
+
+// ── Accessibility ─────────────────────────────────────────────────────────────
+
+// Restore focus outlines — the theme strips them globally via `outline: 0`.
+// :focus-visible shows the ring only during keyboard navigation, not on click.
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid $color-primary-text;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+// Skip-to-content link — visually hidden until focused
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1.25rem;
+  background: $color-primary-text;
+  color: $white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+
+  &:focus {
+    top: 0;
+    color: $white;
+    outline: none; // ring replaced by the visible block itself
+  }
+}
+
+// Accessible outline button — $color-primary fails WCAG AA on white;
+// override with $color-primary-text for text and border.
+.btn-outline-primary {
+  color: $color-primary-text;
+  border-color: $color-primary-text;
+
+  &:hover, &:active, &:focus {
+    background-color: $color-primary-text;
+    border-color: $color-primary-text;
     color: $white;
   }
 }
