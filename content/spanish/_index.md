@@ -50,10 +50,10 @@ service:
         label: "Hablemos"
         link: "contact/"
 
-    - title: "Talleres personalizados"
+    - title: "Coaching de equipos"
       images:
         - "images/services/talleres-personalizados.png"
-      content: "Talleres a medida que responden directamente a los retos reales de tu empresa. Dinámicos, prácticos y enfocados en resultados desde el primer minuto. Impulsa a tu equipo con herramientas que se aplican al instante y generan impacto inmediato."
+      content: "Acompaño a equipos a mejorar cómo trabajan juntos, fortaleciendo la confianza, la claridad y el foco para lograr resultados sostenibles."
       button:
         enable: true
         label: "Hablemos"

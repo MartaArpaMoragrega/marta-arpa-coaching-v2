@@ -50,10 +50,10 @@ service:
         label: "Parlons-en"
         link: "contact/"
 
-    - title: "Ateliers Personnalisés"
+    - title: "Coaching d'équipes"
       images:
         - "images/services/talleres-personalizados.png"
-      content: "Des ateliers sur mesure qui répondent directement aux défis réels de votre entreprise. Dynamiques, pratiques et orientés résultats dès la première minute. Donnez à votre équipe des outils qui s'appliquent immédiatement et génèrent un impact concret."
+      content: "J'accompagne les équipes pour améliorer leur façon de travailler ensemble, en renforçant la confiance, la clarté et le focus pour obtenir des résultats durables."
       button:
         enable: true
         label: "Parlons-en"

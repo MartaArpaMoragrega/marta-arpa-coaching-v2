@@ -50,10 +50,10 @@ service:
         label: "Parlem-ne"
         link: "contact/"
 
-    - title: "Tallers Personalitzats"
+    - title: "Coaching d'equips"
       images:
         - "images/services/talleres-personalizados.png"
-      content: "Tallers a mida que responen directament als reptes reals de la teva empresa. Dinàmics, pràctics i enfocats en resultats des del primer minut. Impulsa el teu equip amb eines que s'apliquen a l'instant i generen impacte immediat."
+      content: "Acompanyo equips a millorar com treballen junts, enfortint la confiança, la claredat i el focus per assolir resultats sostenibles."
       button:
         enable: true
         label: "Parlem-ne"

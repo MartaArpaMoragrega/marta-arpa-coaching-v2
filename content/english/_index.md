@@ -50,10 +50,10 @@ service:
         label: "Let's talk"
         link: "contact/"
 
-    - title: "Tailored Workshops"
+    - title: "Team Coaching"
       images:
         - "images/services/talleres-personalizados.png"
-      content: "Tailored workshops that respond directly to your company's real challenges. Dynamic, practical, and results-focused from the very first minute. Empower your team with tools that apply instantly and generate immediate impact."
+      content: "I accompany teams to improve how they work together, strengthening trust, clarity and focus to achieve sustainable results."
       button:
         enable: true
         label: "Let's talk"
