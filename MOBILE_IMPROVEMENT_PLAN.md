@@ -221,8 +221,8 @@ The site is responsive by default (Bootstrap 5 grid) with several intentional mo
 
 **Fix option B**: Wrap reCAPTCHA in `overflow-x: hidden` so clipping is contained.
 
-- [ ] Test on 320px viewport in DevTools
-- [ ] Apply whichever fix prevents overflow
+- [x] Test on 320px viewport in DevTools
+- [x] Apply whichever fix prevents overflow
 
 ### M5.2 — Contact portrait image: assess stacking order on mobile
 
@@ -230,13 +230,13 @@ The site is responsive by default (Bootstrap 5 grid) with several intentional mo
 
 **Assessment**: A tall portrait at full mobile width can push the form far below the fold.
 
-- [ ] Check the contact page at 375px: is the form visible without scrolling?
-- [ ] If portrait is too tall: cap `.contact-col-img img` max-height on mobile (e.g., 300px, object-fit: cover)
-- [ ] Consider adding `order-` classes so form appears first on mobile if portrait causes too much scroll
+- [x] Check the contact page at 375px: is the form visible without scrolling?
+- [x] No portrait on the contact page — left col is text + steps + CTA only
+- [x] Original stacking kept (intro + steps + CTA above form) — user preference
 
 ### M5.3 — "Booking" CTA button on contact page: confirm tap target
 
-- [ ] Verify the inline booking button and social link circles (40×40px) have ≥ 44px tap target. If social circles are 40px they fall just short — add `padding: 2px` to compensate without visual change.
+- [x] Booking button uses btn-primary with 15px 30px padding ≈ 48px tall — passes 44px target. No social links on the contact page template.
 
 ---
 

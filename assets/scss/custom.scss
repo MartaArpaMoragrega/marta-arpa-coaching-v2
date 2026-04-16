@@ -320,9 +320,19 @@ h5, .h5 {
 
 
 .g-recaptcha {
-  @media (max-width: 360px) {
+  // reCAPTCHA widget is 304px wide. Container + card padding take ~56px,
+  // leaving exactly 304px at 360px screens. Scale down with a safety buffer.
+  @media (max-width: 375px) {
     transform: scale(0.85);
     transform-origin: 0 0;
+  }
+}
+
+// On very small screens reduce card padding so the form doesn't feel cramped
+// and reCAPTCHA has more horizontal room.
+@media (max-width: 375px) {
+  .contact-form-card {
+    padding: 1rem !important;
   }
 }
 
