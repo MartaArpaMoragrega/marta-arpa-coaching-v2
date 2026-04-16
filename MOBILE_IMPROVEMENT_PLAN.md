@@ -255,8 +255,7 @@ Example for service images (roughly 83vw on mobile, 50vw on desktop):
 sizes="(max-width: 991px) 83vw, 50vw"
 ```
 
-- [ ] Audit each call site of `image.html` partial and add appropriate `sizes` strings
-- [ ] Update `layouts/partials/image.html` to accept and pass through a `sizes` parameter
+- [x] N/A — `<picture>` uses `media` queries for art direction; browser picks size deterministically without needing `sizes`
 
 ### M6.2 — Banner hero image: add `fetchpriority="high"` / preload
 
@@ -264,8 +263,8 @@ sizes="(max-width: 991px) 83vw, 50vw"
 
 **Fix**: In `layouts/index.html` banner section, set `loading="eager"` and `fetchpriority="high"` on the hero `<img>`.
 
-- [ ] Check how the banner image is rendered in `layouts/index.html`
-- [ ] Override `loading` and `fetchpriority` attributes for the banner image specifically
+- [x] Check how the banner image is rendered in `layouts/index.html`
+- [x] Added `Fetchpriority` param to `image.html` partial; banner call passes `Loading: eager` + `Fetchpriority: high`
 
 ### M6.3 — Service section Swiper: verify mobile initialization
 

@@ -5,7 +5,7 @@
 <section class="banner">
   {{with .image}}
   <div class="banner-image-wrap">
-    {{ partial "image.html" (dict "Src" . "Alt" "Banner" "Class" "banner-img") }}
+    {{ partial "image.html" (dict "Src" . "Alt" "Banner" "Class" "banner-img" "Loading" "eager" "Fetchpriority" "high") }}
   </div>
   {{end}}
   <div class="container">

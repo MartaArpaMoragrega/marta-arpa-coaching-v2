@@ -9,6 +9,7 @@
 {{ $displaySM:= .DisplaySM | default "545x" }}
 {{ $resize:= .Resize | default true }}
 {{ $loading:= .Loading | default "lazy" }}
+{{ $fetchpriority:= .Fetchpriority | default "" }}
 {{ $context:= .Context | default . }}
 {{ $contentImage:= false }}
 {{ $assetImage:= false }}
@@ -128,6 +129,7 @@
           {{ end }}
 
           alt="{{ .Alt }}"
+          {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}
           class="{{ if $placeholder }}lazy{{ end }} {{ $class }} img"
           width="{{- with $width -}}
             {{- . -}}
@@ -186,6 +188,7 @@
             decoding="async" alt="{{ .Alt }}"
           {{ end }}
 
+          {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}
           class="{{ if $placeholder }}lazy{{ end }} {{ $class }} img"
           width="{{- with $width -}}
             {{- . -}}
@@ -260,9 +263,9 @@
             {{ else }}
               loading="{{ $loading }}" decoding="async"
               src="{{ $imageFallback.RelPermalink }}"
-            {{ end }}class="{{ if $placeholder }}
-              lazy
-            {{ end }} {{ $class }} img"
+            {{ end }}
+            {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}
+            class="{{ if $placeholder }}lazy{{ end }} {{ $class }} img"
             alt="{{ .Alt }}"
             width="{{ $image.Width }}"
             height="{{ $image.Height }}" />
