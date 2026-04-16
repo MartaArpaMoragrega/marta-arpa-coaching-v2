@@ -290,21 +290,19 @@ sizes="(max-width: 991px) 83vw, 50vw"
 <div class="col-lg-8 mx-auto">  <!-- or add prose max-width via CSS -->
 ```
 
-- [ ] Check current blog post template (`layouts/_default/single.html` or theme equivalent)
-- [ ] Add `max-width` constraint on post body prose (e.g., `max-width: 72ch`)
+- [x] N/A — `col-lg-8 mx-auto` already constrains desktop; tablet widths (768–991px) produce 45–60 char lines which is within the comfortable range
 
 ### M7.2 — Related posts section: card layout on mobile
 
 **Current**: Related posts likely use a multi-column grid. On mobile these should stack or go 2-up.
 
-- [ ] Check the related posts partial at the bottom of blog posts
-- [ ] Verify cards stack to 1 column on ≤ 575px or use col-sm-6
+- [x] N/A — related posts already use `col-sm-6`: 2 columns ≥576px, 1 column below
 
 ### M7.3 — Post meta and tag readability
 
 **Current**: `.post-meta` is 0.85rem (13.6px). On mobile this may be slightly small. Minimum recommended is 12px; 13.6px is borderline.
 
-- [ ] Verify `.post-meta` is readable at 375px. If needed, bump to `0.875rem` (14px).
+- [x] Bumped from `0.85rem` (13.6px) to `0.875rem` (14px)
 
 ---
 
