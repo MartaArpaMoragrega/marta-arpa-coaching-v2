@@ -39,7 +39,7 @@
         <div class="contact-form-card rounded p-4 p-lg-5">
           <h5 class="mb-4">{{ i18n "or_write" }}</h5>
           <form method="POST" class="row g-4" action="{{site.Params.contact_form_action | safeURL}}">
-            <input type="hidden" name="_redirect" value="{{ absLangURL "contact-thanks/" }}">
+            <input type="hidden" name="_redirect" value="{{ absLangURL "contact/thanks/" }}">
             <div class="col-sm-6">
               <label class="mb-1" for="first_name">{{ i18n "fname"}} <span class="text-danger">*</span></label>
               <input class="form-control shadow-none" type="text" id="first_name" name="first_name" autocomplete="given-name" placeholder="{{ i18n `fname`}}" required>
