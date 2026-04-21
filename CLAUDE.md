@@ -34,7 +34,21 @@ layouts/partials/              # Theme overrides (see below)
 static/images/                 # Static images (banner, about, posts, logo) served at /images/...
 assets/images/services/        # Service section images — processed by Hugo (auto WebP + responsive srcsets)
 assets/scss/custom.scss        # Minor SCSS overrides only
+hugo_stats.json                # Committed — PurgeCSS reads this in CI. Do not add to .gitignore
+purgecss.config.js             # PurgeCSS CLI config: extractor + JS-toggled class safelist
 ```
+
+### CSS build pipeline
+
+`npm run build` runs Hugo then immediately runs PurgeCSS CLI on `public/css/style.css`:
+
+```
+hugo ... && npx purgecss --css public/css/style.css --content hugo_stats.json --config purgecss.config.js -o public/css/
+```
+
+This reduces Font Awesome from ~2500 selectors to the ~13 actually used (396K → 76K). **Do not** re-enable `purge_css = true` in `params.toml` — the Hugo PostCSS+PurgeCSS pipe is broken for this (v6 stdin bug; the CLI path is the working fix).
+
+If you add new classes that are toggled exclusively by JavaScript (not present in any Hugo template), add them to the `safelist` in `purgecss.config.js` so PurgeCSS doesn't strip them.
 
 ---
 
