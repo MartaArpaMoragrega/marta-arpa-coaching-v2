@@ -1,4 +1,7 @@
 #################### default parameters ################################
+# purge_css = true is intentionally disabled — Hugo's PostCSS+PurgeCSS pipe
+# does not purge correctly (v6 stdin bug). PurgeCSS runs via CLI in package.json instead.
+
 # favicon
 favicon = "images/favicon.png"
 # logo
