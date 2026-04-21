@@ -1,9 +1,9 @@
 {{ if not hugo.IsServer }}
 <!-- Cookiebot CMP — must be first script in <head> to block all others until consent -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="74620d63-7852-407b-b5c4-4c336038f057" data-blockingmode="auto" type="text/javascript"></script>
-<!-- Google Analytics — Cookiebot gates this until statistics consent is given -->
-<script data-cookieconsent="statistics" async src="https://www.googletagmanager.com/gtag/js?id=G-25NEQK4KKL"></script>
-<script data-cookieconsent="statistics">
+<!-- Google Analytics — type="text/plain" prevents browser fetch; Cookiebot changes to text/javascript after statistics consent -->
+<script type="text/plain" data-cookieconsent="statistics" async src="https://www.googletagmanager.com/gtag/js?id=G-25NEQK4KKL"></script>
+<script type="text/plain" data-cookieconsent="statistics">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
