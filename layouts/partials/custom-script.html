@@ -1,6 +1,14 @@
 {{ if not hugo.IsServer }}
 <!-- Cookiebot CMP — must be first script in <head> to block all others until consent -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="74620d63-7852-407b-b5c4-4c336038f057" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Analytics — Cookiebot gates this until statistics consent is given -->
+<script data-cookieconsent="statistics" async src="https://www.googletagmanager.com/gtag/js?id=G-25NEQK4KKL"></script>
+<script data-cookieconsent="statistics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-25NEQK4KKL');
+</script>
 <!-- Umami — cookieless analytics, no consent required -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="6d411740-d616-4e37-875f-35102dd154c6" data-cookieconsent="ignore"></script>
 <!-- Ahrefs analytics -->

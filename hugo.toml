@@ -16,8 +16,8 @@ hasCJKLanguage = true # If hasCJKLanguage true, auto-detect Chinese/Japanese/Kor
 
 ########################### Services #############################
 [services]
-[services.googleAnalytics]
-ID = 'G-25NEQK4KKL'
+# GA is injected manually in custom-script.html with data-cookieconsent="statistics"
+# so Cookiebot can properly gate it. Do not re-enable this.
 
 
 ############################# Modules ############################
