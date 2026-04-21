@@ -6,38 +6,37 @@ weight = 1
 
 [[main]]
 name = "About Me"
-url = "/en/about"
+url = "/en/about/"
 weight = 3
 
 [[main]]
 name = "Blog"
-url = "/en/blog"
+url = "/en/blog/"
 weight = 4
 
 [[main]]
 name = "Contact"
-url = "/en/contact"
+url = "/en/contact/"
 weight = 5
 
 # footer menu middle (Resources)
 [[footer_middle]]
 name = "Blog"
-url = "/en/blog"
+url = "/en/blog/"
 
 [[footer_middle]]
 name = "About Me"
-url = "/en/about"
+url = "/en/about/"
 
 [[footer_middle]]
 name = "Contact"
-url = "/en/contact"
+url = "/en/contact/"
 
 # footer menu right (Legal)
 [[footer_right]]
 name = "Legal Notice"
-url = "/en/aviso-legal"
+url = "/en/aviso-legal/"
 
 [[footer_right]]
 name = "Cookie Policy"
-url = "/en/cookie-policy"
-
+url = "/en/cookie-policy/"
