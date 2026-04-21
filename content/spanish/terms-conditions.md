@@ -1,31 +1,38 @@
 ---
-title: "Terms of Service"
-subtitle: ""
-# meta description
-description: "This is meta description"
+title: "Términos y Condiciones"
+description: "Condiciones generales de contratación de los servicios de coaching"
 draft: false
+translationKey: "terms-conditions"
 ---
 
-##### Responsibility of Contributors
+Las presentes Condiciones Generales regulan la contratación de los servicios de coaching ofrecidos por [NOMBRE COMPLETO] (en adelante, «la titular»), con NIF [NIF/DNI] y domicilio en [DIRECCIÓN PROFESIONAL].
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed 
+##### Descripción de los servicios
 
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+La titular ofrece servicios de coaching ejecutivo, coaching de equipos y acompañamiento individual. Las condiciones concretas de cada servicio —número de sesiones, duración, honorarios y forma de pago— se especifican en la propuesta enviada al cliente antes de iniciar el proceso.
 
-##### Gathering of Personal Information
+##### Contratación y precio
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+El proceso de contratación se inicia con la aceptación expresa de la propuesta económica por parte del cliente. Los honorarios se abonarán según los plazos y medios indicados en dicha propuesta. El impago total o parcial faculta a la titular a suspender la prestación del servicio.
 
-##### Protection of  Personal- Information
+##### Cancelación y reembolso
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. 
+Las cancelaciones comunicadas con más de 48 horas de antelación no generan cargo alguno. Las cancelaciones con menos de 48 horas o la inasistencia sin previo aviso podrán facturarse íntegramente. En caso de cancelación del servicio antes de su finalización, se reembolsarán las sesiones no realizadas.
 
-Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat 
+##### Confidencialidad
 
-##### Privacy Policy Changes
+La titular se compromete a mantener la confidencialidad de toda la información compartida durante las sesiones de coaching. Esta obligación se extiende de forma indefinida más allá de la finalización del proceso.
 
-1. Sll the Themefisher items are designed to be with the latest , We check all
-2. comments that threaten or harm the reputation of any person or organization
-3. personal information including, but  limited to, email addresses, telephone numbers
-4. Any Update come in The technology  Customer will get automatic  Notification.
+##### Propiedad intelectual
+
+Los materiales, metodologías y contenidos facilitados durante el proceso de coaching son propiedad de la titular y no podrán ser reproducidos ni distribuidos sin su autorización expresa.
+
+##### Limitación de responsabilidad
+
+El coaching no es un servicio de psicoterapia, asesoramiento médico ni consultoría jurídica. La titular no se responsabiliza de las decisiones que el cliente adopte como resultado del proceso. Los resultados dependen en gran medida del compromiso y esfuerzo del propio cliente.
+
+##### Legislación aplicable y jurisdicción
+
+Las presentes condiciones se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales del domicilio del cliente, salvo fuero imperativo distinto.
+
+*Última actualización: abril de 2026*

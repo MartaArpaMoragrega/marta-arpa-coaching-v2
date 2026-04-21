@@ -40,3 +40,11 @@ url = "/en/aviso-legal/"
 [[footer_right]]
 name = "Cookie Policy"
 url = "/en/cookie-policy/"
+
+[[footer_right]]
+name = "Privacy Policy"
+url = "/en/privacy-policy/"
+
+[[footer_right]]
+name = "Terms and Conditions"
+url = "/en/terms-conditions/"
