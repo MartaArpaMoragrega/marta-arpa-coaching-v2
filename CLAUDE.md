@@ -52,9 +52,9 @@ blog/
   *.md              # Blog posts (3 per language, 12 total)
 ```
 
-Spanish also has `privacy-policy.md` and `terms-conditions.md` (Lorem ipsum — not yet live).
+All 4 languages have `aviso-legal.md`, `cookie-policy.md`, `privacy-policy.md`, and `terms-conditions.md` — content is real but contains `[PLACEHOLDER]` fields (name, NIF, address, email) that Marta must fill in before go-live.
 
-All 4 languages have `aviso-legal.md` and `cookie-policy.md` — content is real but contains `[PLACEHOLDER]` fields (name, NIF, address, email, domain) that Marta must fill in before go-live.
+`contact-thanks.md` has `noindex: true` — it is a form-redirect utility page and must never appear in search results.
 
 Translations across languages are linked via `translationKey` in front matter.
 
@@ -98,15 +98,16 @@ Place service images in `assets/images/services/` (not `static/`) — Hugo will 
 
 ## Template overrides
 
-Four theme/module partials are overridden in `layouts/partials/` — **do not delete these**:
+Six theme/module partials are overridden in `layouts/partials/` — **do not delete these**:
 
 | File | Why overridden |
 |---|---|
 | `image.html` | Changed `absURL` → `relURL` for static images (fixes cross-device loading). Also handles WebP conversion + responsive `<picture>` srcsets for images in `assets/` |
 | `logo.html` | Same fix for the logo image |
 | `header.html` | Navbar brand uses `"/" | relLangURL` instead of `site.BaseURL`; language switcher uses `.RelPermalink` |
-| `basic-seo.html` | Suppresses `<base>` tag when `hugo.IsServer` (was injecting `//localhost:PORT/`, breaking all relative URLs) |
-| `custom-script.html` | Injects Cookiebot CMP script as the first `<head>` script so it can block GA and other cookies until consent is given |
+| `basic-seo.html` | Suppresses `<base>` tag when `hugo.IsServer`; sole source of `<title>` tag (with `meta_title` front matter support) |
+| `head.html` | Removes the theme's own `<title>` tag — `basic-seo.html` is authoritative to avoid duplicate titles |
+| `custom-script.html` | Injects Cookiebot CMP first; also manually injects GA with `data-cookieconsent="statistics"` so Cookiebot gates it. Both suppressed in dev via `hugo.IsServer`. Do not add GA back to `hugo.toml` |
 
 One layout is overridden in `layouts/_default/`:
 
@@ -139,7 +140,7 @@ Colors and fonts are set in `hugo.toml` under `[params.variables]` and compiled 
 | Nav CTA button label | `config/_default/params.toml` | `navigation_button.label` |
 | Contact form URL | `config/_default/params.toml` | `contact_form_action` |
 | reCAPTCHA site key | `config/_default/params.toml` | `recaptcha_site_key` |
-| Google Analytics | `hugo.toml` | `[services.googleAnalytics].ID` |
+| Google Analytics | `layouts/partials/custom-script.html` | hardcoded `G-25NEQK4KKL` in the gtag snippet — **do not add back to `hugo.toml`** |
 | Social links | `config/_default/params.toml` | `[params.social]` |
 | Logo path/size | `config/_default/params.toml` | `logo`, `logo_width` |
 
@@ -148,6 +149,6 @@ Colors and fonts are set in `hugo.toml` under `[params.variables]` and compiled 
 ## Pending work (from MIGRATION_PLAN.md)
 
 - [x] Favicon — `assets/images/favicon.png` (square MA mark, auto-resized by Hugo)
-- [ ] Fill in `[PLACEHOLDER]` fields in `aviso-legal.md` and `cookie-policy.md` across all 4 languages
+- [ ] Fill in `[PLACEHOLDER]` fields in `aviso-legal.md`, `cookie-policy.md`, `privacy-policy.md`, and `terms-conditions.md` across all 4 languages
 - [x] Phase 6: SEO — metadata, canonical URLs, hreflang x-default fix, Schema.org JSON-LD (done)
 - [ ] Phase 8: QA — full build, link check, form test (end-to-end submit with reCAPTCHA), mobile review
