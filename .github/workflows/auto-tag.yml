@@ -15,7 +15,9 @@ jobs:
         with:
           fetch-depth: 0  # full history so all tags are visible
 
-      - name: Create incremental tag
+      - name: Create release with changelog
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           LATEST=$(git tag -l 'v[0-9]*' | sort -V | tail -1)
           if [ -z "$LATEST" ]; then
@@ -24,8 +26,8 @@ jobs:
             NUM="${LATEST#v}"
             NEXT="v$((NUM + 1))"
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag "$NEXT"
-          git push origin "$NEXT"
-          echo "Tagged as $NEXT"
+          gh release create "$NEXT" \
+            --title "$NEXT" \
+            --generate-notes \
+            --latest
+          echo "Released $NEXT"
