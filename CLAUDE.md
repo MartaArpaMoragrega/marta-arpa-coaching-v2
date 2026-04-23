@@ -98,6 +98,16 @@ Edit `content/{lang}/_index.md`. Each service_item requires `title`, `content`, 
 
 Place service images in `assets/images/services/` (not `static/`) — Hugo will automatically generate WebP versions and responsive srcsets at build time. Source images should be square PNG at 512×512.
 
+### CTA profile image (`assets/images/about/marpa-profile-office.png`)
+
+**Do not replace this file with a JPEG, WebP, or any opaque format.**
+
+The image is a 500×500 PNG with two things baked in:
+1. **Transparent background** outside the circle — the circular crop is in the image, not CSS.
+2. **Teal circular border** ring matching the site's primary colour (`#0AA8A7`) — also baked in, not CSS.
+
+If you swap it for an opaque format (JPEG, etc.) both the circle shape and the border disappear and the photo renders as a plain rectangle. If you need to update the photo, recreate the circular crop + teal border in the new PNG before replacing the file. The CSS class `cta-profile-img` only handles responsive sizing; it applies no border-radius or border of its own.
+
 ---
 
 ## Multilingual rules

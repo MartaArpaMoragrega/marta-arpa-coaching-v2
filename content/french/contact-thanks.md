@@ -2,6 +2,7 @@
 title: "Message envoyé"
 description: "Merci pour votre message. Je vous répondrai bientôt."
 draft: false
+noindex: true
 translationKey: "contact-thanks"
 url: /fr/contact/thanks/
 ---

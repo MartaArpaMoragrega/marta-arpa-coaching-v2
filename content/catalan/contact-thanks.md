@@ -2,6 +2,7 @@
 title: "Missatge enviat"
 description: "Gràcies pel teu missatge. Et respondré aviat."
 draft: false
+noindex: true
 translationKey: "contact-thanks"
 url: /ca/contact/thanks/
 ---
