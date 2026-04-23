@@ -1,0 +1,31 @@
+name: Auto-tag release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so all tags are visible
+
+      - name: Create incremental tag
+        run: |
+          LATEST=$(git tag -l 'v[0-9]*' | sort -V | tail -1)
+          if [ -z "$LATEST" ]; then
+            NEXT="v1"
+          else
+            NUM="${LATEST#v}"
+            NEXT="v$((NUM + 1))"
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag "$NEXT"
+          git push origin "$NEXT"
+          echo "Tagged as $NEXT"
