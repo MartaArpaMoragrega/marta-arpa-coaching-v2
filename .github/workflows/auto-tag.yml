@@ -22,12 +22,14 @@ jobs:
           LATEST=$(git tag -l 'v[0-9]*' | sort -V | tail -1)
           if [ -z "$LATEST" ]; then
             NEXT="v1"
+            NOTES=$(git log --pretty=format:"- %s" --no-merges)
           else
             NUM="${LATEST#v}"
             NEXT="v$((NUM + 1))"
+            NOTES=$(git log "${LATEST}..HEAD" --pretty=format:"- %s" --no-merges)
           fi
           gh release create "$NEXT" \
             --title "$NEXT" \
-            --generate-notes \
+            --notes "$NOTES" \
             --latest
           echo "Released $NEXT"
