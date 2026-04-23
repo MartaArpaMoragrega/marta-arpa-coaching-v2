@@ -5,6 +5,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch or tag to deploy (e.g. main, v3)"
+        required: false
+        default: "main"
 
 permissions:
   contents: read
@@ -23,6 +28,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: ${{ inputs.ref || 'main' }}
           fetch-depth: 0 # needed for .GitInfo and .Lastmod
 
       - name: Setup Go
