@@ -184,6 +184,12 @@
       "url": "{{ $siteID }}/",
       "logo": {{ "images/logo-ma.webp" | absURL | jsonify | safeJS }},
       "description": {{ site.Params.metadata.description | jsonify | safeJS }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Maresme",
+        "addressRegion": "Barcelona",
+        "addressCountry": "ES"
+      },
       "sameAs": [
         "https://www.linkedin.com/in/marta-arpa-moragrega/",
         "https://www.instagram.com/marta_arpa_coaching"
@@ -197,6 +203,12 @@
       "description": {{ site.Params.metadata.description | jsonify | safeJS }},
       "url": "{{ $siteID }}/",
       "image": {{ "images/about/marpa-profile-office-original.jpg" | absURL | jsonify | safeJS }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Maresme",
+        "addressRegion": "Barcelona",
+        "addressCountry": "ES"
+      },
       "worksFor": { "@id": "{{ $siteID }}/#organization" },
       "sameAs": [
         "https://www.linkedin.com/in/marta-arpa-moragrega/",
