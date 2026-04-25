@@ -13,7 +13,7 @@
   {{ $title = .Params.meta_title }}
   <!-- checking page title -->
 {{ else if .Params.title }}
-  {{ $title = .Params.title }}
+  {{ $title = print .Params.title " | " site.Title }}
 {{ end }}
 
 <title>{{ $title }}</title>
@@ -156,6 +156,7 @@
 
 <!-- ######### opengraph others meta ############## -->
 <meta property="og:title" content="{{ $title }}" />
+<meta property="og:site_name" content="{{ site.Title }}" />
 <meta property="og:description" content="{{ $description }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ .Permalink }}" />
@@ -180,7 +181,7 @@
     {
       "@type": "Organization",
       "@id": "{{ $siteID }}/#organization",
-      "name": "Marta Arpa Coaching",
+      "name": "Marta Arpa Coaching & Consulting",
       "url": "{{ $siteID }}/",
       "logo": {{ "images/logo-ma.webp" | absURL | jsonify | safeJS }},
       "description": {{ site.Params.metadata.description | jsonify | safeJS }},
