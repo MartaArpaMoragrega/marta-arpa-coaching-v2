@@ -1,16 +1,16 @@
 {{ if not hugo.IsServer }}
-<!-- Cookiebot CMP — must be first script in <head> to block all others until consent -->
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="74620d63-7852-407b-b5c4-4c336038f057" data-blockingmode="auto" type="text/javascript"></script>
-<!-- Google Analytics — type="text/plain" prevents browser fetch; Cookiebot changes to text/javascript after statistics consent -->
-<script type="text/plain" data-cookieconsent="statistics" async src="https://www.googletagmanager.com/gtag/js?id=G-25NEQK4KKL"></script>
-<script type="text/plain" data-cookieconsent="statistics">
+<!-- Klaro CMP -->
+<script defer src="https://api.kiprotect.com/v1/privacy-managers/9af24f40ff8d0fef9983c9128703efca/klaro.js"></script>
+<!-- Google Analytics — blocked until Klaro grants consent for the "google-analytics" service -->
+<script type="text/plain" data-name="google-analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-25NEQK4KKL"></script>
+<script type="text/plain" data-name="google-analytics">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-25NEQK4KKL');
 </script>
 <!-- Umami — cookieless analytics, no consent required -->
-<script defer src="https://cloud.umami.is/script.js" data-website-id="6d411740-d616-4e37-875f-35102dd154c6" data-cookieconsent="ignore"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="6d411740-d616-4e37-875f-35102dd154c6"></script>
 <!-- Ahrefs analytics -->
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="UByeRHLvn8qMEHqQiQl+yQ" async></script>
 {{ end }}
