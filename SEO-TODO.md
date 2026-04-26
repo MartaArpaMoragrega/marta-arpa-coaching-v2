@@ -132,32 +132,29 @@ Items are ordered by priority. Check off each one as it's done.
 
 ## MEDIUM — hugo.toml and config tweaks
 
-- [ ] **Enable `enableGitInfo = true` in `hugo.toml`**
+- [x] **Enable `enableGitInfo = true` in `hugo.toml`**
   Automatically sets `.Lastmod` from last git commit date, fixing `BlogPosting.dateModified`
   always equalling `datePublished`
 
-- [ ] **Disable taxonomy index pages** — `categories/` and `tags/` pages are auto-generated,
+- [x] **Disable taxonomy index pages** — `categories/` and `tags/` pages are auto-generated,
   content-free, and currently in all 4 language sitemaps.
   Add to `hugo.toml`:
   ```toml
   disableKinds = ["taxonomy", "term"]
   ```
 
-- [ ] **Fix multilingual OG/meta description fallback**
+- [x] **Fix multilingual OG/meta description fallback**
   `params.toml` `[metadata] description` is Spanish-only; EN/FR/CA pages without explicit
   `description` front matter serve Spanish metadata. Add translated `description:` to each
   language's `_index.md` front matter (and `about.md`).
 
-- [ ] **Add `lastmod` front matter to static pages missing it**
-  8 of 13 ES sitemap URLs have no `<lastmod>`. Affects: `about.md`, `contact.md`,
-  `aviso-legal.md`, `cookie-policy.md`, `privacy-policy.md`, `terms-conditions.md`
-  (repeat for all 4 languages). Just add `date: "YYYY-MM-DD"` to their front matter.
+- [x] **Add `lastmod` front matter to static pages missing it** — resolved by `enableGitInfo = true`; Hugo now pulls lastmod from git history automatically.
 
 - [ ] **Submit sitemap to Google Search Console**
   Submit `https://martaarpa.com/sitemap.xml` manually in GSC to accelerate indexation.
   Also verify the property if not already done.
 
-- [ ] **Add location to EN homepage hero**
+- [x] **Add location to EN homepage hero**
   `content/english/_index.md` — add "Barcelona, Spain" to the banner `content:` field
   or the H1. EN homepage has zero geographic signal for "executive coach Barcelona/Spain" searches.
 

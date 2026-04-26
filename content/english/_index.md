@@ -1,6 +1,7 @@
 ---
 meta_title: "Executive Coach Barcelona, Spain | Marta Arpa"
 meta_image: "images/about/profile-pic.png"
+description: "Executive and personal coaching, change management consulting. Supporting people and organizations toward real impact."
 ####################### Banner #########################
 banner:
   title: "Turning purpose into real impact for people and organizations"
