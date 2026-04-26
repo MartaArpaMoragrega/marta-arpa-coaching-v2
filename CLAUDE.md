@@ -31,8 +31,11 @@ content/
   catalan/                     # CA content
 i18n/{es,en,fr,ca}.yaml        # UI string translations (form labels, pagination, etc.)
 layouts/partials/              # Theme overrides (see below)
-static/images/                 # Static images (banner, about, posts, logo) served at /images/...
+static/images/                 # Static images (banner, about, logo) served at /images/...
+static/robots.txt              # Crawler directives + sitemap declaration
+static/llms.txt                # AI ingestion manifest (llmstxt.org)
 assets/images/services/        # Service section images — processed by Hugo (auto WebP + responsive srcsets)
+assets/images/posts/           # Blog post banner images — processed by Hugo (auto WebP + responsive srcsets)
 assets/scss/custom.scss        # Minor SCSS overrides only
 hugo_stats.json                # Committed — PurgeCSS reads this in CI. Do not add to .gitignore
 purgecss.config.js             # PurgeCSS CLI config: extractor + JS-toggled class safelist
@@ -91,7 +94,7 @@ translationKey: "unique-post-slug"
 ---
 ```
 
-Place banner images in `static/images/posts/<folder>/`.
+Place banner images in `assets/images/posts/<folder>/` (not `static/`) — Hugo will automatically generate WebP versions and responsive srcsets at build time.
 
 ### Homepage service row
 Edit `content/{lang}/_index.md`. Each service_item requires `title`, `content`, `images` (list of paths), and optionally a `button`.
@@ -129,7 +132,7 @@ Six theme/module partials are overridden in `layouts/partials/` — **do not del
 | `image.html` | Changed `absURL` → `relURL` for static images (fixes cross-device loading). Also handles WebP conversion + responsive `<picture>` srcsets for images in `assets/` |
 | `logo.html` | Same fix for the logo image |
 | `header.html` | Navbar brand uses `"/" | relLangURL` instead of `site.BaseURL`; language switcher uses `.RelPermalink` |
-| `basic-seo.html` | Suppresses `<base>` tag when `hugo.IsServer`; sole source of `<title>` tag — homepage uses `site.Title` alone, inner pages use `Page Title \| site.Title`; `meta_title` front matter overrides the full title as-is. Outputs `og:site_name`. Injects Schema.org JSON-LD (`@graph` with Organization + Person + optional WebSite, BreadcrumbList on non-home pages, BlogPosting on blog singles). **Always pipe `jsonify` through `safeJS`** (`\| jsonify \| safeJS`) inside `<script>` blocks — Hugo's JS auto-escaper double-encodes quotes otherwise. |
+| `basic-seo.html` | Suppresses `<base>` tag when `hugo.IsServer`; sole source of `<title>` tag — homepage uses `site.Title` alone, inner pages use `Page Title \| site.Title`; `meta_title` front matter overrides the full title as-is. Outputs `og:site_name`. Injects Schema.org JSON-LD (`@graph` with Organization + Person + optional WebSite, BreadcrumbList on non-home pages, BlogPosting on blog singles, ProfilePage on about page). `og:type` is `article` on blog posts, `website` elsewhere. `Person.image` is an `ImageObject` with dimensions. `WebSite @id` uses `$siteID` (not `site.Home.Permalink`) so it stays consistent across all language homepages. Person has `jobTitle`, `areaServed`, `knowsAbout`, and `hasCredential` (ICF). **Always pipe `jsonify` through `safeJS`** (`\| jsonify \| safeJS`) inside `<script>` blocks — Hugo's JS auto-escaper double-encodes quotes otherwise. |
 | `head.html` | Removes the theme's own `<title>` tag — `basic-seo.html` is authoritative to avoid duplicate titles |
 | `custom-script.html` | Injects Klaro CMP (kiprotect.com cloud); GA scripts use `type="text/plain"` + `data-name="google-analytics"` so Klaro gates them. A bare `gtag` stub is defined globally (no consent needed) so Klaro's internal GA callback doesn't throw. Both CMP and GA suppressed in dev via `hugo.IsServer`. Do not add GA back to `hugo.toml` |
 

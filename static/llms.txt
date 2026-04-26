@@ -1,0 +1,26 @@
+# Marta Arpa Coaching & Consultancy
+> ICF certified executive coach and change consultant based in Maresme, Barcelona. 15+ years of experience in organizational transformation, executive coaching, and change management.
+
+## About
+- [About Marta Arpa](https://martaarpa.com/about/)
+
+## Services
+- [Executive Coaching](https://martaarpa.com/)
+- [Team Coaching](https://martaarpa.com/)
+- [Focus Workshops (Píldoras de Foco)](https://martaarpa.com/)
+- [Change Consulting](https://martaarpa.com/)
+- [Positive Leadership](https://martaarpa.com/)
+- [Career Planning](https://martaarpa.com/)
+
+## Blog
+- [Positive Leadership: a way of leading that transforms people and organizations](https://martaarpa.com/blog/liderazgo-positivo/)
+- [Impostor Syndrome: when you doubt yourself even when you are doing well](https://martaarpa.com/blog/sindrome-de-la-impostora/)
+- [Transforming is not changing place](https://martaarpa.com/blog/transformar-no-es-cambiar-de-lugar/)
+
+## Contact
+- [Book a free 30-minute session](https://meet.brevo.com/marta-arpa/sesion-gratuita-)
+- [Contact form](https://martaarpa.com/contact/)
+
+## Languages
+This site is available in Spanish (default), English (/en/), French (/fr/), and Catalan (/ca/).
+The Spanish version is the primary and most complete language version.

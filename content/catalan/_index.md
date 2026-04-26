@@ -1,4 +1,6 @@
 ---
+meta_title: "Coach Executiva a Barcelona | Marta Arpa Coaching"
+meta_image: "images/about/profile-pic.png"
 ####################### Banner #########################
 banner:
   title: "Impulsant persones i organitzacions cap a un impacte real"

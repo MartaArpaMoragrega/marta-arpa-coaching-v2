@@ -158,7 +158,7 @@
 <meta property="og:title" content="{{ $title }}" />
 <meta property="og:site_name" content="{{ site.Title }}" />
 <meta property="og:description" content="{{ $description }}" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="{{ if and .Section (eq .Section "blog") (not .IsSection) }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 
 <!-- ########## twitter others meta ############### -->
@@ -200,10 +200,27 @@
       "@type": "Person",
       "@id": "{{ $siteID }}/#person",
       "name": "Marta Arpa",
-      "jobTitle": "Coach",
+      "jobTitle": "Executive Coach & Change Consultant",
+      "areaServed": ["Spain", "Europe"],
+      "knowsAbout": ["executive coaching", "team coaching", "change management", "organizational consulting", "positive leadership"],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "ICF Certified Coach",
+        "credentialCategory": "Professional Certification",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "International Coaching Federation (ICF)",
+          "url": "https://coachingfederation.org"
+        }
+      },
       "description": {{ site.Params.metadata.description | jsonify | safeJS }},
       "url": "{{ $siteID }}/",
-      "image": {{ "images/about/marpa-profile-office-original.jpg" | absURL | jsonify | safeJS }},
+      "image": {
+        "@type": "ImageObject",
+        "url": {{ "images/about/marpa-profile-office-original.jpg" | absURL | jsonify | safeJS }},
+        "width": 500,
+        "height": 500
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Maresme",
@@ -219,8 +236,8 @@
     {{- if .IsHome }},
     {
       "@type": "WebSite",
-      "@id": "{{ site.Home.Permalink }}#website",
-      "url": "{{ site.Home.Permalink }}",
+      "@id": "{{ $siteID }}/#website",
+      "url": "{{ $siteID }}/",
       "name": {{ site.Title | jsonify | safeJS }},
       "publisher": { "@id": "{{ $siteID }}/#organization" }
     }
@@ -262,6 +279,20 @@
     }
     {{- end }}
   ]
+}
+</script>
+{{- end }}
+{{- if eq .Layout "about" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "{{ .Permalink }}#profilepage",
+  "url": "{{ .Permalink }}",
+  "name": {{ .Title | jsonify | safeJS }},
+  "isPartOf": { "@id": "{{ $siteID }}/#website" },
+  "about": { "@id": "{{ $siteID }}/#person" },
+  "mainEntity": { "@id": "{{ $siteID }}/#person" }
 }
 </script>
 {{- end }}

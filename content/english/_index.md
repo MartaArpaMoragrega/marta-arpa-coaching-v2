@@ -1,4 +1,6 @@
 ---
+meta_title: "Executive Coach Barcelona, Spain | Marta Arpa"
+meta_image: "images/about/profile-pic.png"
 ####################### Banner #########################
 banner:
   title: "Turning purpose into real impact for people and organizations"
