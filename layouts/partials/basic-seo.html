@@ -123,18 +123,16 @@
 
     <!-- If not SVG  -->
     {{ if ne $imageExt `.svg` }}
-      {{ $imageWidth := $image.Width }}
-      {{ $imageHeight := $image.Height }}
-      {{ if (and (gt $imageWidth 144) (gt $imageHeight 144)) }}
-        <meta property="og:image" content="{{ $image.Permalink }}" />
-        <meta name="twitter:image" content="{{ $image.Permalink }}" />
-        <meta
-          name="twitter:card"
-          content="{{- if (and (gt $imageWidth 300) (gt $imageHeight 157) (not (eq $imageWidth $imageHeight))) -}}summary_large_image{{- else -}}summary{{- end -}}" />
+      {{ $ogImage := $image }}
+      {{ if (and (ge $image.Width 600) (ge $image.Height 315)) }}
+        {{ $ogImage = $image.Fill "1200x630 Center" }}
       {{ end }}
-      <!-- /if image gt 144px -->
-      <meta property="og:image:width" content="{{ $imageWidth }}" />
-      <meta property="og:image:height" content="{{ $imageHeight }}" />
+      <meta property="og:image" content="{{ $ogImage.Permalink }}" />
+      <meta property="og:image:width" content="{{ $ogImage.Width }}" />
+      <meta property="og:image:height" content="{{ $ogImage.Height }}" />
+      <meta property="og:image:alt" content="{{ .Title }}" />
+      <meta name="twitter:image" content="{{ $ogImage.Permalink }}" />
+      <meta name="twitter:card" content="summary_large_image" />
     {{ end }}
 
 
@@ -144,7 +142,7 @@
       content="image/{{- if eq $imageExt `.svg` -}}
         svg+xml
       {{- else -}}
-        {{- replaceRE `^jpg$` `jpeg` $imageExt -}}
+        {{- replaceRE `^jpg$` `jpeg` ($imageExt | strings.TrimPrefix ".") -}}
       {{- end -}}" />
   {{ end }}
 
@@ -160,6 +158,16 @@
 <meta property="og:description" content="{{ $description }}" />
 <meta property="og:type" content="{{ if and .Section (eq .Section "blog") (not .IsSection) }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
+{{ $ogLocale := "es_ES" }}
+{{ if eq .Lang "en" }}{{ $ogLocale = "en_US" }}{{ end }}
+{{ if eq .Lang "fr" }}{{ $ogLocale = "fr_FR" }}{{ end }}
+{{ if eq .Lang "ca" }}{{ $ogLocale = "ca_ES" }}{{ end }}
+<meta property="og:locale" content="{{ $ogLocale }}" />
+{{ if and (eq .Section "blog") (not .IsSection) }}
+<meta property="og:article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta property="og:article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta property="og:article:author" content="https://www.linkedin.com/in/marta-arpa-moragrega/" />
+{{ end }}
 
 <!-- ########## twitter others meta ############### -->
 <meta name="twitter:title" content="{{ $title }}" />
