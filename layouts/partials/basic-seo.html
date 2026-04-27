@@ -193,6 +193,7 @@
       "url": "{{ $siteID }}/",
       "logo": {{ "images/logo-ma.webp" | absURL | jsonify | safeJS }},
       "description": {{ site.Params.metadata.description | jsonify | safeJS }},
+      "areaServed": ["Spain", "Europe"],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Maresme",
@@ -209,7 +210,6 @@
       "@id": "{{ $siteID }}/#person",
       "name": "Marta Arpa",
       "jobTitle": "Executive Coach & Change Consultant",
-      "areaServed": ["Spain", "Europe"],
       "knowsAbout": ["executive coaching", "team coaching", "change management", "organizational consulting", "positive leadership"],
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
