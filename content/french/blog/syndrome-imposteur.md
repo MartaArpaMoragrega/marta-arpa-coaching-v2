@@ -33,4 +33,4 @@ Le coaching peut être un outil particulièrement puissant pour aborder le syndr
 
 Le travail ne s'arrête pas à la prise de conscience : il mène à l'action. Mettre en place de petites étapes, valider les progrès et maintenir l'engagement permet à la confiance de devenir une expérience concrète.
 
-Le syndrome de l'imposteur ne signifie pas que vous n'êtes pas capable ; souvent, il signifie que vous êtes en train de grandir. Et grandir est presque toujours inconfortable avant de devenir naturel.
+Le syndrome de l'imposteur ne signifie pas que vous n'êtes pas capable ; souvent, il signifie que vous êtes en train de grandir. Et grandir est presque toujours inconfortable avant de devenir naturel. Avec le bon accompagnement, ce même défi peut devenir une porte vers une confiance plus authentique et stable.

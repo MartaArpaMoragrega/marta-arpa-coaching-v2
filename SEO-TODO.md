@@ -188,10 +188,8 @@ Items are ordered by priority. Check off each one as it's done.
   - Positive leadership: Gallup engagement data, Kim Cameron's PERMA leadership research
   - Change/transformation: Prosci / McKinsey change failure rate statistics
 
-- [ ] **Fix EN impostor syndrome post** — missing closing paragraph present in ES/FR/CA versions
-  File: `content/english/blog/impostor-syndrome.md`
-  Add equivalent of: "With the right support, that same challenge can become a doorway
-  toward more authentic and stable confidence."
+- [x] **Fix EN/FR/CA impostor syndrome posts** — missing closing coaching CTA sentence (only ES had it)
+  Added to EN, FR, CA: the "With the right support…" closing sentence.
 
 ---
 
@@ -263,12 +261,10 @@ New posts to write, by cluster. All word counts are targets, not limits.
 
 ## LOW — Nice to have
 
-- [ ] Fix `<html>` Microdata prefix: `baseof.html` has `itemtype="http://schema.org/WebPage"` —
-  change `http://` to `https://` or remove the Microdata attribute entirely (redundant with JSON-LD)
-- [ ] Localize `metadata.keywords` in `params.toml` — currently Spanish-only, used as fallback
-  for all languages (low ranking signal, but worth fixing for completeness)
-- [ ] Add `summary:` front matter to each blog post for precise control over listing page
-  and OG description snippets (currently auto-generated from body, may truncate oddly)
+- [x] Fix `<html>` Microdata prefix: removed `itemscope itemtype` from `baseof.html` (redundant with JSON-LD)
+- [x] Localize `metadata.keywords` — added language-specific `keywords` front matter to EN/FR/CA `_index.md`
+- [x] Add `summary:` front matter to each blog post — already resolved: `layouts/_default/list.html`
+  uses `.Description` directly, so `description:` front matter controls listing excerpts
 - [ ] Consider a Related Posts partial to make the internal link matrix maintainable at scale
 - [ ] Add a cluster taxonomy (`taxonomies = ['cluster']` in `hugo.toml`) once 10+ posts exist
 - [ ] Investigate replacing webfont-loader JS with `<link rel="preconnect">` + `font-display:swap`

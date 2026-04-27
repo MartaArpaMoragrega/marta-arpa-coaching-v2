@@ -33,4 +33,4 @@ Coaching can be a powerful tool for addressing impostor syndrome because it prov
 
 The process doesn't stop at awareness—it moves into action. Designing small steps, validating progress, and sustaining commitment allows confidence to become an experience, not just an idea.
 
-Impostor syndrome doesn't mean you're not capable; often it means you're growing. And growth almost always feels uncomfortable before it feels natural.
+Impostor syndrome doesn't mean you're not capable; often it means you're growing. And growth almost always feels uncomfortable before it feels natural. With the right support, that same challenge can become a doorway toward more authentic and stable confidence.

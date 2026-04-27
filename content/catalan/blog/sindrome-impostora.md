@@ -33,4 +33,4 @@ El coaching pot ser una eina molt valuosa per treballar la síndrome de la impos
 
 El procés no es queda en la comprensió: impulsa a l'acció. Dissenyar petits passos, validar avenços i sostenir el compromís permet que la confiança esdevingui una experiència real.
 
-La síndrome de la impostora no indica que no siguis capaç; sovint indica que estàs creixent. I créixer gairebé sempre és incòmode abans de ser natural.
+La síndrome de la impostora no indica que no siguis capaç; sovint indica que estàs creixent. I créixer gairebé sempre és incòmode abans de ser natural. Amb el suport adequat, aquest mateix repte pot convertir-se en una porta cap a una seguretat més autèntica i estable.
