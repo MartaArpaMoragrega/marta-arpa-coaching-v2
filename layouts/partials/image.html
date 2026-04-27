@@ -147,7 +147,7 @@
           this.src='{{ $imageFallback.RelPermalink }}';" />
 
         <!-- if image size less then 500x and size not defined -->
-      {{ else if or (lt ($image.Width) 500) (not $resize) }}
+      {{ else if or (le ($image.Width) 500) (not $resize) }}
         {{ $size:= add (add (string $image.Width) "x") (string $image.Height) }}
         <!-- resize -->
         {{ $imageWebp:= $image.Resize (add (string $size) " webp") }}
