@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "rounded-2 w-100 mb-5") }}
-        <h2>{{ .Title }}</h2>
+        <h1 class="h2">{{ .Title }}</h1>
         <p class="post-meta">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02/01/2006" }}</time>
           <span class="post-meta-sep">·</span>
