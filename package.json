@@ -4,8 +4,8 @@
   "license": "MIT",
   "author": "gethugothemes",
   "scripts": {
-    "dev": "hugo server --bind 0.0.0.0",
-    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --forceSyncStatic && npx purgecss --css public/css/style.css --content hugo_stats.json --config purgecss.config.js -o public/css/",
+    "dev": "printf 'hash: %s\\ndate: %s\\ntag: %s\\n' \"$(git rev-parse --short HEAD)\" \"$(git log -1 --format=%ci)\" \"$(git describe --tags 2>/dev/null || echo '')\" > static/version.txt && hugo server --bind 0.0.0.0",
+    "build": "printf 'hash: %s\\ndate: %s\\ntag: %s\\n' \"$(git rev-parse --short HEAD)\" \"$(git log -1 --format=%ci)\" \"$(git describe --tags 2>/dev/null || echo '')\" > static/version.txt && hugo --gc --minify --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --forceSyncStatic && npx purgecss --css public/css/style.css --content hugo_stats.json --config purgecss.config.js -o public/css/",
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --watch --forceSyncStatic -e production --minify",
     "dev:example": "cd exampleSite; hugo server --themesDir ../..",
     "build:example": "cd exampleSite; hugo --themesDir ../.. --gc --minify --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --forceSyncStatic",

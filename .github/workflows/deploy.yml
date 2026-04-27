@@ -1,9 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Auto-tag release"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       ref:
@@ -30,6 +30,9 @@ jobs:
         with:
           ref: ${{ inputs.ref || 'main' }}
           fetch-depth: 0 # needed for .GitInfo and .Lastmod
+
+      - name: Fetch tags
+        run: git fetch --tags --force
 
       - name: Setup Go
         uses: actions/setup-go@v5
