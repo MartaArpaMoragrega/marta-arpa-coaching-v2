@@ -13,7 +13,7 @@
           </div>
           <div class="col-md-6">
             <h2 ><a href="{{ .RelPermalink }}" title="{{ .Title }}" class="text-dark d-inline-block">{{ .Title }}</a></h2>
-            <p class="mb-4">{{ .Summary }}</p>
+            <p class="mb-4">{{ .Description }}</p>
             <a href="{{ .RelPermalink }}" title="{{ i18n `read_more` }} - {{ .Title }}" class="btn btn-sm btn-primary">{{ i18n `read_more` }}</a>
           </div>
         </div>
@@ -23,10 +23,10 @@
       {{ range $paginator.Pages }}
       <div class="col-lg-4 col-sm-6 pb-4">
         <div class="card bg-transparent border-0">
-          {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "rounded-2 mb-4" "Size" "460x") }}
+          {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "rounded-2 mb-4" "Size" "460x195" "Command" "Fill") }}
           <div class="card-body p-0">
             <h3><a href="{{ .RelPermalink }}" title="{{ .Title }}" class="text-dark d-inline-block">{{ .Title }}</a></h3>
-            <p class="mb-4">{{ .Summary }}</p>
+            <p class="mb-4">{{ .Description }}</p>
             <a href="{{ .RelPermalink }}" title="{{ i18n `read_more` }} - {{ .Title }}" class="btn btn-sm btn-primary btn-sm">{{ i18n `read_more` }}</a>
           </div>
         </div>
