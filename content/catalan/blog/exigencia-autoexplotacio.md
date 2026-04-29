@@ -19,9 +19,9 @@ Llegint *La societat del cansament* de Byung-Chul Han, m'he quedat pensant en la
 
 Han ho anomena "violència neuronal", perquè el dany no és físic ni visible, sinó mental, i planteja una idea potent: que la llibertat i l'autoexigència excessiva en la societat actual no ens alliberen, sinó que ens poden conduir a l'esgotament constant.
 
-Si m'aturo a pensar-hi, em ressonen aquests conceptes perquè en algun moment m'he vist atrapada en aquesta lògica d'exigència permanent, on una creu que està triant lliurement, però en realitat respon a una pressió interioritzada per fer més, ser més, rendir més.
+Si m'aturo a pensar-hi, em ressonen aquests conceptes perquè en algun moment m'he vist atrapada en aquesta lògica d'exigència permanent, on un creu que està triant lliurement, però en realitat respon a una pressió interioritzada per fer més, ser més, rendir més.
 
-I potser aquí hi ha una de les grans trampes: ja no cal que ningú ens imposi res des de fora; ens ho exigim soles. Convertim la productivitat en valor personal i el descans en culpa.
+I potser aquí hi ha una de les grans trampes: ja no cal que ningú ens imposi res des de fora; ens ho exigim sols. Convertim la productivitat en valor personal i el descans en culpa.
 
 ### El benestar com a nova obligació
 

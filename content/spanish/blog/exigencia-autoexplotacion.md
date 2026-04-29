@@ -19,9 +19,9 @@ Leyendo *La sociedad del cansancio* de Byung-Chul Han, me he quedado pensando en
 
 Han lo llama "violencia neuronal", porque el daño no es físico ni visible, sino mental, y plantea una idea potente: que la libertad y la autoexigencia excesiva en la sociedad actual no nos liberan, sino que pueden conducirnos al agotamiento constante.
 
-Si me detengo a pensarlo, me resuenan estos conceptos porque en algún momento me he visto atrapada en esa lógica de exigencia permanente, donde una cree que está eligiendo libremente, pero en realidad responde a una presión internalizada por hacer más, ser más, rendir más.
+Si me detengo a pensarlo, me resuenan estos conceptos porque en algún momento me he visto atrapada en esa lógica de exigencia permanente, donde uno cree que está eligiendo libremente, pero en realidad responde a una presión internalizada por hacer más, ser más, rendir más.
 
-Y quizá ahí está una de las grandes trampas: ya no hace falta que alguien nos imponga desde fuera; nos exigimos solas. Convertimos la productividad en valor personal y el descanso en culpa.
+Y quizá ahí está una de las grandes trampas: ya no hace falta que alguien nos imponga desde fuera; nos exigimos solos. Convertimos la productividad en valor personal y el descanso en culpa.
 
 ### El bienestar como nueva obligación
 
