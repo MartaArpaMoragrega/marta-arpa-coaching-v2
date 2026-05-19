@@ -1,5 +1,6 @@
 ---
 title: "L'exigència en l'era de l'autoexplotació: entre el benestar i la trampa del rendiment"
+meta_title: "L'exigència en l'era de l'autoexplotació | Marta Arpa"
 date: "2026-04-27"
 image: "images/posts/exigencia-autoexplotacion/banner.png"
 author: "Marta Arpa"

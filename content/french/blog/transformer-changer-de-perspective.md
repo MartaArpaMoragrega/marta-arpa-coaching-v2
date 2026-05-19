@@ -1,5 +1,6 @@
 ---
 title: "Transformer ne consiste pas à changer de lieu : c'est changer de perspective"
+meta_title: "Transformer, c'est changer de perspective | Marta Arpa"
 date: "2025-12-15"
 image: "images/posts/transformacion/banner.fr.png"
 author: "Marta Arpa"

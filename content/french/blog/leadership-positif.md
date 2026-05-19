@@ -1,5 +1,6 @@
 ---
 title: "Le leadership positif : une manière de diriger qui transforme les personnes et les organisations"
+meta_title: "Leadership Positif | Marta Arpa Coaching"
 date: "2026-01-19"
 image: "images/posts/liderazgo-positivo/banner.png"
 author: "Marta Arpa"

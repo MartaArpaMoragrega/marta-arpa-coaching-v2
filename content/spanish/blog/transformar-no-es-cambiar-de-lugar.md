@@ -1,5 +1,6 @@
 ---
 title: "Transformar no es cambiar de lugar: es cambiar de perspectiva"
+meta_title: "Transformar es Cambiar de Perspectiva | Marta Arpa"
 date: "2025-12-15"
 image: "images/posts/transformacion/banner.png"
 author: "Marta Arpa"

@@ -96,6 +96,8 @@ translationKey: "unique-post-slug"
 
 Place banner images in `assets/images/posts/<folder>/` (not `static/`) — Hugo will automatically generate WebP versions and responsive srcsets at build time.
 
+**`<title>` length:** Hugo renders the title tag as `"{title} | Marta Arpa Coaching"`, adding 22 characters. If the `title` field is longer than ~38 characters the rendered `<title>` will exceed Google's 60-character guideline. For any post with a long descriptive title, add a `meta_title` field (≤ 60 chars, complete — e.g. `"Keyword Topic | Marta Arpa Coaching"`). This overrides both `<title>` and `og:title`; the `title` field stays unchanged and continues to appear in blog listing cards.
+
 ### Homepage service row
 Edit `content/{lang}/_index.md`. Each service_item requires `title`, `content`, `images` (list of paths), and optionally a `button`.
 

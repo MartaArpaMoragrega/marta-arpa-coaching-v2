@@ -1,5 +1,6 @@
 ---
 title: "Impostor Syndrome: When You Doubt Yourself Even Though You're Doing Well"
+meta_title: "Impostor Syndrome | Marta Arpa Coaching"
 date: "2026-02-22"
 image: "images/posts/sindrome-de-la-impostora/banner.png"
 author: "Marta Arpa"

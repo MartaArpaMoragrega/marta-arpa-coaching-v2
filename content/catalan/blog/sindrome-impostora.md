@@ -1,5 +1,6 @@
 ---
 title: "Síndrome de la impostora: quan dubtes de tu tot i fer-ho bé"
+meta_title: "Síndrome de la impostora | Marta Arpa Coaching"
 date: "2026-02-22"
 image: "images/posts/sindrome-de-la-impostora/banner.png"
 author: "Marta Arpa"

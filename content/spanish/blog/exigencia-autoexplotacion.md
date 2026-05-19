@@ -1,5 +1,6 @@
 ---
 title: "La exigencia en la era de la autoexplotación: entre el bienestar y la trampa del rendimiento"
+meta_title: "Exigencia y Autoexplotación | Marta Arpa Coaching"
 date: "2026-04-27"
 image: "images/posts/exigencia-autoexplotacion/banner.png"
 author: "Marta Arpa"

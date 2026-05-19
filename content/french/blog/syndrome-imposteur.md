@@ -1,5 +1,6 @@
 ---
 title: "Syndrome de l'imposteur : quand vous doutez de vous même si tout va bien"
+meta_title: "Syndrome de l'imposteur | Marta Arpa Coaching"
 date: "2026-02-22"
 image: "images/posts/sindrome-de-la-impostora/banner.png"
 author: "Marta Arpa"

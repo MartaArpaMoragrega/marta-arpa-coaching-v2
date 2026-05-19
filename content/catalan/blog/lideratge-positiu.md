@@ -1,5 +1,6 @@
 ---
 title: "Lideratge positiu: una manera de liderar que transforma persones i organitzacions"
+meta_title: "Lideratge Positiu | Marta Arpa Coaching"
 date: "2026-01-19"
 image: "images/posts/liderazgo-positivo/banner.png"
 author: "Marta Arpa"

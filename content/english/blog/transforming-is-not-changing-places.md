@@ -1,5 +1,6 @@
 ---
 title: "Transforming is not about changing places: it's about changing perspective"
+meta_title: "Transforming is Changing Perspective | Marta Arpa"
 date: "2025-12-15"
 image: "images/posts/transformacion/banner.en.png"
 author: "Marta Arpa"

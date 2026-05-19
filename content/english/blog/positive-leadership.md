@@ -1,5 +1,6 @@
 ---
 title: "Positive leadership: a way of leading that transforms people and organizations"
+meta_title: "Positive Leadership | Marta Arpa Coaching"
 date: "2026-01-19"
 image: "images/posts/liderazgo-positivo/banner.png"
 author: "Marta Arpa"
