@@ -1,6 +1,6 @@
 ---
 title: "Términos y Condiciones"
-description: "Condiciones generales de contratación de los servicios de coaching"
+description: "Condiciones generales de contratación de los servicios de coaching ejecutivo y personal. Conoce los plazos, compromisos y condiciones antes de comenzar."
 draft: false
 translationKey: "terms-conditions"
 ---

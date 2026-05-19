@@ -1,6 +1,6 @@
 ---
 title: "Terms and Conditions"
-description: "General terms and conditions for the provision of coaching services"
+description: "General terms and conditions for the provision of executive and personal coaching services, including fees, timelines, and mutual commitments."
 draft: false
 translationKey: "terms-conditions"
 ---

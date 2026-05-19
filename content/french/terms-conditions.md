@@ -1,6 +1,6 @@
 ---
 title: "Conditions Générales"
-description: "Conditions générales de prestation des services de coaching"
+description: "Conditions générales de prestation des services de coaching exécutif et personnel, incluant les tarifs, délais et engagements mutuels."
 draft: false
 translationKey: "terms-conditions"
 ---

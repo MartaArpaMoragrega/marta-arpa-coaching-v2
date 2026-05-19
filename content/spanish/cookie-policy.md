@@ -1,6 +1,6 @@
 ---
 title: "Política de Cookies"
-description: "Información sobre el uso de cookies en este sitio web conforme al RGPD y la LSSI"
+description: "Información sobre el uso de cookies en este sitio web conforme al RGPD y la LSSI. Conoce qué cookies utilizamos y cómo puedes gestionarlas."
 draft: false
 translationKey: "cookie-policy"
 ---

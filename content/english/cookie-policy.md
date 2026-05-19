@@ -1,6 +1,6 @@
 ---
 title: "Cookie Policy"
-description: "Information about the use of cookies on this website in accordance with the GDPR and LSSI"
+description: "Information about the use of cookies on this website in accordance with the GDPR and LSSI. Learn which cookies we use and how to manage your preferences."
 draft: false
 translationKey: "cookie-policy"
 ---

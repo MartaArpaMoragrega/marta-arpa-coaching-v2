@@ -1,7 +1,7 @@
 ---
 title: "Contacte"
 subtitle: "Escriu-me o reserva directament una sessió gratuïta."
-description: "Tens alguna pregunta o vols explorar com puc acompanyar-te? Escriu-me i et respondré aviat."
+description: "Tens alguna pregunta o vols explorar com puc acompanyar-te en el teu procés de coaching? Escriu-me i et respondré aviat."
 draft: false
 translationKey: "contact"
 layout: "contact"

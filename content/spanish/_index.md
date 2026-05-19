@@ -1,5 +1,6 @@
 ---
 meta_title: "Coach Ejecutiva en Barcelona | Marta Arpa Coaching"
+description: "Coaching ejecutivo y personal, consultoría de gestión del cambio. Acompaño a personas y organizaciones hacia un impacto real y sostenible."
 meta_image: "images/about/profile-pic.png"
 ####################### Banner #########################
 banner:

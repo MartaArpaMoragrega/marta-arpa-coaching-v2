@@ -1,6 +1,6 @@
 ---
 title: "Legal Notice"
-description: "Legal information for this website in accordance with Spanish Law 34/2002 on Information Society Services"
+description: "Legal information for this website in accordance with Spanish Law 34/2002 on Information Society Services and Electronic Commerce."
 draft: false
 translationKey: "aviso-legal"
 ---

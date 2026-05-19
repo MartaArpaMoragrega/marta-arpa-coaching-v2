@@ -98,6 +98,8 @@ Place banner images in `assets/images/posts/<folder>/` (not `static/`) — Hugo 
 
 **`<title>` length:** Hugo renders the title tag as `"{title} | Marta Arpa Coaching"`, adding 22 characters. If the `title` field is longer than ~38 characters the rendered `<title>` will exceed Google's 60-character guideline. For any post with a long descriptive title, add a `meta_title` field (≤ 60 chars, complete — e.g. `"Keyword Topic | Marta Arpa Coaching"`). This overrides both `<title>` and `og:title`; the `title` field stays unchanged and continues to appear in blog listing cards.
 
+**`description` length:** Keep meta descriptions between 110 and 160 characters. Descriptions shorter than 110 chars trigger Ahrefs/Google warnings and may result in Google rewriting the snippet from page content. All pages except `noindex` utility pages (e.g. `contact-thanks.md`) must have a `description` field.
+
 ### Homepage service row
 Edit `content/{lang}/_index.md`. Each service_item requires `title`, `content`, `images` (list of paths), and optionally a `button`.
 

@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 subtitle: "Write to me or book a free session directly."
-description: "Do you have a question or want to explore how I can support you? Write to me and I'll get back to you soon."
+description: "Do you have a question or want to explore how coaching can support you? Write to me and I'll get back to you soon."
 draft: false
 translationKey: "contact"
 layout: "contact"

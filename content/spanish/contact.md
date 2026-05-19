@@ -1,7 +1,7 @@
 ---
 title: "Contacto"
 subtitle: "Escríbeme o reserva una sesión gratuita directamente."
-description: "¿Tienes alguna pregunta o quieres explorar cómo puedo acompañarte? Escríbeme y te respondo en breve."
+description: "¿Tienes alguna pregunta o quieres explorar cómo puedo acompañarte en tu proceso de coaching? Escríbeme y te respondo en breve."
 draft: false
 translationKey: "contact"
 layout: "contact"

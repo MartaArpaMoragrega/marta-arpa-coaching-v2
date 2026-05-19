@@ -1,6 +1,6 @@
 ---
 title: "Avís Legal"
-description: "Informació legal del lloc web d'acord amb la Llei 34/2002 de Serveis de la Societat de la Informació"
+description: "Informació legal del lloc web de Marta Arpa d'acord amb la Llei 34/2002 de Serveis de la Societat de la Informació i Comerç Electrònic."
 draft: false
 translationKey: "aviso-legal"
 ---

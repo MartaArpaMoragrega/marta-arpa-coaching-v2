@@ -1,6 +1,6 @@
 ---
 title: "Termes i Condicions"
-description: "Condicions generals de contractació dels serveis de coaching"
+description: "Condicions generals de contractació dels serveis de coaching executiu i personal. Coneix els terminis, compromisos i condicions abans de començar."
 draft: false
 translationKey: "terms-conditions"
 ---
