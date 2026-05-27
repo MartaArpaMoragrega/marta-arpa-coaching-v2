@@ -1,6 +1,6 @@
 ---
 title: "Sobre mí"
-description: "Con más de 15 años de experiencia en consultoría, coaching y dirección de proyectos, acompaño a organizaciones y personas en procesos de cambio profundo."
+description: "Con más de 18 años de experiencia en consultoría, dirección de proyectos y coaching, acompaño a personas y equipos en procesos de transformación real."
 draft: false
 translationKey: "about"
 layout: "about"
@@ -8,9 +8,13 @@ layout: "about"
 about:
   title: "Acerca de mí"
   content: |
-    Con más de 15 años de experiencia en consultoría, coaching y dirección de proyectos, he acompañado a organizaciones y personas en procesos de cambio profundo. Mi propósito es potenciar el desarrollo humano y organizacional, generando entornos donde la innovación, la colaboración y el aprendizaje se conviertan en motores de crecimiento sostenible.
+    Con más de 18 años de experiencia en consultoría, dirección de proyectos y coaching, he tenido la oportunidad de acompañar a personas y equipos en procesos de transformación profunda dentro de grandes corporaciones, startups y entornos de cambio constante. Con el tiempo he aprendido algo que hoy guía todo lo que hago: la transformación real no ocurre solo en los procesos o en las estrategias, sino en las personas y en cómo viven el cambio.
 
-    Mi enfoque integra la claridad estratégica con la escucha activa y la empatía, facilitando transformaciones que permiten a individuos y equipos superar desafíos, reinventarse y alcanzar sus metas más ambiciosas. Esa combinación de visión, experiencia y sensibilidad es lo que define mi manera de acompañar a las personas y a las organizaciones en su camino de evolución y transformación.
+    Me mueve una pasión genuina por el desarrollo humano y organizacional. Disfruto creando espacios donde las ideas nuevas, la colaboración y el aprendizaje continuo se convierten en algo natural, no en iniciativas aisladas. Tras todos estos años, he decidido dar un paso más intencional: llevar esta pasión a un nivel más personal e independiente, donde pueda aportar todo lo aprendido y, al mismo tiempo, seguir explorando nuevas formas de acompañar a personas y organizaciones en sus propios procesos de evolución.
+
+    Lo que realmente me inspira no es "cumplir con lo establecido", sino crear, transformar y acompañar a las personas para que descubran de lo que son capaces cuando cambian su forma de pensar y pasan a la acción. Creo profundamente en el potencial de las personas. Un potencial que se desbloquea cuando hay un cambio de mentalidad y se traduce en acción deliberada, coherente y sostenida en el tiempo.
+
+    Esa es la base de mi trabajo: unir experiencia, claridad y empatía para acompañar transformaciones que sean reales, humanas y sostenibles.
   image: "images/about/profile-pic.png"
 
 philosophy:

@@ -1,6 +1,6 @@
 ---
 title: "À propos de moi"
-description: "Avec plus de 15 ans d'expérience en conseil, coaching et gestion de projets, j'accompagne des organisations et des personnes dans des processus de changement profond."
+description: "Avec plus de 18 ans d'expérience en conseil, gestion de projets et coaching, j'accompagne personnes et équipes dans des processus de transformation réelle."
 draft: false
 translationKey: "about"
 layout: "about"
@@ -8,9 +8,13 @@ layout: "about"
 about:
   title: "À propos de moi"
   content: |
-    Avec plus de 15 ans d'expérience en conseil, coaching et gestion de projets, j'ai accompagné des organisations et des personnes dans des processus de changement profond. Mon objectif est de stimuler le développement humain et organisationnel, en créant des environnements où l'innovation, la collaboration et l'apprentissage deviennent des moteurs de croissance durable.
+    Avec plus de 18 ans d'expérience en conseil, gestion de projets et coaching, j'ai eu l'opportunité d'accompagner des personnes et des équipes dans des processus de transformation profonde au sein de grandes entreprises, de startups et d'environnements en constante évolution. Avec le temps, j'ai appris quelque chose qui guide aujourd'hui tout ce que je fais : la transformation réelle ne se produit pas uniquement dans les processus ou les stratégies, mais dans les personnes et dans la façon dont elles vivent le changement.
 
-    Mon approche intègre la clarté stratégique avec l'écoute active et l'empathie, facilitant des transformations qui permettent aux individus et aux équipes de relever des défis, de se réinventer et d'atteindre leurs objectifs les plus ambitieux. Cette combinaison de vision, d'expérience et de sensibilité définit ma manière d'accompagner les personnes et les organisations dans leur chemin d'évolution et de transformation.
+    Je suis animée par une passion genuïne pour le développement humain et organisationnel. J'aime créer des espaces où les nouvelles idées, la collaboration et l'apprentissage continu deviennent quelque chose de naturel, et non des initiatives isolées. Après toutes ces années, j'ai décidé de faire un pas plus intentionnel : porter cette passion à un niveau plus personnel et indépendant, où je peux apporter tout ce que j'ai appris et, en même temps, continuer à explorer de nouvelles façons d'accompagner les personnes et les organisations dans leurs propres processus d'évolution.
+
+    Ce qui m'inspire vraiment, ce n'est pas « respecter ce qui est établi », mais créer, transformer et accompagner les personnes pour qu'elles découvrent de quoi elles sont capables lorsqu'elles changent leur façon de penser et passent à l'action. Je crois profondément au potentiel des personnes. Un potentiel qui se débloque lorsqu'il y a un changement de mentalité et se traduit en action délibérée, cohérente et soutenue dans le temps.
+
+    C'est la base de mon travail : unir expérience, clarté et empathie pour accompagner des transformations qui soient réelles, humaines et durables.
   image: "images/about/profile-pic.png"
 
 philosophy:

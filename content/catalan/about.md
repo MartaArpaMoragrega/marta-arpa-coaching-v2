@@ -1,6 +1,6 @@
 ---
 title: "Sobre mi"
-description: "Amb més de 15 anys d'experiència en consultoria, coaching i direcció de projectes, acompanyo organitzacions i persones en processos de canvi profund."
+description: "Amb més de 18 anys d'experiència en consultoria, direcció de projectes i coaching, acompanyo persones i equips en processos de transformació real."
 draft: false
 translationKey: "about"
 layout: "about"
@@ -8,9 +8,13 @@ layout: "about"
 about:
   title: "Sobre mi"
   content: |
-    Amb més de 15 anys d'experiència en consultoria, coaching i direcció de projectes, he acompanyat organitzacions i persones en processos de canvi profund. El meu propòsit és potenciar el desenvolupament humà i organitzacional, creant entorns on la innovació, la col·laboració i l'aprenentatge es converteixin en motors de creixement sostenible.
+    Amb més de 18 anys d'experiència en consultoria, direcció de projectes i coaching, he tingut l'oportunitat d'acompanyar persones i equips en processos de transformació profunda dins de grans corporacions, startups i entorns de canvi constant. Amb el temps he après quelcom que avui guia tot el que faig: la transformació real no ocorre només en els processos o en les estratègies, sinó en les persones i en com viuen el canvi.
 
-    El meu enfocament integra la claredat estratègica amb l'escolta activa i l'empatia, facilitant transformacions que permeten a individus i equips superar reptes, reinventar-se i assolir els seus objectius més ambiciosos. Aquesta combinació de visió, experiència i sensibilitat és el que defineix la meva manera d'acompanyar les persones i les organitzacions en el seu camí d'evolució i transformació.
+    Em mou una passió genuïna pel desenvolupament humà i organitzacional. Gaudeixo creant espais on les idees noves, la col·laboració i l'aprenentatge continu es converteixen en quelcom natural, no en iniciatives aïllades. Després de tots aquests anys, he decidit fer un pas més intencional: portar aquesta passió a un nivell més personal i independent, on pugui aportar tot el que he après i, alhora, continuar explorant noves formes d'acompanyar persones i organitzacions en els seus propis processos d'evolució.
+
+    El que realment m'inspira no és "complir amb l'establert", sinó crear, transformar i acompanyar les persones perquè descobreixin de què són capaces quan canvien la seva forma de pensar i passen a l'acció. Crec profundament en el potencial de les persones. Un potencial que es desbloqueja quan hi ha un canvi de mentalitat i es tradueix en acció deliberada, coherent i sostinguda en el temps.
+
+    Aquesta és la base del meu treball: unir experiència, claredat i empatia per acompanyar transformacions que siguin reals, humanes i sostenibles.
   image: "images/about/profile-pic.png"
 
 philosophy:

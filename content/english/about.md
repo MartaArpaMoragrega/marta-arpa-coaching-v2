@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-description: "With more than 15 years of experience in consulting, coaching, and project management, I support organizations and individuals through profound change processes."
+description: "With more than 18 years of experience in consulting, project management, and coaching, I help people and teams through real transformation processes."
 draft: false
 translationKey: "about"
 layout: "about"
@@ -8,9 +8,13 @@ layout: "about"
 about:
   title: "About Me"
   content: |
-    With more than 15 years of experience in consulting, coaching, and project management, I have supported organizations and individuals through profound change processes. My purpose is to foster human and organizational development, creating environments where innovation, collaboration, and learning become drivers of sustainable growth.
+    With more than 18 years of experience in consulting, project management, and coaching, I have had the opportunity to accompany people and teams through profound transformation processes within large corporations, startups, and environments of constant change. Over time I have learned something that now guides everything I do: real transformation does not happen only in processes or strategies, but in people and in how they experience change.
 
-    My approach integrates strategic clarity with active listening and empathy, enabling transformations that allow individuals and teams to overcome challenges, reinvent themselves, and achieve their most ambitious goals. This combination of vision, experience, and sensitivity defines the way I support people and organizations on their journey of growth and transformation.
+    I am driven by a genuine passion for human and organizational development. I enjoy creating spaces where new ideas, collaboration, and continuous learning become something natural, not isolated initiatives. After all these years, I have decided to take a more intentional step: to bring this passion to a more personal and independent level, where I can contribute everything I have learned and, at the same time, continue exploring new ways to accompany people and organizations in their own processes of evolution.
+
+    What truly inspires me is not "meeting established expectations," but creating, transforming, and accompanying people so they discover what they are capable of when they change the way they think and move into action. I deeply believe in the potential of people. A potential that is unlocked when there is a mindset shift and translates into deliberate, coherent, and sustained action over time.
+
+    That is the foundation of my work: combining experience, clarity, and empathy to accompany transformations that are real, human, and sustainable.
   image: "images/about/profile-pic.png"
 
 philosophy:
