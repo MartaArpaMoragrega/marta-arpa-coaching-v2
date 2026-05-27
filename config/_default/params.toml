@@ -44,7 +44,7 @@ preloader = "" # use jpg, png, svg or gif format. example - "images/preloader.gi
 # Change the link here and it updates everywhere automatically.
 [navigation_button]
 enable = true
-label = "Sesión gratuita"
+label = "Hablemos"
 link = "https://meet.brevo.com/marta-arpa/sesion-gratuita-"
 
 

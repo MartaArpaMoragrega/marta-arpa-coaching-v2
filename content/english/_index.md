@@ -95,5 +95,5 @@ call_to_action:
   content: "Book a free 30-minute session and let's talk about your goals. No commitment required."
   button:
     enable: true
-    label: "Book free session"
+    label: "Shall we talk?"
 ---

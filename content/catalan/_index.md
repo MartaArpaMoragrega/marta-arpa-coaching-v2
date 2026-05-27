@@ -95,5 +95,5 @@ call_to_action:
   content: "Reserva una sessió gratuïta de 30 minuts i parlem dels teus objectius. Sense compromís."
   button:
     enable: true
-    label: "Reservar sessió gratuïta"
+    label: "Parlem?"
 ---

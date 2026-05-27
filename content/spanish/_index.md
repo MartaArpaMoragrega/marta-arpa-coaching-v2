@@ -94,5 +94,5 @@ call_to_action:
   content: "Agenda una sesión gratuita de 30 minutos y hablemos sobre tus objetivos. Sin compromiso."
   button:
     enable: true
-    label: "Agendar sesión gratuita"
+    label: "¿Hablamos?"
 ---

@@ -95,5 +95,5 @@ call_to_action:
   content: "Réservez une séance gratuite de 30 minutes et parlons de vos objectifs. Sans engagement."
   button:
     enable: true
-    label: "Réserver une séance gratuite"
+    label: "On se parle ?"
 ---
