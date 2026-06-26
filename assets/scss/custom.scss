@@ -369,6 +369,15 @@ h5, .h5 {
   border-top: 1px solid $border-color;
   margin-top: 3rem;
   padding-top: 2rem;
+
+  // Source banners have varying aspect ratios (4:1 down to 3:2), so resizing
+  // each to the same width yields different heights. Force a uniform 16:9 crop
+  // so every related-post thumbnail is the same size regardless of source.
+  .card .img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
 }
 
 .related-posts-heading {
