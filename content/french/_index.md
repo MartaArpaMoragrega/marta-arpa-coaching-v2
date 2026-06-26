@@ -90,7 +90,7 @@ screenshot:
 ##################### Call to action #####################
 call_to_action:
   enable: true
-  title: "Prête à passer à l'étape suivante ?"
+  title: "Envie de passer à l'étape suivante ?"
   image: "images/about/marpa-profile-office.png"
   content: "Réservez une séance gratuite de 30 minutes et parlons de vos objectifs. Sans engagement."
   button:

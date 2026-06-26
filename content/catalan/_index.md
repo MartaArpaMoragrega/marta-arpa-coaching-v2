@@ -90,7 +90,7 @@ screenshot:
 ##################### Call to action #####################
 call_to_action:
   enable: true
-  title: "Llesta per fer el següent pas?"
+  title: "Vols fer el següent pas?"
   image: "images/about/marpa-profile-office.png"
   content: "Reserva una sessió gratuïta de 30 minuts i parlem dels teus objectius. Sense compromís."
   button:
