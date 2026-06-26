@@ -38,7 +38,7 @@
   translation: "min de lectura"
 
 - id: post_cta_text
-  translation: "¿Te ha resonado este artículo? Hablamos."
+  translation: "¿Te ha resonado este artículo?"
 
 - id: related_posts_heading
   translation: "Más artículos"
