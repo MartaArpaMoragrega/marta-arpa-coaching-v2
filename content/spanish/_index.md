@@ -80,7 +80,9 @@ service:
 
     - title: "Consultoría del Cambio"
       images:
-        - "images/services/consultancy.png"
+        - "images/services/cambio-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Acompaño a tu organización en procesos de cambio y gestión de proyectos con un enfoque práctico, estructurado y orientado a resultados. Facilito la adaptación, alineo equipos y aseguro que las iniciativas avancen con claridad, compromiso y ejecución efectiva."
       button:
         enable: true

@@ -81,7 +81,9 @@ service:
 
     - title: "Change Consulting"
       images:
-        - "images/services/consultancy.png"
+        - "images/services/cambio-bw.png"
+      image_fade: true
+      title_rule: true
       content: "I accompany your organization through change processes and project management with a practical, structured, results-oriented approach. I facilitate adaptation, align teams, and ensure that initiatives move forward with clarity, commitment, and effective execution."
       button:
         enable: true

@@ -81,7 +81,9 @@ service:
 
     - title: "Conseil en Changement"
       images:
-        - "images/services/consultancy.png"
+        - "images/services/cambio-bw.png"
+      image_fade: true
+      title_rule: true
       content: "J'accompagne votre organisation dans les processus de changement et la gestion de projets avec une approche pratique, structurée et orientée résultats. Je facilite l'adaptation, j'aligne les équipes et je m'assure que les initiatives avancent avec clarté, engagement et exécution efficace."
       button:
         enable: true

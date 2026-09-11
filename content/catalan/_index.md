@@ -81,7 +81,9 @@ service:
 
     - title: "Consultoria del Canvi"
       images:
-        - "images/services/consultancy.png"
+        - "images/services/cambio-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Acompanyo la teva organització en processos de canvi i gestió de projectes amb un enfocament pràctic, estructurat i orientat a resultats. Facilito l'adaptació, alinee equips i asseguro que les iniciatives avancin amb claredat, compromís i execució efectiva."
       button:
         enable: true
