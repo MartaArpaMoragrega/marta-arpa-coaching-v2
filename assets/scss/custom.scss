@@ -38,7 +38,9 @@ $banner-rule: #c41f28;     // red used in the illustration
 .banner {
   position: relative;
   overflow: hidden;
-  padding: 100px 0 80px;
+  // Symmetric padding: the text block (headline → button) is centred in the
+  // banner, and the illustration is shifted to share that centre (below).
+  padding: 90px 0;
   // Grows with the viewport (520px at <=1248px wide, 600px at >=1440px) so
   // the image keeps the same crop instead of losing people at the sides on
   // smaller laptops.
@@ -54,6 +56,9 @@ $banner-rule: #c41f28;     // red used in the illustration
     width: 65%;
     height: 100%;
     overflow: hidden; // keeps the zoomed image from spilling under the text
+    // The illustration's own flat background, so shifting/zooming the image
+    // never uncovers an edge.
+    background-color: #e7e7e7;
 
     // Gradient overlay: white on the left edge, fully transparent on the right.
     // Quadratic ease-out, alpha = (1 - x/65%)^2, sampled every 5% so the
@@ -87,16 +92,23 @@ $banner-rule: #c41f28;     // red used in the illustration
       width: 100%;
       height: 100%;
       object-fit: cover;
-      // Anchor on the people band (~39–75% down the illustration) so very
-      // wide screens, where the image is taller than the banner, crop empty
-      // grey top and bottom rather than the people's feet.
-      object-position: center 57%;
+      // The drawing spans 39.6–75.5% of the illustration's height (centre
+      // 57.5%). object-position at that point keeps it at 57.5% of the
+      // banner in every cover case (height- or width-bound), so wide screens
+      // crop empty grey rather than the people's feet…
+      object-position: center 57.5%;
+      transform-origin: center 57.5%;
+
+      @media (min-width: 992px) {
+        // …and shifting up by 57.5% − 50% = 7.5% of the banner height centres
+        // the drawing vertically on the text block.
+        translate: 0 -7.5%;
+      }
       // Slight zoom on the people band so they read larger on wide screens,
       // where the image is width-bound and min-height alone doesn't grow it.
       // Below 1400px there's no side margin left to zoom into.
       @media (min-width: 1400px) {
         transform: scale(1.08);
-        transform-origin: center 60%;
       }
     }
   }
@@ -108,20 +120,27 @@ $banner-rule: #c41f28;     // red used in the illustration
   @media (min-width: 992px) and (max-width: 1199.98px) {
     .banner-image-wrap {
       width: 58%;
-      background-color: #e7e7e7;
 
       // contain leaves the illustration's own empty margins (~11% each
       // side); zoom into them so the people aren't tiny.
+      // Vertical centring: here the image is width-bound (58vw wide →
+      // 32.5vw tall) and centred, so the drawing's centre sits 7.5% of that
+      // height below the middle, ×1.18 after the zoom: 32.5vw × 0.075 × 1.18.
       .banner-img {
         object-fit: contain;
         object-position: center;
         transform: scale(1.18);
-        transform-origin: center 57%;
+        transform-origin: center;
+        translate: 0 -2.88vw;
       }
     }
 
-    // At 48px the headline breaks onto three lines in the narrow lg column;
-    // 40px keeps each phrase on one line, as on wider screens.
+  }
+
+  // At 48px the headline breaks onto three lines in the narrow lg / xl text
+  // columns (below the 1320px container); 40px keeps each phrase on one line,
+  // as on wider screens.
+  @media (min-width: 992px) and (max-width: 1399.98px) {
     .banner-title {
       font-size: 40px;
     }
@@ -131,14 +150,19 @@ $banner-rule: #c41f28;     // red used in the illustration
   // viewport width, so the people grow huge and slide under the (centred,
   // max-width) text column. Fit it to the banner height instead, on the
   // same flat grey, so it keeps a sane size on the right.
+  // Horizontally, align the illustration with the centred 1320px container
+  // rather than centring it in the full-bleed image area (which pushed it
+  // far right of the nav). At 600px tall it draws ~1071px wide with the
+  // drawing spanning 11%–89%; the offset puts its right tip on the
+  // container's content edge (50vw + 648px, where the nav CTA ends).
+  // Wrapper starts at 35vw, so: 50vw + 648px - 35vw - 0.89 × 1071px.
+  // Height-bound here, so the base translate (-7.5%) still centres it.
   @media (min-width: 2000px) {
     .banner-image-wrap {
-      background-color: #e7e7e7;
-
       .banner-img {
         object-fit: contain;
-        object-position: center;
-        transform-origin: center 57%;
+        object-position: calc(15vw - 305px) center;
+        transform: none;
       }
     }
   }
@@ -210,7 +234,6 @@ $banner-rule: #c41f28;     // red used in the illustration
       // of the illustration: zoom in on that band so it reads at phone size.
       .banner-img {
         transform: scale(1.12);
-        transform-origin: center 57%;
       }
     }
   }
