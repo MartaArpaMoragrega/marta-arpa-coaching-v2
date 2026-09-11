@@ -6,7 +6,7 @@ keywords: ["coaching exécutif", "coaching personnel", "conseil en gestion du ch
 ####################### Banner #########################
 banner:
   title: "J'accompagne les personnes et les organisations vers un impact réel"
-  image: "images/homepage/banner-new.webp"
+  image: "images/homepage/banner-styled-bw.webp"
   content: "On commence par une séance gratuite de 30 minutes ?"
   button:
     enable: true

@@ -6,7 +6,7 @@ keywords: ["executive coaching", "personal coaching", "change management consult
 ####################### Banner #########################
 banner:
   title: "Turning purpose into real impact for people and organizations"
-  image: "images/homepage/banner-new.webp"
+  image: "images/homepage/banner-styled-bw.webp"
   content: "Shall we start with a free 30-minute session?"
   button:
     enable: true

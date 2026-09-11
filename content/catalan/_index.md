@@ -6,7 +6,7 @@ keywords: ["coaching executiu", "coaching personal", "consultoria del canvi", "p
 ####################### Banner #########################
 banner:
   title: "Impulsant persones i organitzacions cap a un impacte real"
-  image: "images/homepage/banner-new.webp"
+  image: "images/homepage/banner-styled-bw.webp"
   content: "Comencem amb una sessió gratuïta de 30 minuts?"
   button:
     enable: true

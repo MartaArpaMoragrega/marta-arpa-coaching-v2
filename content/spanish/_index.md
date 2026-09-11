@@ -5,7 +5,7 @@ meta_image: "images/about/profile-pic.png"
 ####################### Banner #########################
 banner:
   title: "Acompaño a personas y organizaciones hacia un impacto real"
-  image: "images/homepage/banner-new.webp"
+  image: "images/homepage/banner-styled-bw.webp"
   content: "¿Empezamos con una sesión gratuita de 30 minutos?"
   button:
     enable: true

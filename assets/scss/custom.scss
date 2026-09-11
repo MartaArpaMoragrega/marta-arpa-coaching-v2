@@ -48,13 +48,25 @@ $color-primary-text: #087E7D;
     width: 65%;
     height: 100%;
 
-    // Gradient overlay: white on the left edge, fully transparent on the right
+    // Gradient overlay: white on the left edge, fully transparent on the right.
+    // Eased (ease-out) stops so the white page blends into the banner's flat
+    // light-grey background without a visible kink.
     &::before {
       content: '';
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(to right, white 0%, rgba(255,255,255,0.6) 25%, transparent 60%);
+      background: linear-gradient(
+        to right,
+        rgba(255,255,255,1)    0%,
+        rgba(255,255,255,0.8)  3%,
+        rgba(255,255,255,0.6)  8%,
+        rgba(255,255,255,0.42) 15%,
+        rgba(255,255,255,0.26) 24%,
+        rgba(255,255,255,0.14) 34%,
+        rgba(255,255,255,0.06) 45%,
+        rgba(255,255,255,0)    60%
+      );
     }
 
     .banner-img {
