@@ -127,12 +127,34 @@ $banner-rule: #c41f28;     // red used in the illustration
       order: 2;
       position: relative;
       width: 100%;
-      height: 260px;
+      height: 220px;
       margin-top: 0;
+      overflow: hidden; // contains the zoomed image below
 
-      // Fade bottom edge into the next section
+      // Eased fades on both edges: top dissolves into the white text area,
+      // bottom into the pale-teal features section that follows, so the
+      // illustration's flat grey never shows a hard edge.
       &::before {
-        background: linear-gradient(to bottom, transparent 60%, white 100%);
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,1)    0%,
+          rgba(255,255,255,0.7)  8%,
+          rgba(255,255,255,0.4)  17%,
+          rgba(255,255,255,0.15) 26%,
+          rgba(255,255,255,0)    34%,
+          rgba($light,0)         72%,
+          rgba($light,0.25)      80%,
+          rgba($light,0.6)       88%,
+          rgba($light,0.88)      95%,
+          rgba($light,1)         100%
+        );
+      }
+
+      // The people occupy only a wide strip (~11–89% across, ~39–75% down)
+      // of the illustration: zoom in on that band so it reads at phone size.
+      .banner-img {
+        transform: scale(1.12);
+        transform-origin: center 57%;
       }
     }
   }
@@ -144,7 +166,12 @@ $banner-rule: #c41f28;     // red used in the illustration
       padding-bottom: 2rem;
     }
     .banner-image-wrap {
-      height: 380px;
+      height: 340px;
+
+      .banner-img {
+        transform: scale(1.1);
+        object-position: center 57%;
+      }
     }
   }
 }
