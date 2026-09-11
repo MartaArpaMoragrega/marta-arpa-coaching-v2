@@ -238,6 +238,44 @@ h5, .h5 {
 .service-img-wrap {
   border-radius: 20px;
   overflow: hidden;
+
+  // The image can be narrower than the column (512px source), so the
+  // wrapper's rounded corners don't reach its right edge — round the image
+  // itself so opaque illustrations get four rounded corners too.
+  img {
+    border-radius: 20px;
+  }
+
+  // Opt-in (service_item.image_fade: true) for opaque illustrations: dissolve
+  // all four edges into the section background. Two eased (smoothstep-like)
+  // linear masks intersected give a soft rectangular vignette; corners fade
+  // out, so no radius needed.
+  &.service-img-fade {
+    border-radius: 0;
+    // Multiply makes the image's white areas take on the section colour
+    // (pale teal on bg-light rows; no visible change on white rows). Set on
+    // the wrapper, not the img, because .swiper is its own stacking context
+    // and would isolate the blend from the section background.
+    mix-blend-mode: multiply;
+
+    img {
+      border-radius: 0;
+      $fade-ramp: transparent 0%, rgba(#000,.08) 3%, rgba(#000,.3) 7%, rgba(#000,.62) 11%, rgba(#000,.88) 15%, #000 18%, #000 82%, rgba(#000,.88) 85%, rgba(#000,.62) 89%, rgba(#000,.3) 93%, rgba(#000,.08) 97%, transparent 100%;
+      $fade-h: linear-gradient(to right, $fade-ramp);
+      $fade-v: linear-gradient(to bottom, $fade-ramp);
+      -webkit-mask-image: $fade-h, $fade-v;
+      -webkit-mask-composite: source-in;
+      mask-image: $fade-h, $fade-v;
+      mask-composite: intersect;
+    }
+  }
+}
+
+// Opt-in (service_item.title_rule: true): red vertical rule beside the
+// service heading, matching the banner headline.
+.service-title-rule {
+  padding-left: 1.25rem;
+  border-left: 6px solid $banner-rule;
 }
 
 // ── Nav active state ──────────────────────────────────────────────────────────

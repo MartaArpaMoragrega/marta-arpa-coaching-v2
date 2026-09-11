@@ -47,7 +47,9 @@ service:
   service_item:
     - title: "Coaching Ejecutivo"
       images:
-        - "images/services/coaching-ex.png"
+        - "images/services/coaching-ejecutivo-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Diseñado para impulsar tanto el desarrollo individual como colectivo, proporcionando las herramientas necesarias para afrontar los desafíos actuales del entorno empresarial. Incluye el desarrollo de habilidades de liderazgo, toma de decisiones, comunicación efectiva y la transformación de equipos hacia una mayor colaboración y efectividad."
       button:
         enable: true
@@ -56,7 +58,9 @@ service:
 
     - title: "Coaching de equipos"
       images:
-        - "images/services/talleres-personalizados.png"
+        - "images/services/coaching-equipos-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Acompaño a equipos a mejorar cómo trabajan juntos, fortaleciendo la confianza, la claridad y el foco para lograr resultados sostenibles."
       button:
         enable: true
@@ -65,7 +69,9 @@ service:
 
     - title: "Píldoras de Foco"
       images:
-        - "images/services/pildoras-foco.png"
+        - "images/services/pildora-bw.png"
+      image_fade: true
+      title_rule: true
       content: "\"Píldoras de Foco\" son micro-talleres prácticos y directos que activan la concentración, la claridad y la acción en poco tiempo. Diseñados para equipos que necesitan resultados rápidos: menos dispersión, más prioridades claras y ejecución efectiva desde el primer momento."
       button:
         enable: true

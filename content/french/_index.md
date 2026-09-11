@@ -48,7 +48,9 @@ service:
   service_item:
     - title: "Coaching Exécutif"
       images:
-        - "images/services/coaching-ex.png"
+        - "images/services/coaching-ejecutivo-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Conçu pour stimuler le développement individuel et collectif, en fournissant les outils nécessaires pour relever les défis actuels de l'environnement professionnel. Comprend le développement du leadership, la prise de décision, la communication efficace et la transformation des équipes."
       button:
         enable: true
@@ -57,7 +59,9 @@ service:
 
     - title: "Coaching d'équipes"
       images:
-        - "images/services/talleres-personalizados.png"
+        - "images/services/coaching-equipos-bw.png"
+      image_fade: true
+      title_rule: true
       content: "J'accompagne les équipes pour améliorer leur façon de travailler ensemble, en renforçant la confiance, la clarté et le focus pour obtenir des résultats durables."
       button:
         enable: true
@@ -66,7 +70,9 @@ service:
 
     - title: "Pilules de Focus"
       images:
-        - "images/services/pildoras-foco.png"
+        - "images/services/pildora-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Les \"Pilules de Focus\" sont des micro-ateliers pratiques et directs qui activent la concentration, la clarté et l'action en peu de temps. Conçus pour les équipes qui ont besoin de résultats rapides : moins de dispersion, des priorités plus claires et une exécution efficace dès le premier moment."
       button:
         enable: true

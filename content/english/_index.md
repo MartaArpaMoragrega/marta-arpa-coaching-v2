@@ -48,7 +48,9 @@ service:
   service_item:
     - title: "Executive Coaching"
       images:
-        - "images/services/coaching-ex.png"
+        - "images/services/coaching-ejecutivo-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Designed to drive both individual and collective development, providing the tools needed to face the current challenges of the business environment. Includes leadership development, decision-making, effective communication, and team transformation toward greater collaboration and effectiveness."
       button:
         enable: true
@@ -57,7 +59,9 @@ service:
 
     - title: "Team Coaching"
       images:
-        - "images/services/talleres-personalizados.png"
+        - "images/services/coaching-equipos-bw.png"
+      image_fade: true
+      title_rule: true
       content: "I accompany teams to improve how they work together, strengthening trust, clarity and focus to achieve sustainable results."
       button:
         enable: true
@@ -66,7 +70,9 @@ service:
 
     - title: "Focus Pills"
       images:
-        - "images/services/pildoras-foco.png"
+        - "images/services/pildora-bw.png"
+      image_fade: true
+      title_rule: true
       content: "\"Focus Pills\" are practical, direct micro-workshops that activate concentration, clarity, and action in a short time. Designed for teams that need fast results: less dispersion, clearer priorities, and effective execution from the very first moment."
       button:
         enable: true

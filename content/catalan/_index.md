@@ -48,7 +48,9 @@ service:
   service_item:
     - title: "Coaching Executiu"
       images:
-        - "images/services/coaching-ex.png"
+        - "images/services/coaching-ejecutivo-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Dissenyat per impulsar tant el desenvolupament individual com col·lectiu, proporcionant les eines necessàries per afrontar els reptes actuals de l'entorn empresarial. Inclou el desenvolupament d'habilitats de lideratge, presa de decisions, comunicació efectiva i transformació d'equips."
       button:
         enable: true
@@ -57,7 +59,9 @@ service:
 
     - title: "Coaching d'equips"
       images:
-        - "images/services/talleres-personalizados.png"
+        - "images/services/coaching-equipos-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Acompanyo equips a millorar com treballen junts, enfortint la confiança, la claredat i el focus per assolir resultats sostenibles."
       button:
         enable: true
@@ -66,7 +70,9 @@ service:
 
     - title: "Píndoles de Focus"
       images:
-        - "images/services/pildoras-foco.png"
+        - "images/services/pildora-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Les \"Píndoles de Focus\" són micro-tallers pràctics i directes que activen la concentració, la claredat i l'acció en poc temps. Dissenyats per a equips que necessiten resultats ràpids: menys dispersió, prioritats més clares i execució efectiva des del primer moment."
       button:
         enable: true
