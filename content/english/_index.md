@@ -5,7 +5,8 @@ description: "Executive and personal coaching, change management consulting. Sup
 keywords: ["executive coaching", "personal coaching", "change management consulting", "career planning", "Marta Arpa"]
 ####################### Banner #########################
 banner:
-  title: "Turning purpose into real impact for people and organizations"
+  title: "Conscious leadership."
+  title_accent: "Real results."
   image: "images/homepage/banner-styled-bw.webp"
   content: "Shall we start with a free 30-minute session?"
   button:

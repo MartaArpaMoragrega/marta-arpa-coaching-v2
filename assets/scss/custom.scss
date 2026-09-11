@@ -32,6 +32,9 @@ $color-primary-text: #087E7D;
 
 // Banner — full-bleed image on the right, text on the left,
 // white-to-transparent gradient bridges the two sides.
+$banner-accent: #77ddce;   // teal used in the illustration
+$banner-rule: #c41f28;     // red used in the illustration
+
 .banner {
   position: relative;
   overflow: hidden;
@@ -49,8 +52,9 @@ $color-primary-text: #087E7D;
     height: 100%;
 
     // Gradient overlay: white on the left edge, fully transparent on the right.
-    // Eased (ease-out) stops so the white page blends into the banner's flat
-    // light-grey background without a visible kink.
+    // Quadratic ease-out, alpha = (1 - x/65%)^2, sampled every 5% so the
+    // white page blends into the banner's flat light-grey background without
+    // a visible kink.
     &::before {
       content: '';
       position: absolute;
@@ -58,14 +62,20 @@ $color-primary-text: #087E7D;
       z-index: 1;
       background: linear-gradient(
         to right,
-        rgba(255,255,255,1)    0%,
-        rgba(255,255,255,0.8)  3%,
-        rgba(255,255,255,0.6)  8%,
-        rgba(255,255,255,0.42) 15%,
-        rgba(255,255,255,0.26) 24%,
-        rgba(255,255,255,0.14) 34%,
-        rgba(255,255,255,0.06) 45%,
-        rgba(255,255,255,0)    60%
+        rgba(255,255,255,1.000) 0%,
+        rgba(255,255,255,0.852) 5%,
+        rgba(255,255,255,0.716) 10%,
+        rgba(255,255,255,0.592) 15%,
+        rgba(255,255,255,0.479) 20%,
+        rgba(255,255,255,0.379) 25%,
+        rgba(255,255,255,0.290) 30%,
+        rgba(255,255,255,0.213) 35%,
+        rgba(255,255,255,0.148) 40%,
+        rgba(255,255,255,0.095) 45%,
+        rgba(255,255,255,0.053) 50%,
+        rgba(255,255,255,0.024) 55%,
+        rgba(255,255,255,0.006) 60%,
+        rgba(255,255,255,0.000) 65%
       );
     }
 
@@ -81,6 +91,22 @@ $color-primary-text: #087E7D;
   .container {
     position: relative;
     z-index: 2;
+  }
+
+  // Two-line headline: dark statement + teal accent line, with a red
+  // vertical rule on the left. inline-block keeps the rule hugging the
+  // text when the column is centred on small screens.
+  .banner-title {
+    display: inline-block;
+    text-align: left;
+    padding-left: 1.5rem;
+    border-left: 6px solid $banner-rule;
+    line-height: 1.2;
+  }
+
+  .banner-title-accent {
+    display: block;
+    color: $banner-accent;
   }
 
   // On small screens: text first, image below, full width

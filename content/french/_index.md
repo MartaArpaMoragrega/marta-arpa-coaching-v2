@@ -5,7 +5,8 @@ description: "Coaching exécutif et personnel, conseil en gestion du changement.
 keywords: ["coaching exécutif", "coaching personnel", "conseil en gestion du changement", "développement de carrière", "Marta Arpa"]
 ####################### Banner #########################
 banner:
-  title: "J'accompagne les personnes et les organisations vers un impact réel"
+  title: "Leadership conscient."
+  title_accent: "Résultats réels."
   image: "images/homepage/banner-styled-bw.webp"
   content: "On commence par une séance gratuite de 30 minutes ?"
   button:

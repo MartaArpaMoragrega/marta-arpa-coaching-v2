@@ -4,7 +4,8 @@ description: "Coaching ejecutivo y personal, consultoría de gestión del cambio
 meta_image: "images/about/profile-pic.png"
 ####################### Banner #########################
 banner:
-  title: "Acompaño a personas y organizaciones hacia un impacto real"
+  title: "Liderazgo consciente."
+  title_accent: "Resultados reales."
   image: "images/homepage/banner-styled-bw.webp"
   content: "¿Empezamos con una sesión gratuita de 30 minutos?"
   button:

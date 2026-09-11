@@ -5,7 +5,8 @@ description: "Coaching executiu i personal, consultoria de gestió del canvi. Ac
 keywords: ["coaching executiu", "coaching personal", "consultoria del canvi", "planificació de carrera", "Marta Arpa"]
 ####################### Banner #########################
 banner:
-  title: "Impulsant persones i organitzacions cap a un impacte real"
+  title: "Lideratge conscient."
+  title_accent: "Resultats reals."
   image: "images/homepage/banner-styled-bw.webp"
   content: "Comencem amb una sessió gratuïta de 30 minuts?"
   button:
