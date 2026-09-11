@@ -39,7 +39,10 @@ $banner-rule: #c41f28;     // red used in the illustration
   position: relative;
   overflow: hidden;
   padding: 100px 0 80px;
-  min-height: 520px;
+  // Grows with the viewport (520px at <=1248px wide, 600px at >=1440px) so
+  // the image keeps the same crop instead of losing people at the sides on
+  // smaller laptops.
+  min-height: clamp(520px, 41.7vw, 600px);
   display: flex;
   align-items: center;
 
@@ -50,6 +53,7 @@ $banner-rule: #c41f28;     // red used in the illustration
     right: 0;
     width: 65%;
     height: 100%;
+    overflow: hidden; // keeps the zoomed image from spilling under the text
 
     // Gradient overlay: white on the left edge, fully transparent on the right.
     // Quadratic ease-out, alpha = (1 - x/65%)^2, sampled every 5% so the
@@ -83,7 +87,59 @@ $banner-rule: #c41f28;     // red used in the illustration
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      // Anchor on the people band (~39–75% down the illustration) so very
+      // wide screens, where the image is taller than the banner, crop empty
+      // grey top and bottom rather than the people's feet.
+      object-position: center 57%;
+      // Slight zoom on the people band so they read larger on wide screens,
+      // where the image is width-bound and min-height alone doesn't grow it.
+      // Below 1400px there's no side margin left to zoom into.
+      @media (min-width: 1400px) {
+        transform: scale(1.08);
+        transform-origin: center 60%;
+      }
+    }
+  }
+
+  // Small laptops (992–1199px): the image area is tall relative to its width,
+  // so `cover` crops the people at the sides and the text column runs over
+  // them. Narrow the area and show the whole illustration (`contain`) on a
+  // matching flat grey (the illustration's own background) instead.
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .banner-image-wrap {
+      width: 58%;
+      background-color: #e7e7e7;
+
+      // contain leaves the illustration's own empty margins (~11% each
+      // side); zoom into them so the people aren't tiny.
+      .banner-img {
+        object-fit: contain;
+        object-position: center;
+        transform: scale(1.18);
+        transform-origin: center 57%;
+      }
+    }
+
+    // At 48px the headline breaks onto three lines in the narrow lg column;
+    // 40px keeps each phrase on one line, as on wider screens.
+    .banner-title {
+      font-size: 40px;
+    }
+  }
+
+  // Very wide screens (≥2000px): `cover` scales the illustration with the
+  // viewport width, so the people grow huge and slide under the (centred,
+  // max-width) text column. Fit it to the banner height instead, on the
+  // same flat grey, so it keeps a sane size on the right.
+  @media (min-width: 2000px) {
+    .banner-image-wrap {
+      background-color: #e7e7e7;
+
+      .banner-img {
+        object-fit: contain;
+        object-position: center;
+        transform-origin: center 57%;
+      }
     }
   }
 
