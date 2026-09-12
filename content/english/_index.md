@@ -5,8 +5,9 @@ description: "Executive and personal coaching, change management consulting. Sup
 keywords: ["executive coaching", "personal coaching", "change management consulting", "career planning", "Marta Arpa"]
 ####################### Banner #########################
 banner:
-  title: "Turning purpose into real impact for people and organizations"
-  image: "images/homepage/banner-new.webp"
+  title: "Conscious leadership."
+  title_accent: "Real results."
+  image: "images/homepage/banner-styled-bw.webp"
   content: "Shall we start with a free 30-minute session?"
   button:
     enable: true
@@ -18,27 +19,21 @@ feature:
   title: "Where I can contribute"
   feature_item:
     - name: "Executive Coaching"
-      icon: "fas fa-handshake"
       content: "Empower leaders and teams to maximize performance and achieve strategic goals."
 
     - name: "Tailored Workshops"
-      icon: "fas fa-users"
       content: "Tailored workshops that address your company's real challenges — dynamic, practical, and immediately impactful."
 
     - name: "Focus Pills"
-      icon: "fas fa-bullseye"
       content: "Practical and direct micro-workshops that activate concentration, clarity and action in a short time."
 
     - name: "Change Consulting"
-      icon: "fas fa-arrow-trend-up"
       content: "Facilitate organizational transformations through tailored strategies. Project and change management."
 
     - name: "Positive Leadership"
-      icon: "fas fa-lightbulb"
       content: "Learn to lead with clarity, coherence and shared responsibility to build committed teams."
 
     - name: "Career Plan"
-      icon: "fas fa-map"
       content: "I help you define, plan, and move forward with clarity towards your professional goals aligned with your purpose and talent."
 
 ######################### Service #####################
@@ -47,7 +42,9 @@ service:
   service_item:
     - title: "Executive Coaching"
       images:
-        - "images/services/coaching-ex.png"
+        - "images/services/coaching-ejecutivo-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Designed to drive both individual and collective development, providing the tools needed to face the current challenges of the business environment. Includes leadership development, decision-making, effective communication, and team transformation toward greater collaboration and effectiveness."
       button:
         enable: true
@@ -56,7 +53,9 @@ service:
 
     - title: "Team Coaching"
       images:
-        - "images/services/talleres-personalizados.png"
+        - "images/services/coaching-equipos-bw.png"
+      image_fade: true
+      title_rule: true
       content: "I accompany teams to improve how they work together, strengthening trust, clarity and focus to achieve sustainable results."
       button:
         enable: true
@@ -65,7 +64,9 @@ service:
 
     - title: "Focus Pills"
       images:
-        - "images/services/pildoras-foco.png"
+        - "images/services/pildora-bw.png"
+      image_fade: true
+      title_rule: true
       content: "\"Focus Pills\" are practical, direct micro-workshops that activate concentration, clarity, and action in a short time. Designed for teams that need fast results: less dispersion, clearer priorities, and effective execution from the very first moment."
       button:
         enable: true
@@ -74,7 +75,9 @@ service:
 
     - title: "Change Consulting"
       images:
-        - "images/services/consultancy.png"
+        - "images/services/cambio-bw.png"
+      image_fade: true
+      title_rule: true
       content: "I accompany your organization through change processes and project management with a practical, structured, results-oriented approach. I facilitate adaptation, align teams, and ensure that initiatives move forward with clarity, commitment, and effective execution."
       button:
         enable: true
@@ -91,7 +94,7 @@ screenshot:
 call_to_action:
   enable: true
   title: "Do you want to take the next step?"
-  image: "images/about/marpa-profile-office.png"
+  image: "images/cta/siguiente-paso.png"
   content: "Book a free 30-minute session and let's talk about your goals. No commitment required."
   button:
     enable: true

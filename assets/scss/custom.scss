@@ -32,11 +32,19 @@ $color-primary-text: #087E7D;
 
 // Banner — full-bleed image on the right, text on the left,
 // white-to-transparent gradient bridges the two sides.
+$banner-accent: #77ddce;   // teal used in the illustration
+$banner-rule: #c41f28;     // red used in the illustration
+
 .banner {
   position: relative;
   overflow: hidden;
-  padding: 100px 0 80px;
-  min-height: 520px;
+  // Symmetric padding: the text block (headline → button) is centred in the
+  // banner, and the illustration is shifted to share that centre (below).
+  padding: 90px 0;
+  // Grows with the viewport (520px at <=1248px wide, 600px at >=1440px) so
+  // the image keeps the same crop instead of losing people at the sides on
+  // smaller laptops.
+  min-height: clamp(520px, 41.7vw, 600px);
   display: flex;
   align-items: center;
 
@@ -47,21 +55,115 @@ $color-primary-text: #087E7D;
     right: 0;
     width: 65%;
     height: 100%;
+    overflow: hidden; // keeps the zoomed image from spilling under the text
+    // The illustration's own flat background, so shifting/zooming the image
+    // never uncovers an edge.
+    background-color: #e7e7e7;
 
-    // Gradient overlay: white on the left edge, fully transparent on the right
+    // Gradient overlay: white on the left edge, fully transparent on the right.
+    // Quadratic ease-out, alpha = (1 - x/65%)^2, sampled every 5% so the
+    // white page blends into the banner's flat light-grey background without
+    // a visible kink.
     &::before {
       content: '';
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(to right, white 0%, rgba(255,255,255,0.6) 25%, transparent 60%);
+      background: linear-gradient(
+        to right,
+        rgba(255,255,255,1.000) 0%,
+        rgba(255,255,255,0.852) 5%,
+        rgba(255,255,255,0.716) 10%,
+        rgba(255,255,255,0.592) 15%,
+        rgba(255,255,255,0.479) 20%,
+        rgba(255,255,255,0.379) 25%,
+        rgba(255,255,255,0.290) 30%,
+        rgba(255,255,255,0.213) 35%,
+        rgba(255,255,255,0.148) 40%,
+        rgba(255,255,255,0.095) 45%,
+        rgba(255,255,255,0.053) 50%,
+        rgba(255,255,255,0.024) 55%,
+        rgba(255,255,255,0.006) 60%,
+        rgba(255,255,255,0.000) 65%
+      );
     }
 
     .banner-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      // The drawing spans 39.6–75.5% of the illustration's height (centre
+      // 57.5%). object-position at that point keeps it at 57.5% of the
+      // banner in every cover case (height- or width-bound), so wide screens
+      // crop empty grey rather than the people's feet…
+      object-position: center 57.5%;
+      transform-origin: center 57.5%;
+
+      @media (min-width: 992px) {
+        // …and shifting up by 57.5% − 50% = 7.5% of the banner height centres
+        // the drawing vertically on the text block.
+        translate: 0 -7.5%;
+      }
+      // Slight zoom on the people band so they read larger on wide screens,
+      // where the image is width-bound and min-height alone doesn't grow it.
+      // Below 1400px there's no side margin left to zoom into.
+      @media (min-width: 1400px) {
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  // Small laptops (992–1199px): the image area is tall relative to its width,
+  // so `cover` crops the people at the sides and the text column runs over
+  // them. Narrow the area and show the whole illustration (`contain`) on a
+  // matching flat grey (the illustration's own background) instead.
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .banner-image-wrap {
+      width: 58%;
+
+      // contain leaves the illustration's own empty margins (~11% each
+      // side); zoom into them so the people aren't tiny.
+      // Vertical centring: here the image is width-bound (58vw wide →
+      // 32.5vw tall) and centred, so the drawing's centre sits 7.5% of that
+      // height below the middle, ×1.18 after the zoom: 32.5vw × 0.075 × 1.18.
+      .banner-img {
+        object-fit: contain;
+        object-position: center;
+        transform: scale(1.18);
+        transform-origin: center;
+        translate: 0 -2.88vw;
+      }
+    }
+
+  }
+
+  // At 48px the headline breaks onto three lines in the narrow lg / xl text
+  // columns (below the 1320px container); 40px keeps each phrase on one line,
+  // as on wider screens.
+  @media (min-width: 992px) and (max-width: 1399.98px) {
+    .banner-title {
+      font-size: 40px;
+    }
+  }
+
+  // Very wide screens (≥2000px): `cover` scales the illustration with the
+  // viewport width, so the people grow huge and slide under the (centred,
+  // max-width) text column. Fit it to the banner height instead, on the
+  // same flat grey, so it keeps a sane size on the right.
+  // Horizontally, align the illustration with the centred 1320px container
+  // rather than centring it in the full-bleed image area (which pushed it
+  // far right of the nav). At 600px tall it draws ~1071px wide with the
+  // drawing spanning 11%–89%; the offset puts its right tip on the
+  // container's content edge (50vw + 648px, where the nav CTA ends).
+  // Wrapper starts at 35vw, so: 50vw + 648px - 35vw - 0.89 × 1071px.
+  // Height-bound here, so the base translate (-7.5%) still centres it.
+  @media (min-width: 2000px) {
+    .banner-image-wrap {
+      .banner-img {
+        object-fit: contain;
+        object-position: calc(15vw - 305px) center;
+        transform: none;
+      }
     }
   }
 
@@ -69,6 +171,22 @@ $color-primary-text: #087E7D;
   .container {
     position: relative;
     z-index: 2;
+  }
+
+  // Two-line headline: dark statement + teal accent line, with a red
+  // vertical rule on the left. inline-block keeps the rule hugging the
+  // text when the column is centred on small screens.
+  .banner-title {
+    display: inline-block;
+    text-align: left;
+    padding-left: 1.5rem;
+    border-left: 6px solid $banner-rule;
+    line-height: 1.2;
+  }
+
+  .banner-title-accent {
+    display: block;
+    color: $banner-accent;
   }
 
   // On small screens: text first, image below, full width
@@ -89,12 +207,33 @@ $color-primary-text: #087E7D;
       order: 2;
       position: relative;
       width: 100%;
-      height: 260px;
+      height: 220px;
       margin-top: 0;
+      overflow: hidden; // contains the zoomed image below
 
-      // Fade bottom edge into the next section
+      // Eased fades on both edges: top dissolves into the white text area,
+      // bottom into the pale-teal features section that follows, so the
+      // illustration's flat grey never shows a hard edge.
       &::before {
-        background: linear-gradient(to bottom, transparent 60%, white 100%);
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,1)    0%,
+          rgba(255,255,255,0.7)  8%,
+          rgba(255,255,255,0.4)  17%,
+          rgba(255,255,255,0.15) 26%,
+          rgba(255,255,255,0)    34%,
+          rgba($light,0)         72%,
+          rgba($light,0.25)      80%,
+          rgba($light,0.6)       88%,
+          rgba($light,0.88)      95%,
+          rgba($light,1)         100%
+        );
+      }
+
+      // The people occupy only a wide strip (~11–89% across, ~39–75% down)
+      // of the illustration: zoom in on that band so it reads at phone size.
+      .banner-img {
+        transform: scale(1.12);
       }
     }
   }
@@ -106,7 +245,12 @@ $color-primary-text: #087E7D;
       padding-bottom: 2rem;
     }
     .banner-image-wrap {
-      height: 380px;
+      height: 340px;
+
+      .banner-img {
+        transform: scale(1.1);
+        object-position: center 57%;
+      }
     }
   }
 }
@@ -163,7 +307,7 @@ h5, .h5 {
 // ── Profile images — cap size on mobile ──────────────────────────────────────
 @media (max-width: 767.98px) {
   .cta-profile-img {
-    max-width: 260px !important; // overrides Bootstrap img-fluid's max-width: 100% !important
+    max-width: 380px !important; // overrides Bootstrap img-fluid's max-width: 100% !important
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -179,17 +323,38 @@ h5, .h5 {
     max-width: 280px;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+// ── CTA image — cap the width from tablet up ────────────────────────────────
+// The illustration is a 512px square whose drawing occupies only the middle
+// 262×213; the rest is white margin. Left to fill its half of the row it would
+// be 636px square at a 1440px viewport — a large, mostly-empty block that
+// dwarfs the text beside it. Cap it and centre it in the column instead.
+//
+// A `max-height` cap was used here previously (for the old portrait photo).
+// Don't reintroduce one: on a `w-100` image it clamps the height while the
+// width stays 100%, distorting the aspect ratio.
+@media (min-width: 768px) {
   .cta-profile-img {
-    max-height: 320px;
+    max-width: 530px !important; // beats img-fluid's max-width: 100% !important
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 
-// ── About page — philosophy icons ───────────────────────────────────────────
-.philosophy-icon {
-  font-size: 2rem;
-  color: $color-primary-text;
+// ── Feature cards — short red rule instead of an icon ───────────────────────
+// The same mark as the banner headline and service titles, rotated: a 32×4px
+// bar sitting where the Font Awesome icons used to be. Keeps the cards
+// centred, and keeps red as an accent rather than blocks of colour.
+// Used by the homepage "Donde puedo aportar" cards (layouts/index.html) and
+// the about page "Mi Filosofía y Enfoque" cards (layouts/_default/about.html).
+.feature-rule {
+  display: block;
+  width: 32px;
+  height: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $banner-rule;
 }
 
 // ── Service rows — image container ──────────────────────────────────────────
@@ -200,6 +365,44 @@ h5, .h5 {
 .service-img-wrap {
   border-radius: 20px;
   overflow: hidden;
+
+  // The image can be narrower than the column (512px source), so the
+  // wrapper's rounded corners don't reach its right edge — round the image
+  // itself so opaque illustrations get four rounded corners too.
+  img {
+    border-radius: 20px;
+  }
+
+  // Opt-in (service_item.image_fade: true) for opaque illustrations: dissolve
+  // all four edges into the section background. Two eased (smoothstep-like)
+  // linear masks intersected give a soft rectangular vignette; corners fade
+  // out, so no radius needed.
+  &.service-img-fade {
+    border-radius: 0;
+    // Multiply makes the image's white areas take on the section colour
+    // (pale teal on bg-light rows; no visible change on white rows). Set on
+    // the wrapper, not the img, because .swiper is its own stacking context
+    // and would isolate the blend from the section background.
+    mix-blend-mode: multiply;
+
+    img {
+      border-radius: 0;
+      $fade-ramp: transparent 0%, rgba(#000,.08) 3%, rgba(#000,.3) 7%, rgba(#000,.62) 11%, rgba(#000,.88) 15%, #000 18%, #000 82%, rgba(#000,.88) 85%, rgba(#000,.62) 89%, rgba(#000,.3) 93%, rgba(#000,.08) 97%, transparent 100%;
+      $fade-h: linear-gradient(to right, $fade-ramp);
+      $fade-v: linear-gradient(to bottom, $fade-ramp);
+      -webkit-mask-image: $fade-h, $fade-v;
+      -webkit-mask-composite: source-in;
+      mask-image: $fade-h, $fade-v;
+      mask-composite: intersect;
+    }
+  }
+}
+
+// Opt-in (service_item.title_rule: true): red vertical rule beside the
+// service heading, matching the banner headline.
+.service-title-rule {
+  padding-left: 1.25rem;
+  border-left: 6px solid $banner-rule;
 }
 
 // ── Nav active state ──────────────────────────────────────────────────────────

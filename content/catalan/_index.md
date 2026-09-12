@@ -5,8 +5,9 @@ description: "Coaching executiu i personal, consultoria de gestió del canvi. Ac
 keywords: ["coaching executiu", "coaching personal", "consultoria del canvi", "planificació de carrera", "Marta Arpa"]
 ####################### Banner #########################
 banner:
-  title: "Impulsant persones i organitzacions cap a un impacte real"
-  image: "images/homepage/banner-new.webp"
+  title: "Lideratge conscient."
+  title_accent: "Resultats reals."
+  image: "images/homepage/banner-styled-bw.webp"
   content: "Comencem amb una sessió gratuïta de 30 minuts?"
   button:
     enable: true
@@ -18,27 +19,21 @@ feature:
   title: "On puc aportar"
   feature_item:
     - name: "Coaching Executiu"
-      icon: "fas fa-handshake"
       content: "Empoderar líders i equips per maximitzar el seu rendiment i assolir objectius estratègics."
 
     - name: "Tallers Personalitzats"
-      icon: "fas fa-users"
       content: "Tallers a mida que responen als reptes reals de la teva empresa: dinàmics, pràctics i amb impacte immediat."
 
     - name: "Píndoles de Focus"
-      icon: "fas fa-bullseye"
       content: "Micro-tallers pràctics i directes que activen la concentració, la claredat i l'acció en poc temps."
 
     - name: "Consultoria del Canvi"
-      icon: "fas fa-arrow-trend-up"
       content: "Facilitar transformacions organitzatives amb estratègies personalitzades. Gestió de projectes i del canvi."
 
     - name: "Lideratge Positiu"
-      icon: "fas fa-lightbulb"
       content: "Aprèn a liderar amb claredat, coherència i responsabilitat compartida per generar equips compromesos."
 
     - name: "Pla de Carrera"
-      icon: "fas fa-map"
       content: "T'ajudo a definir, planificar i avançar amb claredat cap als teus objectius professionals alineats amb el teu propòsit i talent."
 
 ######################### Service #####################
@@ -47,7 +42,9 @@ service:
   service_item:
     - title: "Coaching Executiu"
       images:
-        - "images/services/coaching-ex.png"
+        - "images/services/coaching-ejecutivo-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Dissenyat per impulsar tant el desenvolupament individual com col·lectiu, proporcionant les eines necessàries per afrontar els reptes actuals de l'entorn empresarial. Inclou el desenvolupament d'habilitats de lideratge, presa de decisions, comunicació efectiva i transformació d'equips."
       button:
         enable: true
@@ -56,7 +53,9 @@ service:
 
     - title: "Coaching d'equips"
       images:
-        - "images/services/talleres-personalizados.png"
+        - "images/services/coaching-equipos-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Acompanyo equips a millorar com treballen junts, enfortint la confiança, la claredat i el focus per assolir resultats sostenibles."
       button:
         enable: true
@@ -65,7 +64,9 @@ service:
 
     - title: "Píndoles de Focus"
       images:
-        - "images/services/pildoras-foco.png"
+        - "images/services/pildora-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Les \"Píndoles de Focus\" són micro-tallers pràctics i directes que activen la concentració, la claredat i l'acció en poc temps. Dissenyats per a equips que necessiten resultats ràpids: menys dispersió, prioritats més clares i execució efectiva des del primer moment."
       button:
         enable: true
@@ -74,7 +75,9 @@ service:
 
     - title: "Consultoria del Canvi"
       images:
-        - "images/services/consultancy.png"
+        - "images/services/cambio-bw.png"
+      image_fade: true
+      title_rule: true
       content: "Acompanyo la teva organització en processos de canvi i gestió de projectes amb un enfocament pràctic, estructurat i orientat a resultats. Facilito l'adaptació, alinee equips i asseguro que les iniciatives avancin amb claredat, compromís i execució efectiva."
       button:
         enable: true
@@ -91,7 +94,7 @@ screenshot:
 call_to_action:
   enable: true
   title: "Vols fer el següent pas?"
-  image: "images/about/marpa-profile-office.png"
+  image: "images/cta/siguiente-paso.png"
   content: "Reserva una sessió gratuïta de 30 minuts i parlem dels teus objectius. Sense compromís."
   button:
     enable: true

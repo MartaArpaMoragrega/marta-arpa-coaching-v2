@@ -21,16 +21,13 @@ philosophy:
   enable: true
   title: "La Meva Filosofia i Enfocament"
   items:
-    - icon: "fas fa-comments"
-      title: "Com a Coach"
+    - title: "Com a Coach"
       content: |
         Crec fermament en el **potencial transformador de cada individu**, que comença amb un canvi de mentalitat i es concreta a través de l'acció conscient. El meu enfocament és clar: créixer des del que som, no des del que ens falta.
-    - icon: "fas fa-chart-line"
-      title: "Com a Gestora del Canvi"
+    - title: "Com a Gestora del Canvi"
       content: |
         M'empeny una profunda passió per la transformació, la innovació i l'excel·lència. El meu enfocament integra l'estratègia de negoci, el disseny organitzatiu, la creativitat i les metodologies àgils per aconseguir **transformacions amb impacte real** i durador.
-    - icon: "fas fa-gem"
-      title: "La Meva Essència Professional"
+    - title: "La Meva Essència Professional"
       content: |
         Combina la claredat estratègica del consultor amb l'escolta profunda del coach. Ajudo a convertir la complexitat en accions concretes i, alhora, creo espais de reflexió que permeten avançar amb propòsit cap a un creixement sostenible.
 ---
