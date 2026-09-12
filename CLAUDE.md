@@ -105,15 +105,11 @@ Edit `content/{lang}/_index.md`. Each service_item requires `title`, `content`, 
 
 Place service images in `assets/images/services/` (not `static/`) — Hugo will automatically generate WebP versions and responsive srcsets at build time. Source images should be square PNG at 512×512.
 
-### CTA profile image (`assets/images/about/marpa-profile-office.png`)
+### CTA image (`assets/images/cta/siguiente-paso.png`)
 
-**Do not replace this file with a JPEG, WebP, or any opaque format.**
+The homepage call-to-action uses a square 512×512 B&W illustration matching the service-row style, referenced from `call_to_action.image` in every `content/{lang}/_index.md`.
 
-The image is a 500×500 PNG with two things baked in:
-1. **Transparent background** outside the circle — the circular crop is in the image, not CSS.
-2. **Teal circular border** ring matching the site's primary colour (`#0AA8A7`) — also baked in, not CSS.
-
-If you swap it for an opaque format (JPEG, etc.) both the circle shape and the border disappear and the photo renders as a plain rectangle. If you need to update the photo, recreate the circular crop + teal border in the new PNG before replacing the file. The CSS class `cta-profile-img` only handles responsive sizing; it applies no border-radius or border of its own.
+It replaced the earlier circular profile photo (`marpa-profile-office.png`), which had a circular crop and a teal ring baked into the PNG itself. There is no circle styling anywhere in CSS — the class `cta-profile-img` only handles responsive sizing, applying no border-radius or border of its own. So a plain square image renders as a plain square; no CSS change is needed to swap shapes.
 
 ---
 

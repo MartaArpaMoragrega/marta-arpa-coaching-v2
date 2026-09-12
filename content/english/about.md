@@ -21,16 +21,13 @@ philosophy:
   enable: true
   title: "My Philosophy and Approach"
   items:
-    - icon: "fas fa-comments"
-      title: "As a Coach"
+    - title: "As a Coach"
       content: |
         I firmly believe in the **transformative potential of every individual**, which begins with a mindset shift and takes shape through conscious action. My focus is clear: to grow from who we are, not from what we lack.
-    - icon: "fas fa-chart-line"
-      title: "As a Change Manager"
+    - title: "As a Change Manager"
       content: |
         I am driven by a deep passion for transformation, innovation, and excellence. My approach combines business strategy, organizational design, creativity, and agile methodologies to achieve **transformations with real impact** and lasting results.
-    - icon: "fas fa-gem"
-      title: "My Professional Essence"
+    - title: "My Professional Essence"
       content: |
         It combines the strategic clarity of a consultant with the deep listening of a coach. I help turn complexity into concrete actions while creating spaces for reflection that enable moving forward with purpose toward sustainable growth.
 ---

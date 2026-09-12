@@ -45,7 +45,7 @@
       {{range .items}}
       <div class="col-lg-4 col-md-6">
         <div class="feature-card is-hoverable py-5 bg-white rounded-1 text-center">
-          <i class="{{.icon}} philosophy-icon mb-4"></i>
+          <span class="feature-rule mb-4" aria-hidden="true"></span>
           <h3 class="h5 mb-3">{{.title | markdownify}}</h3>
           <div class="mb-3">{{.content | markdownify}}</div>
         </div>

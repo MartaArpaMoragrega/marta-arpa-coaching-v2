@@ -19,27 +19,21 @@ feature:
   title: "Where I can contribute"
   feature_item:
     - name: "Executive Coaching"
-      icon: "fas fa-handshake"
       content: "Empower leaders and teams to maximize performance and achieve strategic goals."
 
     - name: "Tailored Workshops"
-      icon: "fas fa-users"
       content: "Tailored workshops that address your company's real challenges — dynamic, practical, and immediately impactful."
 
     - name: "Focus Pills"
-      icon: "fas fa-bullseye"
       content: "Practical and direct micro-workshops that activate concentration, clarity and action in a short time."
 
     - name: "Change Consulting"
-      icon: "fas fa-arrow-trend-up"
       content: "Facilitate organizational transformations through tailored strategies. Project and change management."
 
     - name: "Positive Leadership"
-      icon: "fas fa-lightbulb"
       content: "Learn to lead with clarity, coherence and shared responsibility to build committed teams."
 
     - name: "Career Plan"
-      icon: "fas fa-map"
       content: "I help you define, plan, and move forward with clarity towards your professional goals aligned with your purpose and talent."
 
 ######################### Service #####################
@@ -100,7 +94,7 @@ screenshot:
 call_to_action:
   enable: true
   title: "Do you want to take the next step?"
-  image: "images/about/marpa-profile-office.png"
+  image: "images/cta/siguiente-paso.png"
   content: "Book a free 30-minute session and let's talk about your goals. No commitment required."
   button:
     enable: true

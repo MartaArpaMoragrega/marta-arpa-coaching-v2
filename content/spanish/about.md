@@ -21,16 +21,13 @@ philosophy:
   enable: true
   title: "Mi Filosofía y Enfoque"
   items:
-    - icon: "fas fa-comments"
-      title: "Como Coach"
+    - title: "Como Coach"
       content: |
         Creo firmemente en el **potencial transformador de cada individuo**, que comienza con un cambio de mentalidad y se concreta a través de la acción consciente. Mi enfoque es claro: crecer desde lo que somos, no desde lo que falta.
-    - icon: "fas fa-chart-line"
-      title: "Como Gestora del Cambio"
+    - title: "Como Gestora del Cambio"
       content: |
         Me impulsa una profunda pasión por la transformación, la innovación y la excelencia. Mi enfoque integra la estrategia de negocio, el diseño organizativo, la creatividad y metodologías ágiles para lograr **transformaciones con impacto real** y duradero.
-    - icon: "fas fa-gem"
-      title: "Mi Esencia Profesional"
+    - title: "Mi Esencia Profesional"
       content: |
         Combina la claridad estratégica del consultor con la escucha profunda del coach. Ayudo a convertir la complejidad en acciones concretas y, al mismo tiempo, genero espacios de reflexión que permiten avanzar con propósito hacia un crecimiento sostenible.
 ---

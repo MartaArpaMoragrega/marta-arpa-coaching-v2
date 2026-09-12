@@ -19,27 +19,21 @@ feature:
   title: "Où je peux contribuer"
   feature_item:
     - name: "Coaching Exécutif"
-      icon: "fas fa-handshake"
       content: "Autonomiser les leaders et les équipes pour maximiser leur performance et atteindre leurs objectifs stratégiques."
 
     - name: "Ateliers Personnalisés"
-      icon: "fas fa-users"
       content: "Des ateliers sur mesure qui répondent aux défis réels de votre entreprise : dynamiques, pratiques et à impact immédiat."
 
     - name: "Pilules de Focus"
-      icon: "fas fa-bullseye"
       content: "Micro-ateliers pratiques et directs qui activent la concentration, la clarté et l'action en peu de temps."
 
     - name: "Conseil en Changement"
-      icon: "fas fa-arrow-trend-up"
       content: "Faciliter les transformations organisationnelles grâce à des stratégies personnalisées. Gestion de projets et du changement."
 
     - name: "Leadership Positif"
-      icon: "fas fa-lightbulb"
       content: "Apprenez à diriger avec clarté, cohérence et responsabilité partagée pour construire des équipes engagées."
 
     - name: "Plan de Carrière"
-      icon: "fas fa-map"
       content: "Je t'aide à définir, planifier et avancer avec clarté vers tes objectifs professionnels alignés avec ta mission et ton talent."
 
 ######################### Service #####################
@@ -100,7 +94,7 @@ screenshot:
 call_to_action:
   enable: true
   title: "Envie de passer à l'étape suivante ?"
-  image: "images/about/marpa-profile-office.png"
+  image: "images/cta/siguiente-paso.png"
   content: "Réservez une séance gratuite de 30 minutes et parlons de vos objectifs. Sans engagement."
   button:
     enable: true

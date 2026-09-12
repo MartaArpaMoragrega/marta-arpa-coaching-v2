@@ -18,27 +18,21 @@ feature:
   title: "Donde puedo aportar"
   feature_item:
     - name: "Coaching Ejecutivo"
-      icon: "fas fa-handshake"
       content: "Empoderar a líderes y equipos para maximizar su rendimiento y alcanzar objetivos estratégicos."
 
     - name: "Talleres personalizados"
-      icon: "fas fa-users"
       content: "Talleres a medida para los retos de tu empresa: dinámicos, prácticos y con impacto inmediato."
 
     - name: "Píldoras de Foco"
-      icon: "fas fa-bullseye"
       content: "Micro-talleres prácticos y directos que activan la concentración, la claridad y la acción en poco tiempo."
 
     - name: "Consultoría del Cambio"
-      icon: "fas fa-arrow-trend-up"
       content: "Facilitar transformaciones organizativas a través de estrategias personalizadas. Gestión de proyectos y del cambio."
 
     - name: "Liderazgo Positivo"
-      icon: "fas fa-lightbulb"
       content: "Aprende a liderar con claridad, coherencia y responsabilidad compartida para generar equipos comprometidos."
 
     - name: "Plan de Carrera"
-      icon: "fas fa-map"
       content: "Te ayudo a definir, planificar y avanzar con claridad hacia tus objetivos profesionales alineados con tu propósito y talento."
 
 ######################### Service #####################
@@ -99,7 +93,7 @@ screenshot:
 call_to_action:
   enable: true
   title: "¿Quieres dar el siguiente paso?"
-  image: "images/about/marpa-profile-office.png"
+  image: "images/cta/siguiente-paso.png"
   content: "Agenda una sesión gratuita de 30 minutos y hablemos sobre tus objetivos. Sin compromiso."
   button:
     enable: true

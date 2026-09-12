@@ -21,16 +21,13 @@ philosophy:
   enable: true
   title: "Ma Philosophie et Mon Approche"
   items:
-    - icon: "fas fa-comments"
-      title: "En tant que Coach"
+    - title: "En tant que Coach"
       content: |
         Je crois fermement au **potentiel transformateur de chaque individu**, qui commence par un changement de mentalité et se concrétise à travers l'action consciente. Mon approche est claire : grandir à partir de ce que nous sommes, et non de ce qui manque.
-    - icon: "fas fa-chart-line"
-      title: "En tant que Gestionnaire du Changement"
+    - title: "En tant que Gestionnaire du Changement"
       content: |
         Je suis animée par une profonde passion pour la transformation, l'innovation et l'excellence. Mon approche intègre la stratégie d'entreprise, le design organisationnel, la créativité et les méthodologies agiles afin de réaliser **des transformations à impact réel** et durable.
-    - icon: "fas fa-gem"
-      title: "Mon Essence Professionnelle"
+    - title: "Mon Essence Professionnelle"
       content: |
         Elle combine la clarté stratégique du consultant avec l'écoute profonde du coach. J'aide à transformer la complexité en actions concrètes et, en même temps, je crée des espaces de réflexion qui permettent d'avancer avec intention vers une croissance durable.
 ---
