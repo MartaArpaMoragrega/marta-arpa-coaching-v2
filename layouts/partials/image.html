@@ -207,6 +207,20 @@
         <!-- /if image size less then 500x and size not defined -->
 
         <!-- image processing for multiple device -->
+        <!-- never upscale: clamp each display width to the source width -->
+        {{ $maxWidth:= $image.Width }}
+        {{ if and (findRE `^[0-9]+x$` $displayXL) (gt (int (strings.TrimSuffix `x` $displayXL)) $maxWidth) }}
+          {{ $displayXL = printf `%dx` $maxWidth }}
+        {{ end }}
+        {{ if and (findRE `^[0-9]+x$` $displayLG) (gt (int (strings.TrimSuffix `x` $displayLG)) $maxWidth) }}
+          {{ $displayLG = printf `%dx` $maxWidth }}
+        {{ end }}
+        {{ if and (findRE `^[0-9]+x$` $displayMD) (gt (int (strings.TrimSuffix `x` $displayMD)) $maxWidth) }}
+          {{ $displayMD = printf `%dx` $maxWidth }}
+        {{ end }}
+        {{ if and (findRE `^[0-9]+x$` $displaySM) (gt (int (strings.TrimSuffix `x` $displaySM)) $maxWidth) }}
+          {{ $displaySM = printf `%dx` $maxWidth }}
+        {{ end }}
         {{ $imageFallback:= $image.Resize $displayXL }}
         {{ $imageXL:= $image.Resize (add $displayXL " webp") }}
         {{ $imageLG:= $image.Resize (add $displayLG " webp") }}
