@@ -5,6 +5,10 @@
 
 <meta name="theme-name" content="bigspring-light" />
 
+<!-- scroll reveal: opt in before first paint so revealed elements never flash.
+     Skipped for reduced-motion users; no-JS visitors never get the hidden state. -->
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js-reveal')</script>
+
 <!-- favicon -->
 {{ partialCached "favicon" . }}
 

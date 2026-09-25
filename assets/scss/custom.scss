@@ -3,6 +3,9 @@
 // $color-primary-text (#087E7D) is 5.0:1 on white — passes AA for all text sizes.
 $color-primary-text: #087E7D;
 
+// Sunflower yellow — homepage service rows 1 & 3.
+$sunflower: #FFD166;
+
 // ── Logo — scale down on mobile ───────────────────────────────────────────────
 @media (max-width: 575.98px) {
   .navbar-brand img,
@@ -179,9 +182,22 @@ $banner-rule: #c41f28;     // red used in the illustration
   .banner-title {
     display: inline-block;
     text-align: left;
-    padding-left: 1.5rem;
-    border-left: 6px solid $banner-rule;
+    position: relative;
+    padding-left: calc(1.5rem + 6px);
     line-height: 1.2;
+
+    // The red rule, drawn as a pseudo-element (not border-left) so it can
+    // grow in on load — see "Scroll reveal" below.
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 6px;
+      background-color: $banner-rule;
+      transform-origin: top;
+    }
   }
 
   .banner-title-accent {
@@ -211,9 +227,9 @@ $banner-rule: #c41f28;     // red used in the illustration
       margin-top: 0;
       overflow: hidden; // contains the zoomed image below
 
-      // Eased fades on both edges: top dissolves into the white text area,
-      // bottom into the pale-teal features section that follows, so the
-      // illustration's flat grey never shows a hard edge.
+      // Eased fade on the top edge only, dissolving into the white text
+      // area. The bottom meets the navy features block with a hard edge,
+      // like every other colour block on the homepage.
       &::before {
         background: linear-gradient(
           to bottom,
@@ -221,12 +237,7 @@ $banner-rule: #c41f28;     // red used in the illustration
           rgba(255,255,255,0.7)  8%,
           rgba(255,255,255,0.4)  17%,
           rgba(255,255,255,0.15) 26%,
-          rgba(255,255,255,0)    34%,
-          rgba($light,0)         72%,
-          rgba($light,0.25)      80%,
-          rgba($light,0.6)       88%,
-          rgba($light,0.88)      95%,
-          rgba($light,1)         100%
+          rgba(255,255,255,0)    34%
         );
       }
 
@@ -304,6 +315,15 @@ h5, .h5 {
   margin: 0 auto;
 }
 
+// Side by side (lg+) the photo is vertically centred on the long text
+// column; nudge it up a little so it sits closer to the title.
+@media (min-width: 992px) {
+  .about-profile-img {
+    position: relative;
+    top: -48px;
+  }
+}
+
 // ── Profile images — cap size on mobile ──────────────────────────────────────
 @media (max-width: 767.98px) {
   .cta-profile-img {
@@ -358,10 +378,9 @@ h5, .h5 {
 }
 
 // ── Service rows — image container ──────────────────────────────────────────
-// Full-bleed image inside a rounded wrapper. The transparent areas of each
-// RGBA illustration blend naturally with the section background colour
-// (white on rows 0 & 2, pale-teal #EDF6F5 on rows 1 & 3) — no extra
-// background or padding needed.
+// Full-bleed image inside a rounded wrapper. Each homepage row has its own
+// colour block (see "Homepage tones"); transparent or multiplied white areas
+// of the illustrations take on that colour — no extra background needed.
 .service-img-wrap {
   border-radius: 20px;
   overflow: hidden;
@@ -379,10 +398,11 @@ h5, .h5 {
   // out, so no radius needed.
   &.service-img-fade {
     border-radius: 0;
-    // Multiply makes the image's white areas take on the section colour
-    // (pale teal on bg-light rows; no visible change on white rows). Set on
-    // the wrapper, not the img, because .swiper is its own stacking context
-    // and would isolate the blend from the section background.
+    // Multiply makes the image's white areas take on the section colour.
+    // Set on the wrapper, not the img, because .swiper is its own stacking
+    // context and would isolate the blend from the section background. For
+    // the same reason the scroll-reveal classes sit on this wrapper, not on
+    // the column: a transform on an ancestor would isolate the blend too.
     mix-blend-mode: multiply;
 
     img {
@@ -401,8 +421,20 @@ h5, .h5 {
 // Opt-in (service_item.title_rule: true): red vertical rule beside the
 // service heading, matching the banner headline.
 .service-title-rule {
-  padding-left: 1.25rem;
-  border-left: 6px solid $banner-rule;
+  position: relative;
+  padding-left: calc(1.25rem + 6px);
+
+  // Pseudo-element rather than border-left so it can draw in on reveal.
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 6px;
+    background-color: var(--tone-rule, #{$banner-rule});
+    transform-origin: top;
+  }
 }
 
 // ── Nav active state ──────────────────────────────────────────────────────────
@@ -490,7 +522,26 @@ h5, .h5 {
 }
 
 .contact-form-card {
-  background-color: $light;
+  // The original pale teal ($light #EDF6F5), a shade darker so the card
+  // stands out a little more from the white page.
+  background-color: #DDEEEC;
+
+  // The standard teal outline text drops to 4.1:1 on this darker card;
+  // a deeper teal keeps the submit button at AA (5.4:1).
+  .btn-outline-primary {
+    color: #066A69;
+    border-color: #066A69;
+
+    &::before {
+      border-color: #066A69;
+    }
+
+    &:hover, &:active, &:focus {
+      background-color: #066A69 !important;
+      border-color: #066A69 !important;
+      color: $white;
+    }
+  }
 
   .form-control {
     &:hover:not(:focus) {
@@ -610,6 +661,20 @@ h5, .h5 {
   }
 }
 
+// ── Footer columns — menus left, logo block pinned to the right edge ─────────
+// The theme's Bootstrap build has no ms-*-auto / justify-*-between /
+// text-md-end utilities, hence the custom rules.
+@media (min-width: 768px) {
+  .footer-cols {
+    justify-content: space-between;
+  }
+  // !important to beat .text-sm-start (a Bootstrap utility, itself
+  // !important), which still left-aligns the block on small tablets.
+  .footer-brand {
+    text-align: right !important;
+  }
+}
+
 // ── Footer links — touch-friendly spacing ─────────────────────────────────────
 // Default padding: 5px top/bottom → ~26px tap height. Increase on mobile.
 @media (max-width: 767px) {
@@ -690,5 +755,249 @@ select:focus-visible,
     background-color: $color-primary-text;
     border-color: $color-primary-text;
     color: $white;
+  }
+}
+
+
+// ── Homepage tones — one bold colour block per section ──────────────────────
+// Classes set in layouts/index.html (and the about page's philosophy
+// section, which reuses the navy feature tone). Each tone defines:
+//   bg    section background
+//   ink   headings, outline buttons, focus ring
+//   text  body copy
+//   rule  the short accent rules (red where it has contrast, else ink/tomato)
+// Text contrast (AA): ink #101418 on sunflower (rows 1 & 3) 13:1,
+// banner grey (rows 2 & 4) 15:1; white on navy 11:1, on CTA red 6.4:1. The theme's #666 body text
+// fails on most of these, so every tone sets its own.
+$tone-ink: #101418;
+// CTA band: the brand red, deepened and slightly desaturated so a full-width
+// block doesn't glare. The accent rules keep the brighter $banner-rule.
+$cta-red: #AE2F36;
+// Deep red for the service rows' title rules and "Hablemos" buttons.
+$service-red: #8E1F26;
+// The flat grey behind the banner illustration, reused for calm rows.
+$banner-grey: #E7E7E7;
+$home-tones: (
+  feature:   (bg: #1F3F57, ink: #fff,      text: #D5E0E8,   rule: #FF7B63),
+  service-1: (bg: $sunflower, ink: $tone-ink, text: $tone-ink, rule: $service-red),
+  service-2: (bg: $banner-grey, ink: $tone-ink, text: $tone-ink, rule: $service-red),
+  service-3: (bg: $sunflower, ink: $tone-ink, text: $tone-ink, rule: $service-red),
+  service-4: (bg: $banner-grey, ink: $tone-ink, text: $tone-ink, rule: $service-red),
+  cta:       (bg: $cta-red, ink: #fff,     text: #fff,      rule: #fff),
+);
+
+@each $name, $t in $home-tones {
+  .home-tone--#{$name} {
+    --tone-bg: #{map-get($t, bg)};
+    --tone-ink: #{map-get($t, ink)};
+    --tone-text: #{map-get($t, text)};
+    --tone-rule: #{map-get($t, rule)};
+  }
+}
+
+.home-tone {
+  background-color: var(--tone-bg);
+  color: var(--tone-text);
+  // Horizontal reveal slides start up to 32px outside the column; clip
+  // them so they never cause a sideways scrollbar.
+  overflow-x: clip;
+
+  h2, h3, h4 {
+    color: var(--tone-ink);
+  }
+
+  p {
+    color: var(--tone-text);
+  }
+
+  .feature-rule {
+    background-color: var(--tone-rule);
+  }
+
+  // The theme draws the outline on ::before and forces a transparent hover
+  // background with !important, hence the !important here.
+  .btn-outline-primary {
+    color: var(--tone-ink);
+    border-color: var(--tone-ink);
+
+    &::before {
+      border-color: var(--tone-ink);
+    }
+
+    &:hover, &:active, &:focus {
+      background-color: var(--tone-ink) !important;
+      border-color: var(--tone-ink) !important;
+      color: var(--tone-bg);
+    }
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline-color: var(--tone-ink);
+  }
+}
+
+// Features on navy: faint tiles so the six cards read as a set.
+.home-tone--feature .feature-card {
+  height: 100%;
+  padding: 2rem 1.5rem 1.25rem;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, .06);
+  // Hover lift uses the standalone `translate` property so it never fights
+  // the reveal's `transform`.
+  transition: translate .25s ease, background-color .25s ease;
+
+  &:hover {
+    translate: 0 -4px;
+    background-color: rgba(255, 255, 255, .1);
+  }
+}
+
+// CTA on the red band: white button, red label; hover turns it ink.
+.home-tone--cta .btn-primary {
+  background-color: #fff;
+  border-color: #fff;
+  color: $cta-red;
+
+  // !important to beat the theme's forced teal hover background.
+  &:hover, &:active, &:focus {
+    background-color: $tone-ink !important;
+    border-color: $tone-ink !important;
+    color: #fff;
+  }
+}
+
+// ── Scroll reveal ────────────────────────────────────────────────────────────
+// .reveal elements start faded and offset, then settle when reveal.js adds
+// .is-visible. Only transform/opacity animate (no layout shift). Everything
+// is scoped to html.js-reveal, which is only set when JS runs and the user
+// hasn't asked for reduced motion.
+$reveal-ease: cubic-bezier(.2, .7, .2, 1);
+
+.js-reveal {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    // translate/background-color keep the feature tiles' hover transition
+    // (the reveal's own properties carry the stagger delay; hover doesn't).
+    transition:
+      opacity .6s $reveal-ease var(--reveal-delay, 0ms),
+      transform .6s $reveal-ease var(--reveal-delay, 0ms),
+      translate .25s ease,
+      background-color .25s ease;
+  }
+
+  // Side slides only once the columns sit side by side; stacked on mobile
+  // they simply fade up.
+  @media (min-width: 768px) {
+    .reveal-left  { transform: translateX(-32px); }
+    .reveal-right { transform: translateX(32px); }
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  // The accent rules draw in as their block reveals. Scoped to .reveal so
+  // the same rules elsewhere (about page) are never left hidden.
+  .reveal .service-title-rule::before {
+    transform: scaleY(0);
+    transition: transform .7s $reveal-ease .2s;
+  }
+  .reveal.is-visible .service-title-rule::before {
+    transform: none;
+  }
+
+  .reveal .feature-rule {
+    transform: scaleX(0);
+    transition: transform .5s $reveal-ease;
+    transition-delay: calc(var(--reveal-delay, 0ms) + 200ms);
+  }
+  .reveal.is-visible .feature-rule {
+    transform: none;
+  }
+
+  // Banner: only the red rule animates, on load. The headline itself stays
+  // visible so it can't delay LCP.
+  .banner-title::before {
+    animation: rule-draw-y .8s $reveal-ease .15s both;
+  }
+}
+
+@keyframes rule-draw-y {
+  from { transform: scaleY(0); }
+  to   { transform: none; }
+}
+
+// Second guard: if reduced motion is switched on after load, show everything.
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal {
+    .reveal,
+    .reveal .service-title-rule::before,
+    .reveal .feature-rule,
+    .banner-title::before {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}
+
+// ── Service rows — scroll-linked drift ──────────────────────────────────────
+// While a service row crosses the viewport its illustration drifts gently
+// upward and grows a touch (parallax against the still text column). Pure
+// CSS scroll-driven animation: browsers without `animation-timeline` just
+// show the image still. Uses the standalone `translate`/`scale` properties
+// so it composes with the reveal's `transform` on the same wrapper (the
+// wrapper carries the multiply blend, so it must move itself, not a parent).
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .home-tone .service-img-wrap {
+      --drift: 24px;
+      animation: service-drift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+
+      @media (min-width: 768px) {
+        --drift: 40px;
+      }
+    }
+  }
+}
+
+@keyframes service-drift {
+  from { translate: 0 var(--drift); scale: .96; }
+  to   { translate: 0 calc(var(--drift) * -1); scale: 1.04; }
+}
+
+// ── Red buttons ──────────────────────────────────────────────────────────────
+// Same red as the homepage CTA band (white text 6.4:1). Used by the nav
+// "Hablemos" button. !important on hover to beat the theme's forced teal
+// .btn-primary hover background.
+$cta-red-dark: darken($cta-red, 8%);
+
+.btn-red {
+  background-color: $cta-red;
+  border-color: $cta-red;
+  color: #fff;
+
+  &:hover, &:active, &:focus {
+    background-color: $cta-red-dark !important;
+    border-color: $cta-red-dark !important;
+    color: #fff;
+  }
+}
+
+// Service rows: the "Hablemos" buttons take the deeper service red, matching
+// the title rules (white text 8.8:1).
+.home-tone .btn-red {
+  background-color: $service-red;
+  border-color: $service-red;
+
+  &:hover, &:active, &:focus {
+    background-color: darken($service-red, 8%) !important;
+    border-color: darken($service-red, 8%) !important;
   }
 }

@@ -3,38 +3,39 @@
     <div class="row justify-content-center">
       <div class="col-xl-11">
         <div class="section pt-0">
-          <div class="row gy-4">
+          <div class="row gy-4 footer-cols">
+            {{ if site.Menus.footer_left }}
             <div class="col-md-3 col-sm-6 text-center text-sm-start">
-              {{ if site.Menus.footer_left }}
               <div class="h5 mb-4">{{ site.Params.footer_menu_left }}</div>
               <ul class="list-unstyled footer-list">
                 {{ range site.Menus.footer_left }}
                 <li><a href="{{ .URL | relURL }}" title="{{ .Name }}">{{ .Name }}</a></li>
                 {{ end }}
               </ul>
-              {{ end }}
             </div>
+            {{ end }}
+            {{ if site.Menus.footer_middle }}
             <div class="col-md-3 col-sm-6 text-center text-sm-start">
-              {{ if site.Menus.footer_middle }}
               <div class="h5 mb-4">{{ site.Params.footer_menu_middle }}</div>
               <ul class="list-unstyled footer-list">
                 {{ range site.Menus.footer_middle }}
                 <li><a href="{{ .URL | relURL }}" title="{{ .Name }}">{{ .Name }}</a></li>
                 {{ end }}
               </ul>
-              {{ end }}
             </div>
+            {{ end }}
+            {{ if site.Menus.footer_right }}
             <div class="col-md-3 col-sm-6 text-center text-sm-start">
-              {{ if site.Menus.footer_right }}
               <div class="h5 mb-4">{{ site.Params.footer_menu_right }}</div>
               <ul class="list-unstyled footer-list">
                 {{ range site.Menus.footer_right }}
                 <li><a href="{{ .URL | relURL }}" title="{{ .Name }}">{{ .Name }}</a></li>
                 {{ end }}
               </ul>
-              {{ end }}
             </div>
-            <div class="col-md-3 col-sm-6 text-center text-sm-start">
+            {{ end }}
+            <!-- logo block last, pinned to the right edge; menus stay on the left -->
+            <div class="col-md-4 col-sm-6 text-center text-sm-start footer-brand">
               <a class="d-block h5 mb-3" href="{{ site.Home.RelPermalink }}">
                 {{ partial "logo.html" }}
               </a>
