@@ -19,6 +19,8 @@ module.exports = {
       /active/,
       /current/,
       /dark/,
+      // Scroll reveal opt-in, added to <html> by an inline script in head.html
+      /^js-reveal$/,
     ],
     // Keep any rule whose selector contains an attribute selector — needed for
     // [aria-expanded="true"] toggler rules (PurgeCSS only matches class names,

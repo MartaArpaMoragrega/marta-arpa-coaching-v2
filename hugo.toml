@@ -168,4 +168,6 @@ link = "plugins/cookie.js"
 link = "plugins/lazy-loader.js"
 [[params.plugins.js]]
 link = "js/tab.js"
+[[params.plugins.js]]
+link = "js/reveal.js"
 

@@ -113,6 +113,18 @@ It replaced the earlier circular profile photo (`marpa-profile-office.png`), whi
 
 ---
 
+## Homepage colour blocks & scroll motion
+
+Each homepage section gets its own colour through a `home-tone home-tone--{feature,service-N,cta}` class in `layouts/index.html`. The values live in the `$home-tones` map in `custom.scss` (bg / ink / text / rule), exposed as `--tone-*` custom properties. A 5th service row needs a `service-5` entry in that map.
+
+Current order: navy features → yellow (`$sunflower`) / grey (`$banner-grey`) / yellow / grey service rows → red CTA band (`$cta-red`). Service title rules and "Hablemos" buttons use the deeper `$service-red`.
+
+Scroll reveal: add `reveal` (fade up) or `reveal reveal-left|right` (side slide ≥768px) to an element; `assets/js/reveal.js` adds `is-visible` on first intersection. Optional `style="--reveal-delay: 70ms"` for staggering. Don't put `reveal` on an ancestor of `.service-img-fade`: its transform would isolate the `mix-blend-mode: multiply`. Put it on the wrapper itself.
+
+Service-row illustrations also drift slightly (parallax + small scale) as they cross the viewport — CSS scroll-driven animation (`animation-timeline: view()`) on `.home-tone .service-img-wrap`, using the standalone `translate`/`scale` properties so it doesn't clash with the reveal's `transform`. Browsers without support show a still image.
+
+---
+
 ## Multilingual rules
 
 - Always create content in all 4 languages (`spanish/`, `english/`, `french/`, `catalan/`)
@@ -125,22 +137,25 @@ It replaced the earlier circular profile photo (`marpa-profile-office.png`), whi
 
 ## Template overrides
 
-Six theme/module partials are overridden in `layouts/partials/` — **do not delete these**:
+Seven theme/module partials are overridden in `layouts/partials/` — **do not delete these**:
 
 | File | Why overridden |
 |---|---|
 | `image.html` | Changed `absURL` → `relURL` for static images (fixes cross-device loading). Also handles WebP conversion + responsive `<picture>` srcsets for images in `assets/`. In the multi-device branch, each `Display*` width is clamped to the source width so Hugo never upscales — without this a 512×512 service image was blown up to the `DisplayXL` default of 1110px, producing 1.3 MB PNG fallbacks that Ahrefs flagged. The clamp only applies to plain `NNNx` specs, so an explicit `WxH` still behaves as before |
 | `logo.html` | Same fix for the logo image |
-| `header.html` | Navbar brand uses `"/" | relLangURL` instead of `site.BaseURL`; language switcher uses `.RelPermalink` |
+| `header.html` | Navbar brand uses `"/" | relLangURL` instead of `site.BaseURL`; language switcher uses `.RelPermalink`. Nav CTA carries `.btn-red` |
 | `basic-seo.html` | Suppresses `<base>` tag when `hugo.IsServer`; sole source of `<title>` tag — homepage uses `site.Title` alone, inner pages use `Page Title \| site.Title`; `meta_title` front matter overrides the full title as-is. Outputs `og:site_name`. Injects Schema.org JSON-LD (`@graph` with Organization + Person + optional WebSite, BreadcrumbList on non-home pages, BlogPosting on blog singles, ProfilePage on about page). `og:type` is `article` on blog posts, `website` elsewhere. `Person.image` is an `ImageObject` with dimensions. `WebSite @id` uses `$siteID` (not `site.Home.Permalink`) so it stays consistent across all language homepages. Person has `jobTitle`, `areaServed`, `knowsAbout`, and `hasCredential` (ICF). Social cards are rendered as JPEG (`Fill "1200x630 Center jpg q85"`) — a 1200×630 PNG runs past 1 MB and some platforms refuse to preview it; `og:image:type` is tracked in `$ogImageType` so it reports the format actually emitted, not the source extension. **Always pipe `jsonify` through `safeJS`** (`\| jsonify \| safeJS`) inside `<script>` blocks — Hugo's JS auto-escaper double-encodes quotes otherwise. |
-| `head.html` | Removes the theme's own `<title>` tag — `basic-seo.html` is authoritative to avoid duplicate titles |
+| `head.html` | Removes the theme's own `<title>` tag — `basic-seo.html` is authoritative to avoid duplicate titles. Also holds the inline one-liner that adds `js-reveal` to `<html>` (skipped under `prefers-reduced-motion`) — the scroll-reveal hidden state only applies under that class |
+| `footer.html` | Menus on the left, logo block right-aligned (`.footer-cols` / `.footer-brand` in `custom.scss`). Menu columns render only when their menu has entries — an empty `footer_left` used to leave a blank first column |
 | `custom-script.html` | Injects Klaro CMP (kiprotect.com cloud); GA scripts use `type="text/plain"` + `data-name="google-analytics"` so Klaro gates them. A bare `gtag` stub is defined globally (no consent needed) so Klaro's internal GA callback doesn't throw. Both CMP and GA suppressed in dev via `hugo.IsServer`. Do not add GA back to `hugo.toml` |
 
-One layout is overridden in `layouts/_default/`:
+Layouts overridden in `layouts/_default/`:
 
 | File | Why overridden |
 |---|---|
-| `contact.html` | Adds hidden `_redirect` field (language-aware thanks page via `absLangURL`), reCAPTCHA v2 widget, and reCAPTCHA API script |
+| `contact.html` | Adds hidden `_redirect` field (language-aware thanks page via `absLangURL`), reCAPTCHA v2 widget, and reCAPTCHA API script. Booking button carries `.btn-red` |
+| `about.html` | Inlines its own left-aligned copy of the theme's `page-header` partial (the partial centres the title on every page). The philosophy section reuses the navy `home-tone--feature` tone |
+| `single.html` | End-of-article "Hablemos" CTA carries `.btn-red` |
 
 The root cause: Hugo dev server overrides `site.BaseURL` to `//localhost:PORT/` in templates, which breaks cross-device access. These overrides ensure all resource URLs are root-relative.
 
@@ -155,7 +170,14 @@ The root cause: Hugo dev server overrides `site.BaseURL` to `//localhost:PORT/` 
 - **Dark mode**: disabled (`theme_switcher = false`)
 - **Logo**: `static/images/logo-ma.webp`, rendered at 160px wide
 
+- **Reds** (in `custom.scss`): `$banner-rule` `#C41F28` (banner headline rule; feature-card rules on navy are tomato `#FF7B63` via the tone), `$cta-red` `#AE2F36` (homepage CTA band and `.btn-red` — nav, blog article, contact booking buttons), `$service-red` `#8E1F26` (homepage service-row rules and buttons)
+
 Colors and fonts are set in `hugo.toml` under `[params.variables]` and compiled into SCSS at build time.
+
+### Theme CSS gotchas
+
+- The theme's Bootstrap build is trimmed: utilities like `ms-*-auto`, `text-md-end`, `justify-content-md-between` don't exist. Write a small custom rule instead of reaching for them.
+- `.btn-primary` / `.btn-outline-primary` hover states force their background with `!important`, and the outline is drawn on `::before`. Colour overrides need `!important` on hover and a `::before { border-color }` for outlines — see `.btn-red`.
 
 ---
 
