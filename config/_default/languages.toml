@@ -1,7 +1,7 @@
 ################################### Spanish (default) #####################################
 [es]
-languageName = "ES"
-languageCode = "es-ES"
+label = "ES"
+locale = "es-ES"
 contentDir = "content/spanish"
 weight = 1
 [es.params]
@@ -12,8 +12,8 @@ footer_content = "Coaching ejecutivo y personal, gestión del cambio y consultor
 
 ################################### English #####################################
 [en]
-languageName = "EN"
-languageCode = "en-US"
+label = "EN"
+locale = "en-US"
 contentDir = "content/english"
 weight = 2
 [en.params]
@@ -24,8 +24,8 @@ footer_content = "Executive and personal coaching, change management and organiz
 
 ################################### French #####################################
 [fr]
-languageName = "FR"
-languageCode = "fr-FR"
+label = "FR"
+locale = "fr-FR"
 contentDir = "content/french"
 weight = 3
 [fr.params]
@@ -36,8 +36,8 @@ footer_content = "Coaching exécutif et personnel, gestion du changement et cons
 
 ################################### Catalan #####################################
 [ca]
-languageName = "CA"
-languageCode = "ca-ES"
+label = "CA"
+locale = "ca-ES"
 contentDir = "content/catalan"
 weight = 4
 [ca.params]
