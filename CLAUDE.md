@@ -156,6 +156,7 @@ Layouts overridden in `layouts/_default/`:
 | `contact.html` | Adds hidden `_redirect` field (language-aware thanks page via `absLangURL`), reCAPTCHA v2 widget, and reCAPTCHA API script. Booking button carries `.btn-red` |
 | `about.html` | Inlines its own left-aligned copy of the theme's `page-header` partial (the partial centres the title on every page). The philosophy section reuses the navy `home-tone--feature` tone |
 | `single.html` | End-of-article "Hablemos" CTA carries `.btn-red` |
+| `baseof.html`, `index.webmanifest` | Use `site.Language.Locale` instead of `site.LanguageCode` (deprecated in Hugo 0.158). `languages.toml` likewise uses `locale`/`label`, not `languageCode`/`languageName`. CI pins Hugo 0.165.0 in `deploy.yml` — don't drop below 0.158 |
 
 The root cause: Hugo dev server overrides `site.BaseURL` to `//localhost:PORT/` in templates, which breaks cross-device access. These overrides ensure all resource URLs are root-relative.
 
