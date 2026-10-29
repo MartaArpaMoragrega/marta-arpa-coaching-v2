@@ -2,7 +2,6 @@
   "htmlElements": {
     "tags": [
       "a",
-      "base",
       "body",
       "button",
       "code",
@@ -188,6 +187,9 @@
       "pb-4",
       "pe-0",
       "pe-lg-5",
+      "post-banner--crop",
+      "post-card-img--square",
+      "post-card-img--wide",
       "post-cta",
       "post-cta-text",
       "post-meta",

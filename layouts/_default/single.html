@@ -6,7 +6,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">
-        {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "rounded-2 w-100 mb-5") }}
+        {{ $banner := dict "Src" .Params.image "Alt" .Title "Class" "rounded-2 w-100 mb-5" }}
+        {{ if .Params.banner_crop_mobile }}
+          {{/* The mobile crop shows only the middle of the banner, enlarged; the default 545x/600x renditions would be upscaled and blurry */}}
+          {{ $banner = merge $banner (dict "Class" "rounded-2 w-100 mb-5 post-banner--crop" "DisplaySM" "1600x" "DisplayMD" "1600x") }}
+        {{ end }}
+        {{ partial "image" $banner }}
         <h1 class="h2">{{ .Title }}</h1>
         <p class="post-meta">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02/01/2006" }}</time>
