@@ -3,6 +3,7 @@ title: "Cómo dar feedback de mejora sin dañar la relación"
 meta_title: "Feedback de mejora sin dañar la relación | Marta Arpa"
 date: "2026-10-29"
 image: "images/posts/feedback-de-mejora/banner.png"
+banner_crop_mobile: true
 author: "Marta Arpa"
 description: "Dar feedback de mejora cuesta a casi todo el mundo. Seis ideas para hablar a tiempo, partir de los hechos y escuchar, sin dañar la relación con tu equipo."
 type: "post"

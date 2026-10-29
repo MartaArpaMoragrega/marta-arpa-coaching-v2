@@ -600,6 +600,18 @@ h5, .h5 {
   margin: 0.5rem 0 1.75rem;
 }
 
+// Opt-in via `banner_crop_mobile: true` front matter. For wide banners whose
+// drawing sits in the middle with empty margins: on phones, crop to 5:4 so the
+// illustration fills more of the width instead of shrinking to a thin strip.
+// single.html serves a larger mobile rendition for these, so the crop stays sharp.
+@media (max-width: 767.98px) {
+  .post-banner--crop {
+    aspect-ratio: 5 / 4;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
 .post-meta-sep {
   margin: 0 0.4rem;
   opacity: 0.5;

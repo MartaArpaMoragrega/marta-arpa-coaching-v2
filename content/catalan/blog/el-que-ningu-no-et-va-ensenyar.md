@@ -3,6 +3,7 @@ title: "El que ningú no et va ensenyar quan et van fer cap"
 meta_title: "El que ningú no t'ensenya de ser cap | Marta Arpa Coaching"
 date: "2026-10-20"
 image: "images/posts/lo-que-nadie-te-enseno/banner.png"
+banner_crop_mobile: true
 author: "Marta Arpa"
 description: "Et van fer cap perquè eres bo en la teva feina, però sense cap manual. Sis coses que canvien quan lideres un equip i tres passos petits per començar."
 type: "post"

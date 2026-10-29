@@ -3,6 +3,7 @@ title: "Lo que nadie te enseñó cuando te hicieron jefe"
 meta_title: "Lo que nadie te enseñó al ser jefe | Marta Arpa Coaching"
 date: "2026-10-20"
 image: "images/posts/lo-que-nadie-te-enseno/banner.png"
+banner_crop_mobile: true
 author: "Marta Arpa"
 description: "Te hicieron jefe por ser bueno en lo tuyo, pero nadie te dio un manual. Seis cosas que cambian al liderar un equipo y tres pasos pequeños para esta semana."
 type: "post"

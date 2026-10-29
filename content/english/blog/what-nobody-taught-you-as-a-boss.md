@@ -3,6 +3,7 @@ title: "What nobody taught you when you became the boss"
 meta_title: "What Nobody Taught You as a Boss | Marta Arpa Coaching"
 date: "2026-10-20"
 image: "images/posts/lo-que-nadie-te-enseno/banner.png"
+banner_crop_mobile: true
 author: "Marta Arpa"
 description: "You were made the boss because you were good at your job, but nobody handed you a manual. Six things that change when you lead a team, and three small steps."
 type: "post"

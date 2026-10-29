@@ -3,6 +3,7 @@ title: "How to give improvement feedback without damaging the relationship"
 meta_title: "Feedback Without Damaging Trust | Marta Arpa Coaching"
 date: "2026-10-29"
 image: "images/posts/feedback-de-mejora/banner.png"
+banner_crop_mobile: true
 author: "Marta Arpa"
 description: "Giving improvement feedback is hard for almost everyone. Six ideas to speak up early, start from facts and listen, without damaging your team relationships."
 type: "post"

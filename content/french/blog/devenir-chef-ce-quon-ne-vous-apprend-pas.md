@@ -3,6 +3,7 @@ title: "Ce que personne ne vous a appris quand vous êtes devenu chef"
 meta_title: "Devenir chef : ce qu'on ne vous apprend pas | Marta Arpa"
 date: "2026-10-20"
 image: "images/posts/lo-que-nadie-te-enseno/banner.png"
+banner_crop_mobile: true
 author: "Marta Arpa"
 description: "On vous a nommé chef parce que vous étiez bon dans votre métier, mais sans mode d'emploi. Six choses qui changent quand on dirige une équipe."
 type: "post"

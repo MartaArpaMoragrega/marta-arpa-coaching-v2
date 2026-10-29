@@ -3,6 +3,7 @@ title: "Comment donner un feedback d'amélioration sans abîmer la relation"
 meta_title: "Feedback sans abîmer la relation | Marta Arpa Coaching"
 date: "2026-10-29"
 image: "images/posts/feedback-de-mejora/banner.png"
+banner_crop_mobile: true
 author: "Marta Arpa"
 description: "Donner un feedback d'amélioration coûte à presque tout le monde. Six idées pour parler tôt, partir des faits et écouter, sans abîmer la relation avec l'équipe."
 type: "post"

@@ -3,6 +3,7 @@ title: "Com donar feedback de millora sense danyar la relació"
 meta_title: "Feedback de millora sense danyar la relació | Marta Arpa"
 date: "2026-10-29"
 image: "images/posts/feedback-de-mejora/banner.png"
+banner_crop_mobile: true
 author: "Marta Arpa"
 description: "Donar feedback de millora costa a gairebé tothom. Sis idees per parlar a temps, partir dels fets i escoltar, sense danyar la relació amb el teu equip."
 type: "post"

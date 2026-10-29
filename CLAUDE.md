@@ -96,6 +96,8 @@ translationKey: "unique-post-slug"
 
 Place banner images in `assets/images/posts/<folder>/` (not `static/`) — Hugo will automatically generate WebP versions and responsive srcsets at build time.
 
+**Wide banners with empty side margins:** add `banner_crop_mobile: true` to crop the banner to 5:4 (`object-fit: cover`, centred) below 768px, so the drawing isn't tiny on phones; `single.html` also serves a 1600px-wide mobile rendition so the crop stays sharp. Only use it when the drawing fits inside the centred 5:4 window (for a 2416×1024 banner, the middle 1280px), or it will be clipped. Blog listing cards are unaffected.
+
 **`<title>` length:** Hugo renders the title tag as `"{title} | Marta Arpa Coaching"`, adding 22 characters. If the `title` field is longer than ~38 characters the rendered `<title>` will exceed Google's 60-character guideline. For any post with a long descriptive title, add a `meta_title` field (≤ 60 chars, complete — e.g. `"Keyword Topic | Marta Arpa Coaching"`). This overrides both `<title>` and `og:title`; the `title` field stays unchanged and continues to appear in blog listing cards.
 
 **`description` length:** Keep meta descriptions between 110 and 160 characters. Descriptions shorter than 110 chars trigger Ahrefs/Google warnings and may result in Google rewriting the snippet from page content. All pages except `noindex` utility pages (e.g. `contact-thanks.md`) must have a `description` field.
