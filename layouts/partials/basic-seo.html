@@ -239,13 +239,26 @@
         "https://www.instagram.com/marta_arpa_coaching"
       ]
     }
-    {{- if .IsHome }},
+    {{- if or .IsHome (eq .Layout "about") }},
     {
       "@type": "WebSite",
       "@id": "{{ $siteID }}/#website",
       "url": "{{ $siteID }}/",
       "name": {{ site.Title | jsonify | safeJS }},
       "publisher": { "@id": "{{ $siteID }}/#organization" }
+    }
+    {{- end }}
+    {{- if eq .Layout "about" }},
+    {
+      "@type": "ProfilePage",
+      "@id": "{{ .Permalink }}#profilepage",
+      "url": "{{ .Permalink }}",
+      "name": {{ .Title | jsonify | safeJS }},
+      "inLanguage": {{ site.Language.Locale | jsonify | safeJS }},
+      "isPartOf": { "@id": "{{ $siteID }}/#website" },
+      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+      "about": { "@id": "{{ $siteID }}/#person" },
+      "mainEntity": { "@id": "{{ $siteID }}/#person" }
     }
     {{- end }}
   ]
@@ -285,20 +298,6 @@
     }
     {{- end }}
   ]
-}
-</script>
-{{- end }}
-{{- if eq .Layout "about" }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "@id": "{{ .Permalink }}#profilepage",
-  "url": "{{ .Permalink }}",
-  "name": {{ .Title | jsonify | safeJS }},
-  "isPartOf": { "@id": "{{ $siteID }}/#website" },
-  "about": { "@id": "{{ $siteID }}/#person" },
-  "mainEntity": { "@id": "{{ $siteID }}/#person" }
 }
 </script>
 {{- end }}
