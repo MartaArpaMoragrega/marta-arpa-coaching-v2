@@ -139,7 +139,7 @@ Service-row illustrations also drift slightly (parallax + small scale) as they c
 
 ## Template overrides
 
-Seven theme/module partials are overridden in `layouts/partials/` — **do not delete these**:
+The following theme/module partials are overridden in `layouts/partials/` — **do not delete these**:
 
 | File | Why overridden |
 |---|---|
@@ -149,6 +149,7 @@ Seven theme/module partials are overridden in `layouts/partials/` — **do not d
 | `basic-seo.html` | Suppresses `<base>` tag when `hugo.IsServer`; sole source of `<title>` tag — homepage uses `site.Title` alone, inner pages use `Page Title \| site.Title`; `meta_title` front matter overrides the full title as-is. Outputs `og:site_name`. Injects Schema.org JSON-LD (`@graph` with Organization + Person + optional WebSite, BreadcrumbList on non-home pages, BlogPosting on blog singles, ProfilePage on about page). `og:type` is `article` on blog posts, `website` elsewhere. `Person.image` is an `ImageObject` with dimensions. `WebSite @id` uses `$siteID` (not `site.Home.Permalink`) so it stays consistent across all language homepages. Person has `jobTitle`, `areaServed`, `knowsAbout`, and `hasCredential` (ICF). Social cards are rendered as JPEG (`Fill "1200x630 Center jpg q85"`) — a 1200×630 PNG runs past 1 MB and some platforms refuse to preview it; `og:image:type` is tracked in `$ogImageType` so it reports the format actually emitted, not the source extension. **Always pipe `jsonify` through `safeJS`** (`\| jsonify \| safeJS`) inside `<script>` blocks — Hugo's JS auto-escaper double-encodes quotes otherwise. |
 | `head.html` | Removes the theme's own `<title>` tag — `basic-seo.html` is authoritative to avoid duplicate titles. Also holds the inline one-liner that adds `js-reveal` to `<html>` (skipped under `prefers-reduced-motion`) — the scroll-reveal hidden state only applies under that class |
 | `footer.html` | Menus on the left, logo block right-aligned (`.footer-cols` / `.footer-brand` in `custom.scss`). Menu columns render only when their menu has entries — an empty `footer_left` used to leave a blank first column |
+| `pwa.html` | Replaces the pwa module's service-worker registration (Workbox from `storage.googleapis.com`, image-only NetworkFirst: no speed or offline benefit, and an unconsented third-party request). Now only unregisters any previously installed worker and deletes its `workbox*` caches; the web manifest is untouched. The cleanup script can be removed a few months after 2026-11 |
 | `custom-script.html` | Injects Klaro CMP (kiprotect.com cloud); GA scripts use `type="text/plain"` + `data-name="google-analytics"` so Klaro gates them. A bare `gtag` stub is defined globally (no consent needed) so Klaro's internal GA callback doesn't throw. Both CMP and GA suppressed in dev via `hugo.IsServer`. Do not add GA back to `hugo.toml` |
 
 Layouts overridden in `layouts/_default/`:
