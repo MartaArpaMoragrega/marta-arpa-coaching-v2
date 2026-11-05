@@ -1,0 +1,17 @@
+<!-- Overrides the gethugothemes pwa module partial: the site no longer registers a
+     service worker. Unregister any one installed by earlier versions and drop its
+     Workbox image cache. Safe to delete this script once returning visitors have
+     cleaned up (a few months after 2026-11). -->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function (rs) {
+      rs.forEach(function (r) { r.unregister(); });
+    }).catch(function () {});
+    if (window.caches) {
+      caches.keys().then(function (ks) {
+        ks.filter(function (k) { return k.indexOf('workbox') === 0; })
+          .forEach(function (k) { caches.delete(k); });
+      }).catch(function () {});
+    }
+  }
+</script>
