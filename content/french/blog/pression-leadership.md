@@ -13,7 +13,7 @@ draft: false
 
 Si vous gérez des personnes, des projets ou des ressources, la pression fait partie du travail. Elle vient d'en haut, des côtés et parfois de soi-même. Et elle ne s'en va pas, malgré tous nos efforts.
 
-Le rapport Gallup de cette année indique que les personnes qui dirigent disent ressentir plus de stress et plus de solitude que celles qui ne gèrent personne. Cela ne me surprend pas, et je ne crois pas non plus que ce soit un échec personnel.
+Le [rapport Gallup](https://www.gallup.com/workplace/349484/state-workplace.aspx) de cette année indique que les personnes qui dirigent disent ressentir plus de stress et plus de solitude que celles qui ne gèrent personne. Cela ne me surprend pas, et je ne crois pas non plus que ce soit un échec personnel.
 
 Aucune pression ne se règle d'un coup. Mais il existe de petites pratiques qui fonctionnent souvent. Ce ne sont pas des recettes, plutôt des idées à essayer, pour garder ce qui vous sert.
 

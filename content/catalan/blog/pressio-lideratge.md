@@ -13,7 +13,7 @@ draft: false
 
 Si gestiones persones, projectes o recursos, la pressió forma part de la feina. Arriba de dalt, dels costats i de vegades d'un mateix. I no se'n va per molt que ho intentem.
 
-L'informe de Gallup d'aquest any apunta que qui lidera diu sentir més estrès i més solitud que qui no gestiona ningú. No em sorprèn, i tampoc no crec que sigui un error personal.
+L'[informe de Gallup](https://www.gallup.com/workplace/349484/state-workplace.aspx) d'aquest any apunta que qui lidera diu sentir més estrès i més solitud que qui no gestiona ningú. No em sorprèn, i tampoc no crec que sigui un error personal.
 
 Cap pressió es resol de cop. Però sí que hi ha petites pràctiques que solen funcionar. No són receptes, són idees per provar i quedar-te amb el que et serveixi.
 

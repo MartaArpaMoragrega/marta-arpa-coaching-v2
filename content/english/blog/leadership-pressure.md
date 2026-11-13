@@ -13,7 +13,7 @@ draft: false
 
 If you manage people, projects or resources, pressure is part of the job. It comes from above, from the sides and sometimes from yourself. And it doesn't go away, however hard we try.
 
-This year's Gallup report suggests that people who lead say they feel more stress and more loneliness than those who don't manage anyone. That doesn't surprise me, and I don't think it's a personal failing either.
+This year's [Gallup report](https://www.gallup.com/workplace/349484/state-workplace.aspx) suggests that people who lead say they feel more stress and more loneliness than those who don't manage anyone. That doesn't surprise me, and I don't think it's a personal failing either.
 
 No pressure gets solved in one go. But there are small practices that tend to work. They aren't recipes, just ideas to try out, keeping whatever works for you.
 

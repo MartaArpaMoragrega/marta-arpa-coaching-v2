@@ -13,7 +13,7 @@ draft: false
 
 Si gestionas personas, proyectos o recursos, la presión forma parte del trabajo. Llega de arriba, de los lados y a veces de uno mismo. Y no se va por mucho que lo intentemos.
 
-El informe de Gallup de este año apunta que quienes lideran dicen sentir más estrés y más soledad que quienes no gestionan a nadie. No me sorprende, y tampoco creo que sea un fallo personal.
+El [informe de Gallup](https://www.gallup.com/workplace/349484/state-workplace.aspx) de este año apunta que quienes lideran dicen sentir más estrés y más soledad que quienes no gestionan a nadie. No me sorprende, y tampoco creo que sea un fallo personal.
 
 Ninguna presión se resuelve de golpe. Pero sí hay pequeñas prácticas que suelen funcionar. No son recetas, son ideas para probar y quedarte con lo que te sirva.
 
